@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { FaBook, FaFlask, FaDatabase, FaTools, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './Resources.css';
 
 const Resources = () => {
@@ -30,6 +31,7 @@ const Resources = () => {
   const resources = [
     {
       category: "Lab Protocols",
+      icon: FaFlask,
       items: [
         { name: "Photoredox Catalysis Protocol", description: "Standard procedure for photoredox reactions" },
         { name: "Organocatalysis Setup", description: "Protocol for organocatalytic reactions" },
@@ -39,6 +41,7 @@ const Resources = () => {
     },
     {
       category: "Safety Information",
+      icon: FaTools,
       items: [
         { name: "Chemical Safety Guidelines", description: "Safety protocols for chemical handling" },
         { name: "Emergency Procedures", description: "Emergency contact information and procedures" },
@@ -48,6 +51,7 @@ const Resources = () => {
     },
     {
       category: "Software & Tools",
+      icon: FaDatabase,
       items: [
         { name: "ChemDraw", description: "Chemical structure drawing software" },
         { name: "MestReNova", description: "NMR data processing software" },
@@ -57,6 +61,7 @@ const Resources = () => {
     },
     {
       category: "Useful Links",
+      icon: FaBook,
       items: [
         { name: "ACS Publications", description: "American Chemical Society journals" },
         { name: "Chemical Abstracts", description: "Chemical literature database" },
@@ -67,13 +72,14 @@ const Resources = () => {
   ];
 
   return (
-    <motion.div 
-      className="resources-page"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="page-container">
+    <div className="page-wrapper">
+      <motion.div 
+        className="resources-page"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="page-container">
         {/* Hero Section */}
         <motion.section 
           className="resources-hero"
@@ -127,7 +133,10 @@ const Resources = () => {
                   transition: `all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) ${0.4 + index * 0.1}s`
                 }}
               >
-                <h3 className="category-title">{category.category}</h3>
+                <h3 className="category-title">
+                  <category.icon className="category-icon" />
+                  {category.category}
+                </h3>
                 <div className="resource-items">
                   {category.items.map((item, itemIndex) => (
                     <div key={itemIndex} className="resource-item">
@@ -166,8 +175,9 @@ const Resources = () => {
             </div>
           </motion.div>
         </motion.section>
-      </div>
-    </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

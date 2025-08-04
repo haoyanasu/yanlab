@@ -79,9 +79,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 2rem;
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
+  font-size: 3rem;
   color: #ffffff;
   position: relative;
   transition: all 0.3s ease;
@@ -173,10 +171,27 @@
   z-index: -1;
 }
 
+/* Enhanced Mobile Responsiveness */
+@media (min-width: 1400px) {
+  .research-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .research-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-section {
-    padding: 6rem 0 4rem;
-    margin-bottom: 6rem;
+    padding: 5rem 0 4rem;
+    margin-bottom: 5rem;
   }
   
   .research-grid {
@@ -221,5 +236,35 @@
   
   .image-placeholder-content h3 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 3rem 0 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .research-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .research-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 0.7rem;
+  }
+  
+  .research-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .research-card p {
+    font-size: 0.9rem;
+  }
+  
+  .title-underline {
+    width: 60px;
+    height: 3px;
   }
 } 

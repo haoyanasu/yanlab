@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { FaNewspaper, FaCalendar, FaTag, FaEnvelope, FaBell } from 'react-icons/fa';
 import './News.css';
 
 const News = () => {
@@ -67,13 +68,14 @@ const News = () => {
   ];
 
   return (
-    <motion.div 
-      className="news-page"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="page-container">
+    <div className="page-wrapper">
+      <motion.div 
+        className="news-page"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="page-container">
         {/* Hero Section */}
         <motion.section 
           className="news-hero"
@@ -164,8 +166,9 @@ const News = () => {
             </div>
           </motion.div>
         </motion.section>
-      </div>
-    </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

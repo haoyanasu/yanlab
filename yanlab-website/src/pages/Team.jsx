@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { FaEnvelope, FaLinkedin, FaOrcid, FaGraduationCap, FaUsers } from 'react-icons/fa';
 import './Team.css';
 
 const Team = () => {
@@ -73,13 +74,14 @@ const Team = () => {
   ];
 
   return (
-    <motion.div 
-      className="team-page"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="page-container">
+    <div className="page-wrapper">
+      <motion.div 
+        className="team-page"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="page-container">
         {/* Hero Section */}
         <motion.section 
           className="team-hero"
@@ -221,8 +223,9 @@ const Team = () => {
             </div>
           </motion.div>
         </motion.section>
-      </div>
-    </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

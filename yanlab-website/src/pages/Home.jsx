@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { FaAtom, FaDna, FaFlask, FaMicroscope } from 'react-icons/fa';
 import './Home.css';
 
 const Home = () => {
@@ -28,13 +29,14 @@ const Home = () => {
   };
 
   return (
-    <motion.div 
-      className="home-page"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="page-container">
+    <div className="page-wrapper">
+      <motion.div 
+        className="home-page"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="page-container">
         {/* Hero Section */}
         <motion.section 
           className="hero-section"
@@ -58,7 +60,7 @@ const Home = () => {
             className="page-subtitle"
             variants={itemVariants}
           >
-            Advancing the frontiers of catalysis and chemical synthesis through innovative research in organocatalysis, photoredox catalysis, and total synthesis of complex natural products.
+            Advancing the frontiers of DNA nanotechnology and bioengineering through innovative research in DNA origami, nucleic acid devices, and programmable molecular systems.
           </motion.p>
         </motion.section>
 
@@ -88,11 +90,11 @@ const Home = () => {
           >
             <h3>Our Mission</h3>
             <p>
-              The Yan Lab focuses on developing new catalytic methodologies and synthetic strategies 
-              for the construction of complex molecules. Our research spans multiple areas including 
-              organocatalysis, photoredox catalysis, cascade reactions, and the total synthesis of 
-              biologically active natural products. We leverage cutting-edge techniques to investigate 
-              complex biological environments and develop novel therapeutic agents.
+              The Yan Lab focuses on developing programmable DNA and RNA nanostructures for applications 
+              in bioengineering, nanotechnology, and medicine. Our research spans multiple areas including 
+              DNA origami, nucleic acid computing, molecular robotics, and biomedical applications. We leverage 
+              cutting-edge techniques to design and construct sophisticated molecular machines and devices 
+              that can operate at the nanoscale with unprecedented precision.
             </p>
           </motion.div>
         </motion.section>
@@ -125,9 +127,11 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="research-icon photoredox">PHOTOREDOX</div>
-              <h3>Photoredox Catalysis</h3>
-              <p>Development of visible light photoredox catalysts for sustainable chemical transformations.</p>
+              <div className="research-icon photoredox">
+                <FaAtom />
+              </div>
+              <h3>DNA Nanotechnology</h3>
+              <p>Design and construction of programmable DNA nanostructures for various applications.</p>
             </motion.div>
             
             <motion.div 
@@ -135,9 +139,11 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="research-icon organocatalysis">ORGANOCATALYSIS</div>
-              <h3>Organocatalysis</h3>
-              <p>Design and application of organic catalysts for enantioselective synthesis.</p>
+              <div className="research-icon organocatalysis">
+                <FaFlask />
+              </div>
+              <h3>DNA Origami</h3>
+              <p>Engineering complex 3D DNA structures with nanometer precision and functionality.</p>
             </motion.div>
             
             <motion.div 
@@ -145,9 +151,11 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="research-icon synthesis">TOTAL SYNTHESIS</div>
-              <h3>Total Synthesis</h3>
-              <p>Efficient synthesis of complex natural products and pharmaceutical targets.</p>
+              <div className="research-icon synthesis">
+                <FaDna />
+              </div>
+              <h3>Bioengineering</h3>
+              <p>Developing nucleic acid-based devices for biomedical and therapeutic applications.</p>
             </motion.div>
             
             <motion.div 
@@ -155,9 +163,11 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="research-icon proximity">PROXIMITY LABELING</div>
-              <h3>Proximity Labeling</h3>
-              <p>Investigation of complex biological environments using advanced labeling techniques.</p>
+              <div className="research-icon proximity">
+                <FaMicroscope />
+              </div>
+              <h3>Molecular Computing</h3>
+              <p>Creating DNA and RNA-based computational systems for information processing.</p>
             </motion.div>
           </motion.div>
         </motion.section>
@@ -181,8 +191,9 @@ const Home = () => {
             </div>
           </motion.div>
         </motion.section>
-      </div>
-    </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
