@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Research from './pages/Research';
-import Team from './pages/Team';
+import People from './pages/People';
 import Publications from './pages/Publications';
 import News from './pages/News';
 import Resources from './pages/Resources';
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/research" element={<Research />} />
-            <Route path="/team" element={<Team />} />
+            <Route path="/team" element={<People />} />
             <Route path="/publications" element={<Publications />} />
             <Route path="/news" element={<News />} />
             <Route path="/resources" element={<Resources />} />

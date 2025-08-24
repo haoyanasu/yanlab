@@ -28,14 +28,13 @@ const Research = () => {
   };
 
   return (
-    <div className="page-wrapper">
-      <motion.div 
-        className="research-page"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <div className="page-container">
+    <motion.div 
+      className="research-page"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="page-container">
         {/* Main Title Section */}
         <motion.section 
           className="research-hero"
@@ -279,9 +278,8 @@ const Research = () => {
             </motion.div>
           </motion.div>
         </motion.section>
-        </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };
 

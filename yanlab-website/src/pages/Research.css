@@ -356,36 +356,4 @@
   .final-arrow {
     font-size: 2.5rem;
   }
-}
-
-@media (max-width: 480px) {
-  .research-text {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-  }
-  
-  .area-circle {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .research-area {
-    min-width: 150px;
-  }
-  
-  .research-area h3 {
-    font-size: 0.9rem;
-  }
-  
-  .catalyst-desc {
-    font-size: 0.75rem;
-  }
-  
-  .flow-arrow {
-    font-size: 1.5rem;
-  }
-  
-  .final-arrow {
-    font-size: 2rem;
-  }
 } 

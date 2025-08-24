@@ -11,7 +11,7 @@ const Navbar = () => {
   const navItems = [
     { path: '/', label: 'Home', icon: FaHome },
     { path: '/research', label: 'Research', icon: FaFlask },
-    { path: '/team', label: 'Team', icon: FaUsers },
+    { path: '/team', label: 'People', icon: FaUsers },
     { path: '/publications', label: 'Publications', icon: FaFileAlt },
     { path: '/news', label: 'News', icon: FaNewspaper },
     { path: '/resources', label: 'Resources', icon: FaBook }
