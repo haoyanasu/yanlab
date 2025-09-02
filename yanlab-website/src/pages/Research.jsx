@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaDna, FaMicroscope, FaAtom, FaRocket, FaLightbulb } from 'react-icons/fa';
+import SectionBlock from '../components/SectionBlock';
 
 const Research = () => {
   const researchAreas = [
@@ -85,198 +86,31 @@ const Research = () => {
             Research Areas
           </motion.h2>
 
-          {/* Design Section - Full Width */}
-          <motion.div
-            className="grid-item"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            style={{ maxWidth: '1000px', margin: '0 auto 2rem auto' }}
-          >
-            <motion.div 
-              style={{
-                width: '100%',
-                height: '450px',
-                backgroundImage: 'url(/design.jpg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                borderRadius: '4px',
-                marginBottom: '1rem',
-                display: 'flex',
-                alignItems: 'flex-end',
-                justifyContent: 'center',
-                position: 'relative',
-                overflow: 'hidden',
-                cursor: 'pointer'
-              }}
-              whileHover="hover"
-              initial="initial"
-            >
-              <motion.div 
-                style={{
-                  background: 'rgba(0,0,0,0.6)',
-                  padding: '1rem 2rem',
-                  borderRadius: '4px',
-                  margin: '1rem',
-                  textAlign: 'center',
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0
-                }}
-                variants={{
-                  initial: { y: 0 },
-                  hover: { y: '100%' }
-                }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-                <h3 style={{ 
-                  fontSize: '1.5rem', 
-                  fontWeight: '600', 
-                  marginBottom: '0.5rem',
-                  color: 'white',
-                  lineHeight: '1.3'
-                }}>
-                  {researchAreas[0].title}
-                </h3>
-                <p style={{ 
-                  color: 'rgba(255,255,255,0.9)', 
-                  lineHeight: '1.6',
-                  fontSize: '1rem',
-                  fontWeight: '500'
-                }}>
-                  {researchAreas[0].description}
-                </p>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-
-          {/* Assembly Section - Full Width */}
-          <motion.div
-            className="grid-item"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.0 }}
-            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            style={{ maxWidth: '1000px', margin: '0 auto 2rem auto' }}
-          >
-            <motion.div 
-              style={{
-                width: '100%',
-                height: '300px',
-                backgroundImage: 'url(/assembly.jpg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                borderRadius: '4px',
-                marginBottom: '1rem',
-                display: 'flex',
-                alignItems: 'flex-end',
-                justifyContent: 'center',
-                position: 'relative',
-                overflow: 'hidden',
-                cursor: 'pointer'
-              }}
-              whileHover="hover"
-              initial="initial"
-            >
-              <motion.div 
-                style={{
-                  background: 'rgba(0,0,0,0.6)',
-                  padding: '1rem 2rem',
-                  borderRadius: '4px',
-                  margin: '1rem',
-                  textAlign: 'center',
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0
-                }}
-                variants={{
-                  initial: { y: 0 },
-                  hover: { y: '100%' }
-                }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-                <h3 style={{ 
-                  fontSize: '1.5rem', 
-                  fontWeight: '600', 
-                  marginBottom: '0.5rem',
-                  color: 'white',
-                  lineHeight: '1.3'
-                }}>
-                  {researchAreas[1].title}
-                </h3>
-                <p style={{ 
-                  color: 'rgba(255,255,255,0.9)', 
-                  lineHeight: '1.6',
-                  fontSize: '1rem',
-                  fontWeight: '500'
-                }}>
-                  {researchAreas[1].description}
-                </p>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-
-          {/* Functionalization and Interface - Two Columns */}
-          <motion.div 
-            className="grid-container"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            style={{ gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: '1000px', gap: '2rem' }}
-          >
-            {researchAreas.slice(2).map((area, index) => (
-              <motion.div
-                key={index + 2}
-                className="grid-item"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              >
-                <div style={{
-                  width: '100%',
-                  height: '200px',
-                  backgroundImage: area.gradient,
-                  borderRadius: '4px',
-                  marginBottom: '1rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  <area.icon style={{ 
-                    fontSize: 'clamp(2rem, 4vw, 3rem)', 
-                    color: 'white'
-                  }} />
-                </div>
-                <h3 style={{ 
-                  fontSize: '0.78375rem', 
-                  fontWeight: '600', 
-                  marginBottom: '0.75rem',
-                  color: '#1e293b',
-                  lineHeight: '1.3'
-                }}>
-                  {area.title}
-                </h3>
-                <p style={{ 
-                  color: '#64748b', 
-                  lineHeight: '1.6',
-                  fontSize: '0.78375rem',
-                  fontWeight: '500',
-                  flex: 1,
-                  textAlign: 'center'
-                }}>
-                  {area.description}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-
-
-
-
+          {/* Research Areas - Flexbox Layout */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', maxWidth: '1000px', margin: '0 auto' }}>
+            <SectionBlock
+              image={'/design.jpg'}
+              title={researchAreas[0].title}
+              description={researchAreas[0].description}
+            />
+            <SectionBlock
+              image={'/assembly.jpg'}
+              title={researchAreas[1].title}
+              description={researchAreas[1].description}
+              reverse
+            />
+            <SectionBlock
+              image={'/function.jpg'}
+              title={researchAreas[2].title}
+              description={researchAreas[2].description}
+            />
+            <SectionBlock
+              image={'/interface.jpg'}
+              title={researchAreas[3].title}
+              description={researchAreas[3].description}
+              reverse
+            />
+          </div>
 
           {/* Research Funded By */}
           <motion.div
