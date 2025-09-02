@@ -73,7 +73,7 @@ const People = () => {
 
   return (
     <main className="people-main-container">
-      <div className="people-content-wrapper fade-in">
+      <div className="people-content-wrapper fade-in" style={{ borderRadius: 0 }}>
         <section className="page-content">
           {/* Header */}
           <motion.div

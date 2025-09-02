@@ -5,7 +5,7 @@ import { FaDna, FaMicroscope, FaAtom } from 'react-icons/fa';
 const Home = () => {
   return (
     <main className="home-main-container">
-      <div className="home-content-wrapper fade-in" style={{ borderRadius: 0 }}>
+      <div className="home-content-wrapper fade-in">
         <section className="page-content">
           {/* Hero Section */}
           <motion.div
@@ -18,23 +18,6 @@ const Home = () => {
               Advancing structural DNA nanotechnology and molecular design for biomedical applications
             </p>
           </motion.div>
-
-            {/* Nanobot Video Section */}
-            <div style={{ width: '100%', margin: '2rem 0' }}>
-              <video
-                controls
-                style={{
-                  width: '100%',
-                  maxHeight: '500px',
-                  objectFit: 'cover',
-                  borderRadius: '12px',
-                  boxShadow: '0 2px 16px rgba(0,0,0,0.08)'
-                }}
-              >
-                <source src="/Nanobots.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
 
           {/* Main Description */}
           <motion.div

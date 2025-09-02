@@ -681,7 +681,7 @@ const News = () => {
 
   return (
     <main className="news-main-container">
-      <div className="news-content-wrapper fade-in">
+      <div className="news-content-wrapper fade-in" style={{ borderRadius: 0 }}>
         <section className="page-content">
           {/* Header */}
           <motion.div
@@ -740,20 +740,20 @@ const News = () => {
             {newsItems.map((item, index) => (
               <motion.div
                 key={index}
-                className="card"
-                style={{ 
-                  textAlign: 'left', 
-                  marginBottom: '1.5rem',
-                  border: '1px solid #e2e8f0',
+                style={{
+                  display: 'block',
+                  textAlign: 'left',
+                  marginBottom: '2rem',
+                  background: 'none',
+                  border: 'none',
+                  boxShadow: 'none',
+                  padding: 0,
                   position: 'relative'
                 }}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
               >
-
-
-                {/* Date */}
                 <div style={{
                   marginBottom: '0.75rem',
                   color: '#64748b',
@@ -761,8 +761,6 @@ const News = () => {
                 }}>
                   {formatDate(item.date)}
                 </div>
-
-                {/* Content */}
                 <h3 style={{
                   fontSize: '1.03125rem',
                   fontWeight: '600',
@@ -771,7 +769,6 @@ const News = () => {
                 }}>
                   {item.title}
                 </h3>
-
                 <p style={{
                   color: '#64748b',
                   lineHeight: '1.6',
@@ -779,22 +776,22 @@ const News = () => {
                 }}>
                   {item.description}
                 </p>
-
-                {/* Type Badge */}
-                <div style={{
+                {/* Type Badge on the right, floated */}
+                <span style={{
                   position: 'absolute',
-                  top: '1rem',
-                  right: '1rem',
+                  top: '1.5rem',
+                  right: 0,
                   background: `${item.color}20`,
                   color: item.color,
                   padding: '0.25rem 0.75rem',
                   borderRadius: '4px',
-                  fontSize: '0.78375rem', fontWeight: '500',
-                  fontWeight: '600',
-                  textTransform: 'capitalize'
+                  fontSize: '0.78375rem', fontWeight: '600',
+                  textTransform: 'capitalize',
+                  minWidth: '90px',
+                  textAlign: 'center'
                 }}>
                   {item.type}
-                </div>
+                </span>
               </motion.div>
             ))}
           </motion.div>

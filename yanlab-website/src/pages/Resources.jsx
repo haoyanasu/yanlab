@@ -132,7 +132,7 @@ const Resources = () => {
 
   return (
     <main className="resources-main-container">
-      <div className="resources-content-wrapper fade-in">
+      <div className="resources-content-wrapper fade-in" style={{ borderRadius: 0 }}>
         <section className="page-content">
           {/* Header */}
           <motion.div
