@@ -1,660 +1,578 @@
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { FaUser, FaGraduationCap, FaFlask, FaEnvelope, FaPhone, FaMapMarkerAlt, FaChevronDown, FaChevronUp, FaAward, FaUniversity, FaResearchgate, FaOrcid, FaLinkedin } from 'react-icons/fa';
-import './People.css';
+import { FaUser, FaEnvelope, FaPhone, FaGraduationCap, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const People = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const [expandedSections, setExpandedSections] = useState({
+    faculty: true,
+    staff: true,
+    students: true,
+    former: false,
+    mentees: true
+  });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        staggerChildren: 0.2
-      }
-    }
+  const toggleSection = (section) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
   };
 
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.6 }
-    }
-  };
-
-  // Faculty data
   const faculty = {
     name: "Hao Yan",
-    title: "Regents Professor Milton D. Glick Distinguished Professor",
-    position: "Director, Center for Molecular Design and Biomimetics",
-    department: "Professor, School of Molecular Sciences and School of Medicine and Advanced Medical Engineering",
+    title: "Regents Professor",
+    subtitle: "Milton D. Glick Distinguished Professor",
+    department: "School of Molecular Sciences and School of Medicine",
     office: "BDA 124B",
     phone: "(480) 727-8570",
     email: "hao.yan@asu.edu",
-    researchInterests: [
-      "Structural DNA nanotechnology",
-      "DNA-directed self-assembly"
-    ],
-    bio: "Dr. Hao Yan is a leading expert in DNA nanotechnology and molecular design. His research focuses on structural DNA nanotechnology and DNA-directed self-assembly."
+    bio: "Dr. Hao Yan is a leading expert in DNA nanotechnology and molecular design. His research focuses on structural DNA nanotechnology and DNA-directed self-assembly.",
+    awards: [
+      "Foresight Institute Feynman Prize in Nanotechnology",
+      "Rozenberg Tulip Award in DNA Computing",
+      "Humboldt Research Award"
+    ]
   };
 
-  // Research professionals
-  const researchProfessionals = [
+  const staff = [
     {
       name: "Chad R Simmons",
       title: "Research Professional",
       email: "chad.simmons@asu.edu",
-      researchFocus: "Biomacromolecule crystallography"
+      focus: "Biomacromolecule crystallography",
+      image: "chad.jpg"
     },
     {
       name: "Yang Xu",
-      title: "Assistant Research Professor",
+      title: "Assistant Research Professor", 
       email: "yangxu3@asu.edu",
-      researchFocus: "DNA nanotechnology research"
+      focus: "DNA nanotechnology research",
+      image: "yangxu.jpg"
     }
   ];
 
-  // Graduate students
-  const graduateStudents = [
-    {
-      name: "Deeksha Satyabola",
-      level: "5th Year Graduate Student",
-      email: "ddeeksha@asu.edu",
-      researchArea: "DNA nanotechnology"
-    },
-    {
-      name: "Abhay Prasad",
-      level: "5th Year Graduate Student",
-      email: "aprasa36@asu.edu",
-      researchArea: "Molecular design"
-    },
-    {
-      name: "Rong Zheng",
-      level: "4th Year Graduate Student",
-      email: "rzheng22@asu.edu",
-      researchArea: "DNA assembly"
-    },
-    {
-      name: "Lanshen Zhao",
-      level: "4th Year Graduate Student",
-      email: "lzhao89@asu.edu",
-      researchArea: "Biomolecular engineering"
-    },
-    {
-      name: "Xinyi Tu",
-      level: "4th Year Graduate Student",
-      email: "xinyitu@asu.edu",
-      researchArea: "DNA origami"
-    },
-    {
-      name: "Thong Diep",
-      level: "3rd Year Graduate Student",
-      email: "tdiep2@asu.edu",
-      researchArea: "Molecular nanotechnology"
-    },
-    {
-      name: "Gengshi Wu",
-      level: "2nd Year Graduate Student",
-      email: "gengshiw@asu.edu",
-      researchArea: "DNA-based systems"
-    },
-    {
-      name: "Alexsandra Petrova",
-      level: "2nd Year Graduate Student",
-      email: "apetrova@asu.edu",
-      researchArea: "Structural biology"
-    },
-    {
-      name: "Yichen Yang",
-      level: "1st Year Graduate Student",
-      email: "yyan62@asu.edu",
-      researchArea: "Molecular design"
-    }
+  const students = [
+    { name: "Deeksha Satyabola", level: "5th Year PhD", email: "ddeeksha@asu.edu", research: "DNA nanotechnology", image: "deeksha.jpg" },
+    { name: "Abhay Prasad", level: "5th Year PhD", email: "aprasa36@asu.edu", research: "Molecular design", image: "abhay.jpg" },
+    { name: "Rong Zheng", level: "4th Year PhD", email: "rzheng22@asu.edu", research: "DNA assembly", image: "rong.jpg" },
+    { name: "Lanshen Zhao", level: "4th Year PhD", email: "lzhao89@asu.edu", research: "Biomolecular engineering", image: "lanshen.jpg" },
+    { name: "Xinyi Tu", level: "4th Year PhD", email: "xinyitu@asu.edu", research: "DNA origami", image: "xinyi.jpg" },
+    { name: "Thong Diep", level: "4th Year PhD", email: "tdiep2@asu.edu", research: "Molecular nanotechnology", image: "thong.jpg" },
+    { name: "Aleksandra Petrova", level: "3rd Year PhD Student", email: "aleksandra@asu.edu", research: "DNA nanotechnology", image: "Aleksandra.jpg" },
+    { name: "Gengshi Wu", level: "3rd Year PhD Student", email: "gengshi@asu.edu", research: "Molecular design", image: "gengshi.jpg" },
+    { name: "Yichen Yan", level: "2nd Year PhD", email: "yichen@asu.edu", research: "DNA research", image: "yichen.jpg" }
   ];
 
-  // Undergraduate and exchange students
-  const undergraduateStudents = [
-    {
-      name: "Joel Joseph",
-      program: "Barrett Honors Thesis Student",
-      duration: "2022-2023",
-      researchArea: "DNA nanotechnology research"
-    },
-    {
-      name: "Lan Liu",
-      program: "Exchange Student",
-      duration: "2018-2020",
-      researchArea: "Molecular assembly studies"
-    },
-    {
-      name: "Zhilei Ge",
-      program: "Exchange Student (2011-2013); Exchange Scholar (2016-2017)",
-      currentPosition: "Assistant Professor, Shanghai Institute of Applied Physics, Chinese Academy of Sciences",
-      researchArea: "Applied physics research"
-    },
-    {
-      name: "Yuanchen Dong",
-      program: "Exchange Student",
-      duration: "2013-2014",
-      researchArea: "DNA nanotechnology"
-    },
-    {
-      name: "Guoliang Ke",
-      program: "Exchange Student",
-      duration: "2014-2015",
-      researchArea: "Molecular assembly"
-    },
-    {
-      name: "Xingyu Luo",
-      program: "Exchange Student",
-      duration: "2018-2019",
-      researchArea: "DNA structures"
-    },
-    {
-      name: "Eric Smith",
-      program: "Undergraduate Student",
-      duration: "2013-2015",
-      researchArea: "Laboratory research"
-    },
-    {
-      name: "Lucas Johnson",
-      program: "Undergraduate Student",
-      duration: "2017-2017",
-      researchArea: "Research assistant"
-    },
-    {
-      name: "Ashley Hunt",
-      program: "Undergraduate Student",
-      duration: "2013-2015",
-      researchArea: "Lab work"
-    },
-    {
-      name: "Shaun Wootten",
-      program: "Undergraduate Student",
-      duration: "2013-2016",
-      researchArea: "Research support"
-    },
-    {
-      name: "Matthew Vrbanac",
-      program: "Undergraduate Student",
-      duration: "2018-2019",
-      researchArea: "Lab research"
-    },
-    {
-      name: "Bryan Wei",
-      program: "Exchange Student",
-      duration: "Summer 2008-Spring 2009",
-      currentPosition: "Professor, Tsinghua University, Beijing, P. R. China",
-      researchArea: "DNA nanotechnology"
-    },
-    {
-      name: "Kasper Jahn",
-      program: "Exchange Student",
-      duration: "2008-2009",
-      researchArea: "Molecular research"
-    },
-    {
-      name: "Casper Andersen",
-      program: "Exchange Student",
-      duration: "2007-2008",
-      researchArea: "Nanotechnology"
-    }
+  const former = [
+    { name: "Liangxiao Chen", title: "PhD 2019-2024", current: "Postdoc, Harvard University" },
+    { name: "Lu Yu", title: "PhD 2019-2024", current: "Postdoc, University of Washington" },
+    { name: "Leeza Abraham", title: "PhD 2018-2023", current: "Research Scientist, Exodigm" },
+    { name: "Yue Tang", title: "PhD 2018-2023", current: "Assistant Professor, Shandong University" },
+    { name: "Hao Liu", title: "PhD 2018-2023", current: "Postdoc, Arizona State University" }
   ];
-
-  // Former members
-  const formerMembers = [
-    {
-      name: "Liangxiao Chen",
-      title: "Ph.D. student (2019-2024)",
-      currentPosition: "Postdoc Fellow, Harvard University",
-      researchArea: "DNA nanotechnology"
-    },
-    {
-      name: "Lu Yu",
-      title: "Ph.D. student (2019-2024)",
-      currentPosition: "Postdoc Fellow, University of Washington",
-      researchArea: "Molecular engineering"
-    },
-    {
-      name: "Leeza Abraham",
-      title: "Ph.D. student (2018-2023)",
-      currentPosition: "Research Scientist, Exodigm",
-      researchArea: "Biotechnology applications"
-    },
-    {
-      name: "Yue Tang",
-      title: "Ph.D. student (2018-2023)",
-      currentPosition: "Assistant Professor, Shandong University",
-      researchArea: "Academic research"
-    },
-    {
-      name: "Hao Liu",
-      title: "Ph.D. student (2018-2023)",
-      currentPosition: "Postdoc Fellow, Arizona State University",
-      researchArea: "DNA assembly"
-    },
-    {
-      name: "Bo Ning",
-      title: "Assistant Research Professor (2018-2019)",
-      currentPosition: "Assistant Professor, Tulane University",
-      researchArea: "Molecular design"
-    },
-    {
-      name: "Guangbao Yao",
-      title: "Postdoc (2017-2020)",
-      currentPosition: "Associate Professor, Shanghai Jiao Tong University",
-      researchArea: "Nanotechnology"
-    },
-    {
-      name: "Xu Zhou",
-      title: "Ph.D. student (2016-2021)",
-      currentPosition: "Postdoc Fellow, University of Wisconsin, Madison",
-      researchArea: "DNA origami"
-    },
-    {
-      name: "Raghu Pradeep",
-      title: "Ph.D. student (2015-2021)",
-      currentPosition: "Postdoc Fellow, University of California San Francisco",
-      researchArea: "Biomolecular systems"
-    },
-    {
-      name: "Swarup Dey",
-      title: "Ph.D. student (2015-2021)",
-      currentPosition: "Postdoc Fellow, Harvard University",
-      researchArea: "DNA nanotechnology"
-    },
-    {
-      name: "Fan Hong",
-      title: "Ph.D. student (2014-2019)",
-      currentPosition: "Postdoc Fellow, Harvard University",
-      researchArea: "Molecular engineering"
-    },
-    {
-      name: "Saswata Banerjee",
-      title: "Ph.D. student (2012-2018)",
-      currentPosition: "Postdoc Fellow, Columbia University",
-      researchArea: "Structural biology"
-    },
-    {
-      name: "Yuhe Yang",
-      title: "Ph.D. student (2011-2016)",
-      currentPosition: "Postdoc Fellow, Scripps Research Institute",
-      researchArea: "Chemical biology"
-    },
-    {
-      name: "Shuoxing Jiang",
-      title: "Ph.D. student (2011-2016)",
-      currentPosition: "Associate Professor, Nanjing University",
-      researchArea: "Materials science"
-    },
-    {
-      name: "Fei Zhang",
-      title: "Ph.D. student (2010-2015)",
-      currentPosition: "Assistant Professor, Rutgers University",
-      researchArea: "DNA nanotechnology"
-    },
-    {
-      name: "Jinglin Fu",
-      title: "Postdoc (2010-2013)",
-      currentPosition: "Assistant Professor, Rutgers University",
-      researchArea: "Molecular assembly"
-    },
-    {
-      name: "Yang Yang",
-      title: "Postdoc (2010-2012)",
-      currentPosition: "Postdoc, Yale",
-      researchArea: "Chemical research"
-    },
-    {
-      name: "Palash Dutta",
-      title: "Ph.D. student (2009-2014)",
-      currentPosition: "Postdoc Fellow, Georgia Tech and Emory University",
-      researchArea: "Nanotechnology"
-    },
-    {
-      name: "Zhengtao Deng",
-      title: "Assistant Research Professor (2009-2012)",
-      currentPosition: "Professor, Nanjing University",
-      researchArea: "Materials chemistry"
-    },
-    {
-      name: "Wei Li",
-      title: "Ph.D. student (2009-2014)",
-      currentPosition: "Postdoc Fellow, California Institute of Technology",
-      researchArea: "Molecular systems"
-    },
-    {
-      name: "Anirban Samanta",
-      title: "Ph.D. student (2009-2014)",
-      currentPosition: "Postdoc Fellow, Naval Research Laboratory",
-      researchArea: "Materials research"
-    },
-    {
-      name: "Dongran Han",
-      title: "Ph.D. student (2009-2013)",
-      currentPosition: "Professor, Beijing University of Chinese Medicine",
-      researchArea: "Biomedical applications"
-    },
-    {
-      name: "Zhao Zhao",
-      title: "Ph.D. student (2008-2013)",
-      currentPosition: "Postdoc Fellow, Harvard Medical School",
-      researchArea: "Medical research"
-    },
-    {
-      name: "Xiaowei Liu",
-      title: "Ph.D. student (2008-2013)",
-      currentPosition: "Postdoc Fellow, Arizona State University",
-      researchArea: "DNA engineering"
-    },
-    {
-      name: "Suchetan Pal",
-      title: "Ph.D. student (2008-2012)",
-      currentPosition: "Postdoc Fellow, Sloan Kettering Cancer Research Institute",
-      researchArea: "Cancer research"
-    },
-    {
-      name: "Zhe Li",
-      title: "Ph.D. student (2007-2012)",
-      currentPosition: "Postdoc Fellow, Yale University",
-      researchArea: "Molecular biology"
-    },
-    {
-      name: "Xixi Wei",
-      title: "Ph.D. student (2008-2014)",
-      currentPosition: "Research Scientist, Caris Life Sciences",
-      researchArea: "Life sciences"
-    },
-    {
-      name: "Qiangbin Wang",
-      title: "Postdoc (2006-2008)",
-      currentPosition: "Professor, Suzhou Institute of Nano-Tech and Nano-Bionics, Chinese Academy of Sciences",
-      researchArea: "Nanobionics"
-    },
-    {
-      name: "Junping Zhang",
-      title: "Postdoc (2005-2006)",
-      currentPosition: "Research Scientist, Carestream Company, Minnesota, USA",
-      researchArea: "Materials science"
-    }
-  ];
-
-  const [expandedSection, setExpandedSection] = useState(null);
-
-  const toggleSection = (section) => {
-    setExpandedSection(expandedSection === section ? null : section);
-  };
-
-  const PersonCard = ({ person, type }) => (
-    <motion.div 
-      className={`person-card ${type}`}
-      whileHover={{ y: -5 }}
-      transition={{ duration: 0.3 }}
-    >
-      <div className="person-avatar">
-        <FaUser />
-      </div>
-      <div className="person-info">
-        <h3 className="person-name">{person.name}</h3>
-        <p className="person-title">{person.title || person.level}</p>
-        
-        {type === 'faculty' && (
-          <>
-            <p className="person-position">{person.position}</p>
-            <p className="person-department">{person.department}</p>
-            <p className="person-institute">{person.institute}</p>
-            
-            <div className="contact-info">
-              <div className="contact-item">
-                <FaMapMarkerAlt />
-                <span>{person.office}, {person.location}</span>
-              </div>
-              <div className="contact-item">
-                <FaPhone />
-                <a href={`tel:${person.phone}`}>{person.phone}</a>
-              </div>
-              <div className="contact-item">
-                <FaEnvelope />
-                <a href={`mailto:${person.email}`}>{person.email}</a>
-              </div>
-            </div>
-
-            <div className="research-interests">
-              <h4>Research Interests</h4>
-              <ul>
-                {person.researchInterests.map((interest, index) => (
-                  <li key={index}>{interest}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="awards">
-              <h4>Selected Awards</h4>
-              <ul>
-                {person.awards.map((award, index) => (
-                  <li key={index}><FaAward /> {award}</li>
-                ))}
-              </ul>
-            </div>
-          </>
-        )}
-
-        {type === 'research' && (
-          <>
-            <p className="research-focus">{person.researchFocus}</p>
-            <p className="education">{person.education}</p>
-            <div className="contact-info">
-              <div className="contact-item">
-                <FaMapMarkerAlt />
-                <span>{person.office}</span>
-              </div>
-              <div className="contact-item">
-                <FaEnvelope />
-                <a href={`mailto:${person.email}`}>{person.email}</a>
-              </div>
-            </div>
-          </>
-        )}
-
-        {type === 'graduate' && (
-          <>
-            <p className="student-year">{person.year}</p>
-            <p className="advisor">Advisor: {person.advisor}</p>
-            <p className="research-area">{person.researchArea}</p>
-            <div className="contact-item">
-              <FaEnvelope />
-              <a href={`mailto:${person.email}`}>{person.email}</a>
-            </div>
-          </>
-        )}
-
-        {type === 'undergraduate' && (
-          <>
-            <p className="student-details">{person.year} • {person.major}</p>
-            <p className="program">{person.program}</p>
-            {person.university && <p className="university">{person.university}</p>}
-            <div className="contact-item">
-              <FaEnvelope />
-              <a href={`mailto:${person.email}`}>{person.email}</a>
-            </div>
-          </>
-        )}
-
-        {type === 'former' && (
-          <>
-            <p className="current-position">{person.currentPosition}</p>
-            <p className="research-area">{person.researchArea}</p>
-          </>
-        )}
-      </div>
-    </motion.div>
-  );
 
   return (
-    <div className="page-wrapper">
-      <motion.div 
-        className="people-page"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <div className="page-container">
-        {/* Hero Section */}
-        <motion.section 
-          className="hero-section"
-          variants={itemVariants}
-        >
-          <motion.h1 
-            className="page-title"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+    <main className="people-main-container">
+      <div className="people-content-wrapper fade-in">
+        <section className="page-content">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            PEOPLE
-          </motion.h1>
-          <motion.div 
-            className="title-underline"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          />
-          <motion.p 
-            className="page-subtitle"
-            variants={itemVariants}
-          >
-            Meet the researchers advancing the frontiers of DNA nanotechnology and molecular design
-          </motion.p>
-        </motion.section>
-
-        <motion.div 
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-        >
-        {/* Faculty Section */}
-        <motion.section className="team-section" variants={itemVariants}>
-          <h2 className="section-title">
-            <FaUniversity className="section-icon" />
-            Faculty
-          </h2>
-          <div className="team-grid faculty-grid">
-            <PersonCard person={faculty} type="faculty" />
-          </div>
-        </motion.section>
-
-        {/* Research Professionals Section */}
-        <motion.section className="team-section" variants={itemVariants}>
-          <h2 className="section-title">
-            <FaFlask className="section-icon" />
-            Research Professionals
-          </h2>
-          <div className="team-grid">
-            {researchProfessionals.map((person, index) => (
-              <PersonCard key={index} person={person} type="research" />
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Graduate Students Section */}
-        <motion.section className="team-section" variants={itemVariants}>
-          <h2 className="section-title">
-            <FaGraduationCap className="section-icon" />
-            Graduate Students
-          </h2>
-          <div className="team-grid">
-            {graduateStudents.map((person, index) => (
-              <PersonCard key={index} person={person} type="graduate" />
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Undergraduate Students Section */}
-        <motion.section className="team-section" variants={itemVariants}>
-          <h2 className="section-title">
-            <FaUser className="section-icon" />
-            Undergraduate & Exchange Students
-          </h2>
-          <div className="team-grid">
-            {undergraduateStudents.map((person, index) => (
-              <PersonCard key={index} person={person} type="undergraduate" />
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Former Members Section */}
-        <motion.section className="team-section" variants={itemVariants}>
-          <div className="expandable-section">
-            <h2 
-              className="section-title expandable-title"
-              onClick={() => toggleSection('former')}
-            >
-              <FaAward className="section-icon" />
-              Former Members
-              {expandedSection === 'former' ? <FaChevronUp /> : <FaChevronDown />}
-            </h2>
-            
-            {expandedSection === 'former' && (
-              <motion.div 
-                className="team-grid"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {formerMembers.map((person, index) => (
-                  <PersonCard key={index} person={person} type="former" />
-                ))}
-              </motion.div>
-            )}
-          </div>
-        </motion.section>
-
-        {/* Lab Information Section */}
-        <motion.section className="lab-info-section" variants={itemVariants}>
-          <div className="lab-info-content">
-            <h2>Join Our Team</h2>
-            <p>
-              We are always looking for motivated researchers to join our interdisciplinary team. 
-              If you're interested in DNA nanotechnology, molecular design, or bio-inspired materials, 
-              we'd love to hear from you.
+            <h1 className="page-title">People</h1>
+            <p className="page-subtitle">
+              Meet the talented researchers and students driving innovation in DNA nanotechnology
             </p>
-            
-            <div className="opportunities">
-              <div className="opportunity-card">
-                <h3>Postdoctoral Positions</h3>
-                <p>We have openings for postdoctoral researchers with backgrounds in chemistry, bioengineering, or materials science.</p>
+          </motion.div>
+
+          {/* Faculty Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+
+
+              <div className="card" style={{ maxWidth: '900px', margin: '0 auto' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+                  <img 
+                    src="/hyan.jpg" 
+                    alt="Dr. Hao Yan"
+                    style={{
+                      width: '280px',
+                      height: '300px',
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                      borderRadius: '4px'
+                    }}
+                  />
+                  <div style={{ textAlign: 'left', flex: '1', minWidth: '300px' }}>
+                    <h3 style={{ fontSize: '1.2375rem', fontWeight: '700', marginBottom: '0.25rem' }}>
+                      {faculty.name}
+                    </h3>
+                    <p style={{ color: '#3b82f6', fontWeight: '600', marginBottom: '0.25rem' }}>
+                      {faculty.title}
+                    </p>
+                    <p style={{ color: '#64748b', fontSize: '0.7425rem' }}>
+                      {faculty.subtitle}
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ textAlign: 'left', lineHeight: '1.6' }}>
+                  <p style={{ marginBottom: '1rem', color: '#475569', fontSize: '0.78375rem', fontWeight: '500' }}>{faculty.bio}</p>
+                  
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '1rem', fontSize: '0.78375rem', fontWeight: '500' }}>
+                    <div>
+                      <strong style={{ fontWeight: '600' }}>Department:</strong><br />
+                      {faculty.department}
+                    </div>
+                    <div>
+                      <strong style={{ fontWeight: '600' }}>Office:</strong> {faculty.office}<br />
+                      <strong style={{ fontWeight: '600' }}>Phone:</strong> {faculty.phone}
+                    </div>
+                  </div>
+
+                  <div style={{ marginBottom: '1rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <FaEnvelope style={{ color: '#3b82f6' }} />
+                      <a href={`mailto:${faculty.email}`} style={{ color: '#3b82f6', textDecoration: 'none', fontSize: '0.78375rem', fontWeight: '500' }}>
+                        {faculty.email}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div style={{ fontSize: '0.78375rem', fontWeight: '500' }}>
+                    <strong style={{ fontWeight: '600' }}>Selected Awards:</strong>
+                    <ul style={{ marginTop: '0.5rem', paddingLeft: '1.5rem' }}>
+                      {faculty.awards.map((award, index) => (
+                        <li key={index} style={{ marginBottom: '0.25rem', color: '#475569', fontSize: '0.78375rem', fontWeight: '500' }}>{award}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div className="opportunity-card">
-                <h3>Graduate Students</h3>
-                <p>We welcome Ph.D. and M.S. students interested in molecular nanotechnology and programmable materials.</p>
-              </div>
-              <div className="opportunity-card">
-                <h3>Undergraduate Research</h3>
-                <p>Undergraduate students can gain research experience through directed study courses and summer programs.</p>
-              </div>
+          </motion.div>
+
+          {/* Research Staff Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              margin: '1.5rem 0 0.75rem 0',
+              cursor: 'pointer',
+              textAlign: 'center'
+            }} onClick={() => toggleSection('staff')}>
+              <h2 className="section-title" style={{ margin: 0 }}>Research Staff</h2>
+              {expandedSections.staff ? <FaChevronUp /> : <FaChevronDown />}
             </div>
 
-            <div className="contact-cta">
-              <h3>Get in Touch</h3>
-              <p>Contact Dr. Hao Yan to discuss research opportunities and learn more about our work.</p>
-              <a href="mailto:hao.yan@asu.edu" className="contact-button">
-                <FaEnvelope />
-                Contact Us
-              </a>
+            {expandedSections.staff && (
+              <div className="grid-container">
+                {staff.map((member, index) => (
+                  <div key={index} className="grid-item">
+                    <div style={{
+                      width: '216px',
+                      height: '216px',
+                      borderRadius: '50%',
+                      overflow: 'hidden',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto 0.5rem auto',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+                    }}>
+                      <img 
+                        src={`/${member.image}`} 
+                        alt={member.name}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          objectPosition: 'center top'
+                        }}
+                      />
+                    </div>
+                    <h3 style={{ fontSize: '0.78375rem', fontWeight: '600', marginBottom: '0.125rem', textAlign: 'center' }}>
+                      {member.name}
+                    </h3>
+                    <p style={{ color: '#3b82f6', fontWeight: '600', marginBottom: '0.125rem', fontSize: '0.78375rem' }}>
+                      {member.title}
+                    </p>
+                    <p style={{ color: '#64748b', marginBottom: '0.25rem', fontSize: '0.78375rem', fontWeight: '500' }}>
+                      {member.focus}
+                    </p>
+                    <a href={`mailto:${member.email}`} style={{ color: '#3b82f6', textDecoration: 'none', fontSize: '0.78375rem', fontWeight: '500' }}>
+                      <FaEnvelope style={{ marginRight: '0.5rem' }} />
+                      {member.email}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            )}
+          </motion.div>
+
+          {/* Students Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              margin: '1.5rem 0 0.75rem 0',
+              cursor: 'pointer'
+            }} onClick={() => toggleSection('students')}>
+              <h2 className="section-title" style={{ margin: 0 }}>Graduate Students</h2>
+              {expandedSections.students ? <FaChevronUp /> : <FaChevronDown />}
             </div>
-          </div>
-        </motion.section>
-        </motion.div>
-        </div>
-      </motion.div>
-    </div>
+
+            {expandedSections.students && (
+              <div className="grid-container">
+                {students.map((student, index) => (
+                  <div key={index} className="grid-item">
+                    <div style={{
+                      width: '216px',
+                      height: '216px',
+                      borderRadius: '50%',
+                      overflow: 'hidden',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto 0.5rem auto',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+                    }}>
+                      <img 
+                        src={`/${student.image}`} 
+                        alt={student.name}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          objectPosition: 'center top'
+                        }}
+                      />
+                    </div>
+                    <h3 style={{ fontSize: '0.78375rem', fontWeight: '600', marginBottom: '0.125rem', textAlign: 'center' }}>
+                      {student.name}
+                    </h3>
+                    <p style={{ color: '#f59e0b', fontWeight: '600', marginBottom: '0.125rem', fontSize: '0.78375rem' }}>
+                      {student.level}
+                    </p>
+                    <p style={{ color: '#64748b', marginBottom: '0.25rem', fontSize: '0.78375rem', fontWeight: '500' }}>
+                      {student.research}
+                    </p>
+                    <a href={`mailto:${student.email}`} style={{ color: '#3b82f6', textDecoration: 'none', fontSize: '0.78375rem', fontWeight: '500' }}>
+                      <FaEnvelope style={{ marginRight: '0.5rem' }} />
+                      {student.email}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            )}
+          </motion.div>
+
+          {/* Graduate Student Mentees Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              margin: '2rem 0 1rem 0',
+              cursor: 'pointer'
+            }} onClick={() => toggleSection('mentees')}>
+              <h2 className="section-title" style={{ margin: 0, color: '#3b82f6' }}>Graduate Student Mentees</h2>
+              {expandedSections.mentees ? <FaChevronUp /> : <FaChevronDown />}
+            </div>
+
+            {expandedSections.mentees && (
+              <div style={{ textAlign: 'left', overflow: 'auto', background: 'transparent', padding: 0 }}>
+              <div style={{ overflowX: 'auto' }}>
+                <table style={{
+                  width: '100%',
+                  borderCollapse: 'collapse',
+                  fontSize: '0.78375rem',
+                  minWidth: '600px'
+                }}>
+                  <thead>
+                    <tr style={{ backgroundColor: '#f8fafc', borderBottom: '2px solid #e2e8f0' }}>
+                      <th style={{ padding: '12px 10px', textAlign: 'left', fontWeight: '600', color: '#1e293b' }}>Name</th>
+                      <th style={{ padding: '12px 10px', textAlign: 'left', fontWeight: '600', color: '#1e293b' }}>Year Enrolled</th>
+                      <th style={{ padding: '12px 10px', textAlign: 'left', fontWeight: '600', color: '#1e293b' }}>Current Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Kyle Lund</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2004</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Medical Director, Clinical Pathology, Landmark Regional Medical Center</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Rahul Chhabra</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2004</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Family Physician, Forest Lane Medical</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Sherri Rinker</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2004</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Director at B2S Life Sciences</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yonggang Ke</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2005</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Emory-Georgia Tech joint Wallace H. Coulter Department of Biomedical Engineering</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Chenxiang Lin</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2005</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Yale University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Jaswinder Sharma</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2005</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Senior R&D Staff and Leader, Energy Storage and Conversion Manufacturing Group, Oak Ridge National Lab, TN</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Jeanette Nangreave</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2007</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Teaching Professor, Arizona State</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Zhe Li</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2007</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Professor and Vice Dean, College of Engineering and Applied Sciences, Nanjing University, Chief Technology Office, Neoscura</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Zhao Zhao</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2008</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Senior Research Scientist, Curis Life Sciences</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>XiXi Wei</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2008</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Senior Research Scientist, Curis Life Sciences</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yan Liu</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2009</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Professor, Arizona State University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Mingqiang Li</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2009</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Professor, Central China Normal University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Suchetan Pal</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2009</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Indian Institute of Science Education and Research</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Dongran Han</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2010</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, University of Science and Technology of China</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yuhe Yang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2010</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Principal Research Scientist, Pacific Northwest National Laboratory</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Banani Chakraborty</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2010</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Research Scientist, Molecular Vista Inc.</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yonggang Ke</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2010</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Emory University and Georgia Tech</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Luvena Ong</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2011</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Senior Research Scientist, Institute of Materials Research and Engineering, Singapore</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Anchi Cheng</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2011</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Research Scientist, Simons Foundation</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Zhiyong Shen</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2011</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Assistant Professor, Shanghai University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Alexander Kuzuya</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2011</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Kansai University, Japan</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Minghui Liu</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2012</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Professor, University of Central Florida</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Sui Wang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2012</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Tianjin University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Pengfei Wang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2012</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Dalian University of Technology</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Jie Chao</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2012</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Professor, Nanjing University of Posts and Telecommunications</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Shuoxing Jiang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2013</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, National University of Singapore</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Nicholas Stephanopoulos</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2013</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Arizona State University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Feng Li</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2013</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Professor, Beijing Institute of Technology</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yongxi Zhao</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2013</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, University of Science and Technology Beijing</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Jeanette Nangreave</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2013</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Clinical Assistant Professor, Arizona State University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Jianbang Wang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2014</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Hunan University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Tao Zhang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2014</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Beijing University of Chemical Technology</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Chao Zhang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2014</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Assistant Professor, University of Illinois at Urbana-Champaign</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Lifeng Zhou</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2014</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Xi'an Jiaotong University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Fei Zhang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2015</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Professor, Nanjing University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yijin Zhang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2015</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, University of Connecticut</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yang Yang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2015</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Assistant Professor, University of Central Florida</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Guizhi Zhu</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2015</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Professor, Henan University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yung Chang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2016</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Assistant Professor, Arizona State University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Mo Li</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2016</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Macau University of Science and Technology</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yuvraj Singh Negi</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2016</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Assistant Professor, Indian Institute of Technology Roorkee</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Jing Pan</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2016</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Senior Research Scientist, Arizona State University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Risheng Wang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Spring 2017</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Associate Professor, Shanghai University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Xiaolei Zuo</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2017</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Professor, Shanghai Jiao Tong University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Leeza Abraham</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2018</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Research Scientist, Exodigm</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Yue Tang</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2018</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Assistant Professor, Shandong University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Hao Liu</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2018</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Postdoc, Arizona State University</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Liangxiao Chen</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2019</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Postdoc, Harvard University</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '10px 10px', fontWeight: '500' }}>Lu Yu</td>
+                      <td style={{ padding: '10px 10px', color: '#64748b' }}>Fall 2019</td>
+                      <td style={{ padding: '10px 10px', color: '#3b82f6' }}>Postdoc, University of Washington</td>
+                    </tr>
+                  </tbody>
+                </table>
+                  </div>
+              </div>
+            )}
+          </motion.div>
+
+        </section>
+      </div>
+    </main>
   );
 };
 
