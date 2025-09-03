@@ -2,9 +2,9 @@
 .section-block {
 	display: flex;
 	align-items: center;
-	background: #fff;
-	border-radius: 12px;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
 	margin-bottom: 2rem;
 	padding: 2rem;
 	gap: 2rem;
@@ -19,6 +19,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: none;
+	box-shadow: none;
 }
 
 .section-block-image img {
@@ -27,8 +29,8 @@
 	height: auto;
 	border-radius: 10px;
 	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-	background: #fff;
-	padding: 2rem;
+	background: none;
+	padding: 0;
 	display: block;
 }
 
