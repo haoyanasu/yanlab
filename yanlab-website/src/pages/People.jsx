@@ -81,10 +81,27 @@ const People = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="page-title">People</h1>
+            {/* Removed page title 'People' as requested */}
             <p className="page-subtitle">
               Meet the talented researchers and students driving innovation in DNA nanotechnology
             </p>
+            <h2 style={{
+              fontSize: '1.5rem',
+              fontWeight: '600',
+              color: '#1e293b',
+              marginBottom: '0.5rem',
+              letterSpacing: '0.1em',
+              fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
+              textAlign: 'center',
+              marginTop: '2.5rem'
+            }}>PI Yan</h2>
+            <div style={{
+              width: '300px',
+              height: '3px',
+              background: '#3b82f6',
+              margin: '0 auto 2.5rem auto',
+              borderRadius: '2px',
+            }} />
           </motion.div>
 
           {/* Faculty Section */}
@@ -171,7 +188,22 @@ const People = () => {
               cursor: 'pointer',
               textAlign: 'center'
             }} onClick={() => toggleSection('staff')}>
-              <h2 className="section-title" style={{ margin: 0 }}>Research Staff</h2>
+              <h2 style={{
+                fontSize: '1.5rem',
+                fontWeight: '600',
+                color: '#1e293b',
+                marginBottom: '0.5rem',
+                letterSpacing: '0.1em',
+                fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
+                textAlign: 'center',
+              }}>Research Staff</h2>
+              <div style={{
+                width: '300px',
+                height: '3px',
+                background: '#3b82f6',
+                margin: '0 auto 2.5rem auto',
+                borderRadius: '2px',
+              }} />
               {expandedSections.staff ? <FaChevronUp /> : <FaChevronDown />}
             </div>
 
@@ -234,7 +266,22 @@ const People = () => {
               margin: '1.5rem 0 0.75rem 0',
               cursor: 'pointer'
             }} onClick={() => toggleSection('students')}>
-              <h2 className="section-title" style={{ margin: 0 }}>Graduate Students</h2>
+              <h2 style={{
+                fontSize: '1.5rem',
+                fontWeight: '600',
+                color: '#1e293b',
+                marginBottom: '0.5rem',
+                letterSpacing: '0.1em',
+                fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
+                textAlign: 'center',
+              }}>Graduate Students</h2>
+              <div style={{
+                width: '300px',
+                height: '3px',
+                background: '#3b82f6',
+                margin: '0 auto 2.5rem auto',
+                borderRadius: '2px',
+              }} />
               {expandedSections.students ? <FaChevronUp /> : <FaChevronDown />}
             </div>
 
@@ -297,7 +344,22 @@ const People = () => {
               margin: '2rem 0 1rem 0',
               cursor: 'pointer'
             }} onClick={() => toggleSection('mentees')}>
-              <h2 className="section-title" style={{ margin: 0, color: '#3b82f6' }}>Graduate Student Mentees</h2>
+              <h2 style={{
+                fontSize: '1.5rem',
+                fontWeight: '600',
+                color: '#1e293b',
+                marginBottom: '0.5rem',
+                letterSpacing: '0.1em',
+                fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
+                textAlign: 'center',
+              }}>Graduate Student Mentees</h2>
+              <div style={{
+                width: '300px',
+                height: '3px',
+                background: '#3b82f6',
+                margin: '0 auto 2.5rem auto',
+                borderRadius: '2px',
+              }} />
               {expandedSections.mentees ? <FaChevronUp /> : <FaChevronDown />}
             </div>
 

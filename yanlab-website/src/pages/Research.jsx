@@ -19,7 +19,7 @@ const Research = () => {
       description: "Investigating the fundamental principles of molecular self-assembly to create complex hierarchical structures. Our work focuses on understanding and controlling the assembly pathways of DNA nanostructures for precise architectural control.",
       color: "#10b981",
       gradient: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
-      detailedDescription: "We study the self-assembly mechanisms that govern the formation of DNA nanostructures, developing new strategies for controlling assembly kinetics and thermodynamics to achieve desired structural outcomes."
+              fontSize: '1.6rem',
     },
     {
       icon: FaAtom,
@@ -84,11 +84,11 @@ const Research = () => {
             style={{ textAlign: 'center', margin: '4rem 0 2.5rem 0' }}
           >
             <h2 style={{
-              fontSize: '2rem',
+              fontSize: '1.5rem',
               fontWeight: '600',
               color: '#1e293b',
               marginBottom: '0.5rem',
-              letterSpacing: '0.04em',
+              letterSpacing: '0.1em',
               fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
             }}>
               Research Areas
@@ -109,7 +109,7 @@ const Research = () => {
           </motion.div>
 
           {/* Research Areas - Flexbox Layout */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', maxWidth: '1000px', margin: '0 auto' }}>
             <SectionBlock
               image={'/design.jpg'}
               title={researchAreas[0].title}
@@ -117,6 +117,7 @@ const Research = () => {
                 Our research focuses on designing programmable DNA nanostructures by encoding structural and functional instructions directly into DNA sequences, leveraging predictable base-pairing and versatile junctions to create precise, tunable architectures. From early demonstrations of DNA as a scaffold for ordered lattices and 3D crystals to engineering assemblies with atomic-level precision, we have shown how DNA can organize matter and host molecules for structural studies. We pioneered complex DNA and RNA origami, folding long strands into intricate 2D and 3D shapes for applications in dynamic devices and biomedical platforms, and collaborated with computer scientists to develop automated design tools that streamline the creation of reconfigurable nanostructures, programmable patterns, and molecular computing devices. Together, these efforts have built an integrated design ecosystem—from simple DNA tiles to sophisticated crystalline lattices—that advances nanoscale control of matter and paves the way for future breakthroughs in nanotechnology, computation, and medicine.
               </span>}
             />
+            <div style={{ width: '100%', height: '1px', background: '#e5e7eb', margin: '2rem auto' }} />
             <SectionBlock
               image={'/assembly.jpg'}
               title={researchAreas[1].title}
@@ -130,6 +131,7 @@ const Research = () => {
               </span>}
               reverse
             />
+            <div style={{ width: '100%', height: '1px', background: '#e5e7eb', margin: '2rem auto' }} />
             <SectionBlock
               image={'/function.jpg'}
               title={researchAreas[2].title}
@@ -143,6 +145,7 @@ const Research = () => {
                 Chem 2022, 8, 2442–2459
               </span>}
             />
+            <div style={{ width: '100%', height: '1px', background: '#e5e7eb', margin: '2rem auto' }} />
             <SectionBlock
               image={'/interface.jpg'}
               title={researchAreas[3].title}
