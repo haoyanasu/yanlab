@@ -91,7 +91,9 @@ const Research = () => {
             <SectionBlock
               image={'/design.jpg'}
               title={researchAreas[0].title}
-              description={researchAreas[0].description}
+              description={<span style={{ fontSize: '0.95rem', color: '#475569', lineHeight: '1.7' }}>
+                Our research focuses on designing programmable DNA nanostructures by encoding structural and functional instructions directly into DNA sequences, leveraging predictable base-pairing and versatile junctions to create precise, tunable architectures. From early demonstrations of DNA as a scaffold for ordered lattices and 3D crystals to engineering assemblies with atomic-level precision, we have shown how DNA can organize matter and host molecules for structural studies. We pioneered complex DNA and RNA origami, folding long strands into intricate 2D and 3D shapes for applications in dynamic devices and biomedical platforms, and collaborated with computer scientists to develop automated design tools that streamline the creation of reconfigurable nanostructures, programmable patterns, and molecular computing devices. Together, these efforts have built an integrated design ecosystem—from simple DNA tiles to sophisticated crystalline lattices—that advances nanoscale control of matter and paves the way for future breakthroughs in nanotechnology, computation, and medicine.
+              </span>}
             />
             <SectionBlock
               image={'/assembly.jpg'}
@@ -112,7 +114,7 @@ const Research = () => {
             />
           </div>
 
-          {/* Research Funded By */}
+          {/* Research Funded By - Only agencies from yanlab-asu.com */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,194 +128,50 @@ const Research = () => {
               marginBottom: '0.5rem',
               letterSpacing: '0.1em'
             }}>
-              RESEARCH FUNDED BY:
+              Funding Agencies
             </h2>
-            
-            {/* Blue underline */}
             <div style={{
-              width: '100px',
+              width: '300px',
               height: '3px',
               background: '#3b82f6',
-              margin: '0 auto 3rem auto'
+              margin: '0 auto 2.5rem auto'
             }} />
-
-            {/* Logo Grid */}
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '2rem',
-              maxWidth: '1000px',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '2.5rem',
+              maxWidth: '900px',
               margin: '0 auto',
-              alignItems: 'center'
+              alignItems: 'center',
+              borderTop: '2px solid #e5e7eb',
+              borderBottom: '2px solid #e5e7eb',
+              padding: '2.5rem 0'
             }}>
               {/* Row 1 */}
-              <div style={{
-                border: '1px solid #e5e7eb',
-                padding: '2rem',
-                borderRadius: '8px',
-                backgroundColor: 'white',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '150px'
-              }}>
-                {/* ONR Logo placeholder */}
-                <div style={{
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  textAlign: 'center',
-                  fontWeight: '500'
-                }}>
-                  Office of Naval Research
-                </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
+                <img src="/aro.png" alt="Army Research Office" style={{ maxHeight: '80px', maxWidth: '100%' }} />
+                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>Army Research Office</div>
               </div>
-              
-              <div style={{
-                border: '1px solid #e5e7eb',
-                padding: '2rem',
-                borderRadius: '8px',
-                backgroundColor: 'white',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '150px'
-              }}>
-                {/* NSF Logo placeholder */}
-                <div style={{
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  textAlign: 'center',
-                  fontWeight: '500'
-                }}>
-                  National Science Foundation
-                </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
+                <img src="/doe.png" alt="Department of Energy" style={{ maxHeight: '80px', maxWidth: '100%' }} />
+                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>Department of Energy</div>
               </div>
-              
-              <div style={{
-                border: '1px solid #e5e7eb',
-                padding: '2rem',
-                borderRadius: '8px',
-                backgroundColor: 'white',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '150px'
-              }}>
-                {/* NIH Logo placeholder */}
-                <div style={{
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  textAlign: 'center',
-                  fontWeight: '500'
-                }}>
-                  National Institutes of Health
-                </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
+                <img src="/don.png" alt="Department of Navy" style={{ maxHeight: '80px', maxWidth: '100%' }} />
+                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>Department of Navy</div>
               </div>
-              
-              <div style={{
-                border: '1px solid #e5e7eb',
-                padding: '2rem',
-                borderRadius: '8px',
-                backgroundColor: 'white',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '150px'
-              }}>
-                {/* ENERGY.GOV Logo placeholder */}
-                <div style={{
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  textAlign: 'center',
-                  fontWeight: '500'
-                }}>
-                  Department of Energy
-                </div>
-              </div>
-
               {/* Row 2 */}
-              <div style={{
-                border: '1px solid #e5e7eb',
-                padding: '2rem',
-                borderRadius: '8px',
-                backgroundColor: 'white',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '150px'
-              }}>
-                {/* Army Research Office placeholder */}
-                <div style={{
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  textAlign: 'center',
-                  fontWeight: '500'
-                }}>
-                  Army Research Office
-                </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
+                <img src="/nih.png" alt="National Institutes of Health" style={{ maxHeight: '80px', maxWidth: '100%' }} />
+                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>National Institutes of Health</div>
               </div>
-              
-              <div style={{
-                border: '1px solid #e5e7eb',
-                padding: '2rem',
-                borderRadius: '8px',
-                backgroundColor: 'white',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '150px'
-              }}>
-                {/* HFSP Logo placeholder */}
-                <div style={{
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  textAlign: 'center',
-                  fontWeight: '500'
-                }}>
-                  Human Frontier Science Program
-                </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
+                <img src="/nsf.png" alt="National Science Foundation" style={{ maxHeight: '80px', maxWidth: '100%' }} />
+                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>National Science Foundation</div>
               </div>
-              
-              <div style={{
-                border: '1px solid #e5e7eb',
-                padding: '2rem',
-                borderRadius: '8px',
-                backgroundColor: 'white',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '150px'
-              }}>
-                {/* Alexander von Humboldt Foundation placeholder */}
-                <div style={{
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  textAlign: 'center',
-                  fontWeight: '500'
-                }}>
-                  Alexander von Humboldt Foundation
-                </div>
-              </div>
-              
-              <div style={{
-                border: '1px solid #e5e7eb',
-                padding: '2rem',
-                borderRadius: '8px',
-                backgroundColor: 'white',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '150px'
-              }}>
-                {/* Stanley Center placeholder */}
-                <div style={{
-                  fontSize: '0.9rem',
-                  color: '#64748b',
-                  textAlign: 'center',
-                  fontWeight: '500'
-                }}>
-                  Stanley Center for Psychiatric Research
-                </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
+                <img src="/pharma.png" alt="PhRMA Foundation" style={{ maxHeight: '80px', maxWidth: '100%' }} />
+                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>PhRMA Foundation</div>
               </div>
             </div>
           </motion.div>

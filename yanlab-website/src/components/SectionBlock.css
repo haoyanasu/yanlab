@@ -1,0 +1,50 @@
+/* SectionBlock: side-by-side image and text layout */
+.section-block {
+	display: flex;
+	align-items: center;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	margin-bottom: 2rem;
+	padding: 2rem;
+	gap: 2rem;
+}
+
+.section-block.reverse {
+	flex-direction: row-reverse;
+}
+
+.section-block-image {
+	flex: 1 1 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.section-block-image img {
+	max-width: 320px;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+	background: #fff;
+	padding: 2rem;
+	display: block;
+}
+
+.section-block-text {
+	flex: 2 1 400px;
+}
+
+.section-block-text h3 {
+	font-size: 1.35rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: #1e293b;
+}
+
+.section-block-text p {
+	font-size: 1.05rem;
+	color: #475569;
+	line-height: 1.7;
+}

@@ -1,10 +1,16 @@
 import React from 'react';
+import './SectionBlock.css';
 
-const SectionBlock = ({ title, children }) => {
+const SectionBlock = ({ image, title, description, reverse }) => {
   return (
-    <section style={{ padding: '1rem', marginBottom: '1.5rem', background: '#fff', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-      {title && <h2 style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.75rem' }}>{title}</h2>}
-      <div>{children}</div>
+    <section className={`section-block${reverse ? ' reverse' : ''}`}>
+      <div className="section-block-image">
+        <img src={image} alt={title} />
+      </div>
+      <div className="section-block-text">
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
     </section>
   );
 };
