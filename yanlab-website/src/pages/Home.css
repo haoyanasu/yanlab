@@ -20,7 +20,7 @@
   height: 4px;
   background: linear-gradient(90deg, #4a90e2, #7b68ee);
   margin: 2rem auto 3rem;
-  border-radius: 2px;
+  border-radius: 0;
   transform-origin: left;
 }
 
@@ -35,7 +35,7 @@
 .research-card {
   background: #ffffff;
   border: 1px solid #e9ecef;
-  border-radius: 20px;
+  border-radius: 0;
   padding: 3rem 2.5rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
@@ -74,7 +74,7 @@
 .research-icon {
   width: 140px;
   height: 140px;
-  border-radius: 50%;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +155,7 @@
   width: 300px;
   height: 300px;
   background: radial-gradient(circle, rgba(255, 107, 107, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
+  border-radius: 0;
   z-index: -1;
 }
 
@@ -167,7 +167,7 @@
   width: 250px;
   height: 250px;
   background: radial-gradient(circle, rgba(123, 104, 238, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
+  border-radius: 0;
   z-index: -1;
 }
 

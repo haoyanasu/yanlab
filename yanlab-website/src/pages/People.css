@@ -57,7 +57,7 @@
 /* Person Cards */
 .person-card {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 0;
   padding: 2rem;
   border: 1px solid #e9ecef;
   transition: all 0.3s ease;
@@ -96,7 +96,7 @@
   width: 80px;
   height: 80px;
   background: linear-gradient(135deg, #4a90e2, #7b68ee);
-  border-radius: 50%;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,7 +274,7 @@
 /* Lab Information Section */
 .lab-info-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  border-radius: 20px;
+  border-radius: 0;
   padding: 4rem;
   margin-top: 4rem;
   text-align: center;
@@ -307,7 +307,7 @@
 
 .opportunity-card {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 0;
   padding: 2rem;
   border: 1px solid #e9ecef;
   transition: all 0.3s ease;
@@ -359,7 +359,7 @@
   background: linear-gradient(135deg, #4a90e2, #7b68ee);
   color: white;
   padding: 1rem 2rem;
-  border-radius: 50px;
+  border-radius: 0;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
@@ -477,12 +477,12 @@
 
 .person-card::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 .person-card::-webkit-scrollbar-thumb {
   background: #4a90e2;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 .person-card::-webkit-scrollbar-thumb:hover {
