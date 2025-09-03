@@ -77,14 +77,36 @@ const Research = () => {
           </motion.div>
 
           {/* Research Areas */}
-          <motion.h2 
-            className="section-title"
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            style={{ textAlign: 'center', margin: '4rem 0 2.5rem 0' }}
           >
-            Research Areas
-          </motion.h2>
+            <h2 style={{
+              fontSize: '2rem',
+              fontWeight: '600',
+              color: '#1e293b',
+              marginBottom: '0.5rem',
+              letterSpacing: '0.04em',
+              fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
+            }}>
+              Research Areas
+            </h2>
+            <div style={{
+              width: '300px',
+              height: '3px',
+              background: '#3b82f6',
+              margin: '0 auto 0 auto',
+              borderRadius: '2px',
+            }} />
+            <div style={{
+              width: '100%',
+              height: '1px',
+              background: '#e5e7eb',
+              margin: '2rem auto 0 auto',
+            }} />
+          </motion.div>
 
           {/* Research Areas - Flexbox Layout */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', maxWidth: '1000px', margin: '0 auto' }}>
@@ -125,7 +147,7 @@ const Research = () => {
               image={'/interface.jpg'}
               title={researchAreas[3].title}
               description={<span>
-                Our research focuses on building versatile tools to interface DNA and RNA nanostructures with both inorganic materials and biological systems, enabling precision control over physical phenomena and advancing biomedical applications. While our early work explored plasmonic coupling and chiral metamaterial behavior through DNA–inorganic hybrid systems, we believe the most transformative opportunities in nucleic acid nanotechnology will arise from its integration with living systems. Leveraging the programmability, biocompatibility, and sequence specificity of nucleic acids, we have developed platforms that incorporate rationally designed nanostructures into natural and synthetic cell environments, creating functional devices that operate autonomously in biological contexts. In collaboration with Ding, we introduced a DNA nanorobot that selectively delivers thrombin in response to tumor markers, inducing targeted tumor vessel thrombosis in vivo (Nat. Biotechnol. 2018, 36, 258–264). Building on this, we developed CytoDirect, a DNA nanodevice that bypasses endosomal trapping to deliver RNAs and small molecules directly into the cytoplasm (J. Am. Chem. Soc. 2023, 145, 27336–27347), and, with Chang, applied RNA origami nanostructures as potent, self-adjuvanted nanovaccines capable of eliciting robust anti-tumor immune responses (Science 2017, 358, eaao2648; ACS Nano 2020, 14, 4727–4740; ACS Nano 2024, 18, 4056–4067). We have also demonstrated DNA-templated scaffolds for organizing PROTAC components, providing spatially controlled protein degradation (J. Am. Chem. Soc., in revision). Beyond therapeutics, our work merges synthetic biology with nucleic acid nanotechnology: we showed that DNA assemblies can replicate within living cells while retaining structural integrity (Proc. Natl. Acad. Sci. USA 2008, 105, 17626–17631), engineered reversible DNA membrane channels to transport proteins across lipid bilayers (Nat. Commun. 2022, 13, 2271), and, in collaboration with Liu, developed autonomous DNA nanorobots that sense environmental cues, interact with lipid membranes, and perform localized mechanical and transport functions within synthetic cells (Nat. Mater. 2025, 24, 278–286). Together, these efforts demonstrate how nucleic acid nanotechnology can serve as a programmable interface between molecular design and living systems, advancing both synthetic biology and biomedical innovation.<br /><br />
+                Our research develops DNA and RNA nanostructures as programmable interfaces with both inorganic materials and biological systems. While early work focused on hybrid systems to study physical phenomena such as plasmonic coupling and chiral behavior, we see the greatest potential in integrating nucleic acid nanotechnology with living systems. By leveraging the programmability and biocompatibility of DNA and RNA, we design nanodevices that operate inside cells and synthetic environments with precision and autonomy. This includes therapeutic platforms such as DNA nanorobots for targeted drug delivery, RNA origami vaccines that stimulate robust immune responses, and nanostructures that enable direct cytoplasmic delivery of molecular payloads. Beyond medicine, we have engineered DNA-based protein transport channels and autonomous nanorobots for synthetic cells, creating systems that sense, respond, and perform functional tasks in biological contexts. Together, these efforts highlight how nucleic acid nanotechnology can serve as a powerful bridge between molecular design and living systems, advancing both synthetic biology and biomedical innovation.<br /><br />
                 <strong>Key Publications</strong><br />
                 Nat. Biotechnol. 2018, 36, 258–264<br />
                 J. Am. Chem. Soc. 2023, 145, 27336–27347<br />

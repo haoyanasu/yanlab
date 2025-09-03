@@ -1,13 +1,16 @@
 /* SectionBlock: side-by-side image and text layout */
 .section-block {
-	display: flex;
-	align-items: center;
-	background: none;
-	border-radius: 0;
-	box-shadow: none;
-	margin-bottom: 2rem;
-	padding: 2rem;
-	gap: 2rem;
+	 display: flex;
+	 align-items: center;
+	 background: none;
+	 border-radius: 0;
+	 box-shadow: none;
+	 border: none;
+	 transition: none;
+	 text-align: justify;
+	 margin-bottom: 0 !important;
+	 padding: 1.5rem 0 !important;
+	 gap: 2rem;
 }
 
 .section-block.reverse {
@@ -24,12 +27,13 @@
 }
 
 .section-block-image img {
-	max-width: 320px;
+	max-width: 780px;
 	width: 100%;
-	height: auto;
-	border-radius: 10px;
-	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-	background: none;
+	height: 520px;
+	object-fit: contain;
+	border-radius: 50%;
+	box-shadow: none;
+	background: transparent;
 	padding: 0;
 	display: block;
 }
