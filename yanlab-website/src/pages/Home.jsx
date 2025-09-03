@@ -7,17 +7,27 @@ const Home = () => {
     <main className="home-main-container">
       <div className="home-content-wrapper fade-in">
         <section className="page-content">
-          {/* Hero Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 style={{ fontSize: '1.2375rem', fontWeight: '800', color: '#0f172a', marginBottom: '1rem', textAlign: 'center' }}>THE YAN LAB</h1>
-            <p style={{ fontSize: '0.78375rem', fontWeight: '500', color: '#64748b', marginBottom: '2rem', textAlign: 'center' }}>
-              Advancing structural DNA nanotechnology and molecular design for biomedical applications
-            </p>
-          </motion.div>
+          {/* Hero Video Section */}
+          <div style={{ position: 'relative', width: '100%', borderRadius: '0', overflow: 'hidden', marginBottom: '2rem', boxShadow: '0 2px 16px rgba(0,0,0,0.08)' }}>
+            <video
+              src="/nanobots.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: '100%',
+                height: '400px',
+                objectFit: 'cover',
+                display: 'block',
+                borderRadius: '0',
+                background: '#000'
+              }}
+            />
+          </div>
+          <p style={{ fontSize: '0.78375rem', fontWeight: '500', color: '#64748b', marginBottom: '2rem', textAlign: 'center' }}>
+            Advancing structural DNA nanotechnology and molecular design for biomedical applications
+          </p>
 
           {/* Main Description */}
           <motion.div
