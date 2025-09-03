@@ -98,18 +98,45 @@ const Research = () => {
             <SectionBlock
               image={'/assembly.jpg'}
               title={researchAreas[1].title}
-              description={researchAreas[1].description}
+              description={<span>
+                We investigate how nucleic acid nanostructures form, evolve, and organize themselves over space and time, uncovering the thermodynamic and kinetic principles that govern their self-assembly. By characterizing nucleation rates, growth dynamics, and energy landscapes using AFM imaging, kinetic modeling, and crystallographic analysis, we have shown how subtle sequence variations in DNA junctions influence lattice symmetry, crystal resolution, and hierarchical assembly pathways. These mechanistic insights inform the rational design of scalable, programmable DNA architectures capable of spatio-temporal control, algorithmic growth, and environmentally triggered responses, bridging molecular-level understanding with emergent material behavior to emulate the precision and sophistication of natural morphogenesis.<br /><br />
+                <strong>Relevant publications:</strong><br />
+                J. Am. Chem. Soc. 2014, 136, 3724–3727<br />
+                ACS Nano 2017, 11, 9370–9381<br />
+                ACS Nano 2021, 15, 5384–5396<br />
+                Nature Communications 2022, 13, 3112
+              </span>}
               reverse
             />
             <SectionBlock
               image={'/function.jpg'}
               title={researchAreas[2].title}
-              description={researchAreas[2].description}
+              description={<span>
+                We explore DNA nanostructures as programmable scaffolds for organizing functional molecular and nanoscale components with nanometer precision. By directing the site-specific placement of inorganic nanoparticles, chromophores, enzymes, and biomolecules, our work has enabled the creation of multifunctional assemblies for sensing, actuation, signal processing, and energy transduction. Early studies established DNA-directed methods for templating gold nanoparticles, quantum dots, and other chemically conjugated materials to build hybrid nanostructures with applications in plasmonics, nanoelectronics, and catalysis. In parallel, we engineered light-harvesting and excitonic energy transfer systems inspired by photosynthetic complexes, positioning chromophores on DNA frameworks to study directional energy migration and tunable excitonic coupling for emerging quantum photonic devices. Additionally, we developed DNA-based multivalent ligand displays and enzyme cascades to probe spatial effects in biomolecular recognition and to enhance catalytic efficiency through substrate channeling. These integrated efforts demonstrate how DNA nanotechnology can bridge inorganic, photonic, and biological domains to create spatially precise hybrid systems with broad implications for synthetic biology, molecular computing, and advanced materials.<br /><br />
+                <strong>Relevant publications</strong><br />
+                Nature Nanotechnology 2008, 3, 418–422<br />
+                Science 2009, 323, 112–116<br />
+                Nature Materials 2018, 17, 159–166<br />
+                Nature Nanotechnology 2014, 9, 531–536<br />
+                Chem 2022, 8, 2442–2459
+              </span>}
             />
             <SectionBlock
               image={'/interface.jpg'}
               title={researchAreas[3].title}
-              description={researchAreas[3].description}
+              description={<span>
+                Our research focuses on building versatile tools to interface DNA and RNA nanostructures with both inorganic materials and biological systems, enabling precision control over physical phenomena and advancing biomedical applications. While our early work explored plasmonic coupling and chiral metamaterial behavior through DNA–inorganic hybrid systems, we believe the most transformative opportunities in nucleic acid nanotechnology will arise from its integration with living systems. Leveraging the programmability, biocompatibility, and sequence specificity of nucleic acids, we have developed platforms that incorporate rationally designed nanostructures into natural and synthetic cell environments, creating functional devices that operate autonomously in biological contexts. In collaboration with Ding, we introduced a DNA nanorobot that selectively delivers thrombin in response to tumor markers, inducing targeted tumor vessel thrombosis in vivo (Nat. Biotechnol. 2018, 36, 258–264). Building on this, we developed CytoDirect, a DNA nanodevice that bypasses endosomal trapping to deliver RNAs and small molecules directly into the cytoplasm (J. Am. Chem. Soc. 2023, 145, 27336–27347), and, with Chang, applied RNA origami nanostructures as potent, self-adjuvanted nanovaccines capable of eliciting robust anti-tumor immune responses (Science 2017, 358, eaao2648; ACS Nano 2020, 14, 4727–4740; ACS Nano 2024, 18, 4056–4067). We have also demonstrated DNA-templated scaffolds for organizing PROTAC components, providing spatially controlled protein degradation (J. Am. Chem. Soc., in revision). Beyond therapeutics, our work merges synthetic biology with nucleic acid nanotechnology: we showed that DNA assemblies can replicate within living cells while retaining structural integrity (Proc. Natl. Acad. Sci. USA 2008, 105, 17626–17631), engineered reversible DNA membrane channels to transport proteins across lipid bilayers (Nat. Commun. 2022, 13, 2271), and, in collaboration with Liu, developed autonomous DNA nanorobots that sense environmental cues, interact with lipid membranes, and perform localized mechanical and transport functions within synthetic cells (Nat. Mater. 2025, 24, 278–286). Together, these efforts demonstrate how nucleic acid nanotechnology can serve as a programmable interface between molecular design and living systems, advancing both synthetic biology and biomedical innovation.<br /><br />
+                <strong>Key Publications</strong><br />
+                Nat. Biotechnol. 2018, 36, 258–264<br />
+                J. Am. Chem. Soc. 2023, 145, 27336–27347<br />
+                Science 2017, 358, eaao2648<br />
+                ACS Nano 2020, 14, 4727–4740<br />
+                ACS Nano 2024, 18, 4056–4067<br />
+                J. Am. Chem. Soc. (in revision)<br />
+                Proc. Natl. Acad. Sci. USA 2008, 105, 17626–17631<br />
+                Nat. Commun. 2022, 13, 2271<br />
+                Nat. Mater. 2025, 24, 278–286
+              </span>}
               reverse
             />
           </div>
