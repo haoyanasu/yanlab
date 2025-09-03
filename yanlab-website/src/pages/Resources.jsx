@@ -399,8 +399,7 @@ const Resources = () => {
                       color: pub.type === 'Review' ? '#f59e0b' : '#3b82f6',
                       padding: '0.25rem 0.75rem',
                       borderRadius: '4px',
-                      fontSize: '0.78375rem', fontWeight: '500',
-                      fontWeight: '600'
+                        fontSize: '0.78375rem', fontWeight: '600'
                     }}>
                       {pub.type}
                     </span>
