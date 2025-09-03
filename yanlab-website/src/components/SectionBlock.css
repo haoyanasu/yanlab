@@ -33,7 +33,9 @@
 }
 
 .section-block-text {
-	flex: 2 1 400px;
+	flex: 2 1 700px;
+	text-align: left;
+	max-width: 900px;
 }
 
 .section-block-text h3 {
@@ -46,5 +48,7 @@
 .section-block-text p {
 	font-size: 1.05rem;
 	color: #475569;
-	line-height: 1.7;
+	line-height: 1.5;
+	max-width: 900px;
+	margin: 0;
 }

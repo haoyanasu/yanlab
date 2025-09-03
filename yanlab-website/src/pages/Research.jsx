@@ -48,8 +48,8 @@ const Research = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            style={{ textAlign: 'left' }}
           >
-            <h1 className="page-title">Research</h1>
             <p className="page-subtitle">
               Exploring the frontiers of DNA nanotechnology and molecular design
             </p>
