@@ -4,8 +4,10 @@ import Home from './pages/Home';
 import Research from './pages/Research';
 import People from './pages/People';
 // import Publications from './pages/Publications';
+
 import News from './pages/News';
 import Resources from './pages/Resources';
+import Contact from './pages/Contact';
 import './App.css';
 
 function AppContent() {
@@ -22,6 +24,7 @@ function AppContent() {
   {/* <Route path="/publications" element={<Publications />} /> */}
         <Route path="/news" element={<News />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );

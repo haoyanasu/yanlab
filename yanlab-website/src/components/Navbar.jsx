@@ -12,7 +12,8 @@ const Navbar = () => {
     { path: '/research', label: 'Research' },
     { path: '/team', label: 'People' },
     { path: '/news', label: 'News' },
-    { path: '/resources', label: 'Resources' }
+    { path: '/resources', label: 'Resources' },
+    { path: '/contact', label: 'Contact' }
   ];
 
   return (
