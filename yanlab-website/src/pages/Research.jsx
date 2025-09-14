@@ -50,29 +50,32 @@ const Research = () => {
             transition={{ duration: 0.8 }}
             style={{ textAlign: 'left' }}
           >
-            <p className="page-subtitle">
+            <p className="page-subtitle" style={{
+              fontWeight: 700,
+              fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
+            }}>
               Exploring the frontiers of DNA nanotechnology and molecular design
             </p>
           </motion.div>
 
           {/* Mission Statement */}
           <motion.div
-            className="card"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 style={{ fontSize: '1.2375rem', fontWeight: '600', marginBottom: '1rem', color: '#1e293b' }}>
-              Our Mission
-            </h3>
-            <p style={{ fontSize: '0.9075rem', lineHeight: '1.8', color: '#475569', marginBottom: '1rem' }}>
-              The Yan Lab focuses on the rational design and engineering of DNA nanostructures for applications 
-              in biotechnology, medicine, and materials science. We develop innovative approaches to create 
-              programmable molecular systems that can sense, compute, and respond to their environment.
-            </p>
-            <p style={{ fontSize: '0.9075rem', lineHeight: '1.8', color: '#475569' }}>
-              Our interdisciplinary research combines principles from chemistry, biology, physics, and engineering 
-              to push the boundaries of what's possible at the molecular scale.
+            <p style={{
+              fontSize: '0.9075rem',
+              lineHeight: '1.8',
+              color: '#475569',
+              margin: 0,
+              textAlign: 'justify',
+              width: '100%',
+              maxWidth: 'none',
+              fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
+              fontWeight: 400
+            }}>
+              The Yan Lab focuses on the rational design and engineering of DNA nanostructures for applications in biotechnology, medicine, and materials science. We develop innovative approaches to create programmable molecular systems that can sense, compute, and respond to their environment. Our interdisciplinary research combines principles from chemistry, biology, physics, and engineering to push the boundaries of what's possible at the molecular scale.
             </p>
           </motion.div>
 
@@ -103,7 +106,7 @@ const Research = () => {
             <div style={{
               width: '100%',
               height: '1px',
-              background: '#e5e7eb',
+              background: 'transparent',
               margin: '2rem auto 0 auto',
             }} />
           </motion.div>
@@ -117,7 +120,7 @@ const Research = () => {
                 Our research focuses on designing programmable DNA nanostructures by encoding structural and functional instructions directly into DNA sequences, leveraging predictable base-pairing and versatile junctions to create precise, tunable architectures. From early demonstrations of DNA as a scaffold for ordered lattices and 3D crystals to engineering assemblies with atomic-level precision, we have shown how DNA can organize matter and host molecules for structural studies. We pioneered complex DNA and RNA origami, folding long strands into intricate 2D and 3D shapes for applications in dynamic devices and biomedical platforms, and collaborated with computer scientists to develop automated design tools that streamline the creation of reconfigurable nanostructures, programmable patterns, and molecular computing devices. Together, these efforts have built an integrated design ecosystem—from simple DNA tiles to sophisticated crystalline lattices—that advances nanoscale control of matter and paves the way for future breakthroughs in nanotechnology, computation, and medicine.
               </span>}
             />
-            <div style={{ width: '100%', height: '1px', background: '#e5e7eb', margin: '2rem auto' }} />
+            <div style={{ width: '100%', height: '1.5px', background: '#e5e7eb', margin: '2.5rem 0', borderRadius: '1px' }} />
             <SectionBlock
               image={'/assembly.jpg'}
               title={researchAreas[1].title}
@@ -131,7 +134,7 @@ const Research = () => {
               </span>}
               reverse
             />
-            <div style={{ width: '100%', height: '1px', background: '#e5e7eb', margin: '2rem auto' }} />
+            <div style={{ width: '100%', height: '1px', background: 'transparent', margin: '2rem auto' }} />
             <SectionBlock
               image={'/function.jpg'}
               title={researchAreas[2].title}
@@ -145,7 +148,7 @@ const Research = () => {
                 Chem 2022, 8, 2442–2459
               </span>}
             />
-            <div style={{ width: '100%', height: '1px', background: '#e5e7eb', margin: '2rem auto' }} />
+            <div style={{ width: '100%', height: '1px', background: 'transparent', margin: '2rem auto' }} />
             <SectionBlock
               image={'/interface.jpg'}
               title={researchAreas[3].title}
@@ -199,19 +202,6 @@ const Research = () => {
               borderBottom: '2px solid #e5e7eb',
               padding: '2.5rem 0'
             }}>
-              {/* Row 1 */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
-                <img src="/aro.png" alt="Army Research Office" style={{ maxHeight: '80px', maxWidth: '100%' }} />
-                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>Army Research Office</div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
-                <img src="/doe.png" alt="Department of Energy" style={{ maxHeight: '80px', maxWidth: '100%' }} />
-                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>Department of Energy</div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
-                <img src="/don.png" alt="Department of Navy" style={{ maxHeight: '80px', maxWidth: '100%' }} />
-                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>Department of Navy</div>
-              </div>
               {/* Row 2 */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
                 <img src="/nih.png" alt="National Institutes of Health" style={{ maxHeight: '80px', maxWidth: '100%' }} />
@@ -222,8 +212,8 @@ const Research = () => {
                 <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>National Science Foundation</div>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '120px' }}>
-                <img src="/pharma.png" alt="PhRMA Foundation" style={{ maxHeight: '80px', maxWidth: '100%' }} />
-                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>PhRMA Foundation</div>
+                <img src="/flinn.png" alt="Flinn Foundation" style={{ maxHeight: '80px', maxWidth: '100%' }} />
+                <div style={{ marginTop: '0.75rem', fontSize: '1rem', color: '#334155', fontWeight: '500', textAlign: 'center' }}>Flinn Foundation</div>
               </div>
             </div>
           </motion.div>

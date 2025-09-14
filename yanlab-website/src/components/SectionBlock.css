@@ -2,11 +2,11 @@
 .section-block {
 	display: flex;
 	align-items: center;
-	background: #fff;
-	border-radius: 12px;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
 	margin-bottom: 2rem;
-	padding: 2rem;
+	padding: 0;
 	gap: 2rem;
 }
 
@@ -25,10 +25,10 @@
 	max-width: 320px;
 	width: 100%;
 	height: auto;
-	border-radius: 10px;
-	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-	background: #fff;
-	padding: 2rem;
+	border-radius: 0;
+	box-shadow: none;
+	background: transparent;
+	padding: 0;
 	display: block;
 }
 
@@ -43,12 +43,16 @@
 	font-weight: 700;
 	margin-bottom: 1rem;
 	color: #1e293b;
+	font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .section-block-text p {
-	font-size: 1.05rem;
+	font-size: 0.9075rem;
 	color: #475569;
-	line-height: 1.5;
+	line-height: 1.8;
 	max-width: 900px;
 	margin: 0;
+	font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+	font-weight: 400;
+	text-align: justify;
 }
