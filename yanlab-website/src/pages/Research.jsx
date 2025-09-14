@@ -41,7 +41,7 @@ const Research = () => {
 
   return (
     <main className="research-main-container">
-      <div className="research-content-wrapper fade-in">
+  <div className="research-content-wrapper fade-in" style={{ background: 'rgba(255,255,255,0.65)', backdropFilter: 'blur(6px)', borderRadius: 0 }}>
         <section className="page-content">
           {/* Header */}
           <motion.div
@@ -158,12 +158,7 @@ const Research = () => {
                 Nat. Biotechnol. 2018, 36, 258–264<br />
                 J. Am. Chem. Soc. 2023, 145, 27336–27347<br />
                 Science 2017, 358, eaao2648<br />
-                ACS Nano 2020, 14, 4727–4740<br />
-                ACS Nano 2024, 18, 4056–4067<br />
-                J. Am. Chem. Soc. (in revision)<br />
-                Proc. Natl. Acad. Sci. USA 2008, 105, 17626–17631<br />
-                Nat. Commun. 2022, 13, 2271<br />
-                Nat. Mater. 2025, 24, 278–286
+                ACS Nano 2020, 14, 4727–4740
               </span>}
               reverse
             />

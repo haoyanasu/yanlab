@@ -5,7 +5,7 @@ import { FaDna, FaMicroscope, FaAtom } from 'react-icons/fa';
 const Home = () => {
   return (
     <main className="home-main-container">
-      <div className="home-content-wrapper fade-in">
+      <div className="home-content-wrapper fade-in" style={{ background: 'rgba(255,255,255,0.65)', backdropFilter: 'blur(6px)', borderRadius: 0 }}>
         <section className="page-content">
           {/* Hero Video Section */}
           <div style={{ position: 'relative', width: '100%', borderRadius: '0', overflow: 'hidden', marginBottom: '2rem', boxShadow: '0 2px 16px rgba(0,0,0,0.08)' }}>

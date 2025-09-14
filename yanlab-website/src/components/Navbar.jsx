@@ -11,14 +11,13 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/research', label: 'Research' },
     { path: '/team', label: 'People' },
-    { path: '/publications', label: 'Publications' },
     { path: '/news', label: 'News' },
     { path: '/resources', label: 'Resources' }
   ];
 
   return (
     <nav style={{
-      background: 'rgba(255, 255, 255, 0.95)',
+      background: 'rgba(255, 255, 255, 0.65)',
       backdropFilter: 'blur(10px)',
       borderBottom: '1px solid #e2e8f0',
       padding: '1rem 0',
