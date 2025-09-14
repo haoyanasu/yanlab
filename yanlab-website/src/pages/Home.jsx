@@ -25,18 +25,19 @@ const Home = () => {
               }}
             />
           </div>
+
+
           <p style={{ fontSize: '0.78375rem', fontWeight: '500', color: '#64748b', marginBottom: '2rem', textAlign: 'center' }}>
             Advancing structural DNA nanotechnology and molecular design for biomedical applications
           </p>
 
           {/* Main Description */}
           <motion.div
-            className="card mt-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p style={{ fontSize: '0.78375rem', fontWeight: '500', lineHeight: '1.8', color: '#475569' }}>
+            <p style={{ fontSize: '1.125rem', fontWeight: '400', lineHeight: '1.7', color: '#374151', background: 'none', textAlign: 'center', margin: '0 auto', maxWidth: '1000px' }}>
               Our laboratory focuses on the rational design and engineering of DNA nanostructures 
               for applications in biotechnology, medicine, and materials science. We develop innovative 
               approaches to create programmable molecular systems that can sense, compute, and respond 

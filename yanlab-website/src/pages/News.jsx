@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaTrophy, FaGraduationCap } from 'react-icons/fa';
 
 
 const News = () => {
@@ -702,7 +704,7 @@ const News = () => {
               style={{
                 display: 'flex',
                 justifyContent: 'center',
-                marginBottom: '3rem'
+                marginBottom: '2.5rem'
               }}
             >
               <img 
@@ -717,6 +719,34 @@ const News = () => {
                 }}
               />
             </motion.div>
+
+            {/* YouTube Videos Row */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', gap: 0, marginBottom: '2.5rem', flexWrap: 'wrap' }}>
+              <div style={{ flex: 1, minWidth: 280, display: 'flex', justifyContent: 'flex-end' }}>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/4ZF-PHp6Soc"
+                  title="YouTube video player 1"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  style={{ maxWidth: 420, borderRadius: 0, boxShadow: '0 2px 12px rgba(0,0,0,0.07)', marginRight: 0 }}
+                ></iframe>
+              </div>
+              <div style={{ flex: 1, minWidth: 280, display: 'flex', justifyContent: 'flex-start' }}>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/_TOzkOIhEKE"
+                  title="YouTube video player 2"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  style={{ maxWidth: 420, borderRadius: 0, boxShadow: '0 2px 12px rgba(0,0,0,0.07)', marginLeft: 0 }}
+                ></iframe>
+              </div>
+            </div>
           </motion.div>
 
 
@@ -777,20 +807,26 @@ const News = () => {
                   {item.description}
                 </p>
                 {/* Type Badge on the right, floated */}
-                <span style={{
-                  position: 'absolute',
-                  top: '1.5rem',
-                  right: 0,
-                  background: `${item.color}20`,
-                  color: item.color,
-                  padding: '0.25rem 0.75rem',
-                  borderRadius: '4px',
-                  fontSize: '0.78375rem', fontWeight: '600',
-                  textTransform: 'capitalize',
-                  minWidth: '90px',
-                  textAlign: 'center'
-                }}>
-                  {item.type}
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '1.5rem',
+                    right: 0,
+                    color: item.color,
+                    fontSize: '1.3rem',
+                    fontWeight: '600',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  {item.type === 'award' && <FaTrophy style={{ color: item.color, fontSize: '1.3rem' }} />}
+                  {item.type === 'defense' && <FaGraduationCap style={{ color: item.color, fontSize: '1.3rem' }} />}
+                  {item.type !== 'award' && item.type !== 'defense' && (
+                    <span style={{ textTransform: 'capitalize', fontSize: '0.78375rem', color: item.color }}>
+                      {item.type}
+                    </span>
+                  )}
                 </span>
               </motion.div>
             ))}

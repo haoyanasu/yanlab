@@ -1,442 +1,120 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBook, FaCode, FaDatabase, FaDownload, FaExternalLinkAlt, FaDna, FaGraduationCap, FaLaptopCode } from 'react-icons/fa';
+import { FaLaptopCode, FaExternalLinkAlt } from 'react-icons/fa';
+
+
+const scientificTools = [
+  { name: 'Mfold', link: 'http://frontend.bioinfo.rpi.edu/applications/mfold/', desc: 'by Michael Zuker at Rensselaer Polytechnic Institute.' },
+  { name: 'Nanoengineer-1', link: 'http://nanoengineer-1.com/content/', desc: 'by Nanorex.' },
+  { name: 'NUPACK', link: 'http://nupack.org/', desc: 'by Niles Pierce and Colleagues at Caltech.' },
+  { name: 'Fluorescence SpectraViewer', link: 'http://www.invitrogen.com/site/us/en/home/support/Research-Tools/Fluorescence-SpectraViewer.html', desc: 'by Invitrogen.' },
+  { name: 'Oligo Analyzer', link: 'http://www.idtdna.com/Scitools/Scitools.aspx', desc: 'by Integrated DNA Technologies.' },
+  { name: 'caDNAno', link: 'http://cadnano.org/', desc: 'by Shawn Douglas and William Shih at Harvard.' },
+  { name: 'CanDo', link: 'http://cando-dna-origami.org/', desc: 'by Mark Bathe at MIT.' },
+  { name: 'SARSE-DNA origami', link: 'http://www.cdna.dk/index.php/software.html', desc: 'by Kurt Gothelf and Colleagues at Aarhus.' },
+];
+
+const dnaLabs = [
+  { name: 'Paul Alivisatos Lab', link: 'http://www.cchem.berkeley.edu/pagrp/', inst: 'UC Berkeley' },
+  { name: 'Mark Bathe Lab', link: 'http://lcbb.mit.edu/index.html', inst: 'MIT' },
+  { name: 'Hendrik Dietz Lab', link: 'http://bionano.physik.tu-muenchen.de/', inst: 'TU Munchen' },
+  { name: 'Chunhai Fan Lab', link: 'http://www.sinap.ac.cn/physbio/index-en.htm', inst: 'Shanghai Institute of Applied Physics' },
+  { name: 'Deborah Fygenson Lab', link: 'http://www.physics.ucsb.edu/~deborah/', inst: 'UCSB' },
+  { name: 'Kurt Gothelf Lab', link: 'http://www.cdna.dk/index.php/home.html', inst: 'Aarhus' },
+  { name: 'Luc Jaeger Lab', link: 'http://www.chem.ucsb.edu/people/faculty/jaeger/', inst: 'UCSB' },
+  { name: 'Makoto Komiyama', link: 'http://www.mkomi.rcast.u-tokyo.ac.jp/index_e_link_e.html', inst: 'U of Tokyo' },
+  { name: 'Yamuna Krishnan Lab', link: 'http://www.ncbs.res.in/index.php?option=com_content&task=view&id=60&Itemid=69', inst: 'NCBS' },
+  { name: 'Thom LaBean Lab', link: 'http://www.cs.duke.edu/~thl/', inst: 'Duke' },
+  { name: 'Tim Liedl Lab', link: 'http://www.softmatter.physik.uni-muenchen.de/tiki-index.php?page=GroupLiedlHome', inst: 'LMU Munchen' },
+  { name: 'Dongsheng Liu Lab', link: 'http://liuds.chem.tsinghua.edu.cn/LabTour.html', inst: 'Tsinghua' },
+  { name: 'Dan Luo Lab', link: 'http://luolabs.bee.cornell.edu/index.html', inst: 'Cornell' },
+  { name: 'Chengde Mao Lab', link: 'http://www.chem.purdue.edu/people/faculty/faculty.asp?itemID=46', inst: 'Purdue' },
+  { name: 'Michael Mertig Lab', link: 'http://www.digs-bb.de/digs-bb/research-groups/Mertig', inst: 'Dresden' },
+  { name: 'Yongli Mi Lab', link: 'http://ihome.ust.hk/~keymix/', inst: 'HKUST' },
+  { name: 'Christof Niemeyer', link: 'http://www.chemie.uni-dortmund.de/groups/niemeyer/index.html', inst: 'Dortmund' },
+  { name: 'Niles Pierce Lab', link: 'http://www.piercelab.caltech.edu/', inst: 'Caltech' },
+  { name: 'John Reif Lab', link: 'http://www.cs.duke.edu/~reif/', inst: 'Duke' },
+  { name: 'Paul Rothemund Lab', link: 'http://www.dna.caltech.edu/~pwkr/', inst: 'Caltech' },
+  { name: 'Ned Seeman Lab', link: 'http://seemanlab4.chem.nyu.edu/', inst: 'NYU' },
+  { name: 'William Shih Lab', link: 'http://research2.dfci.harvard.edu/shih/SHIH_LAB/Home.html', inst: 'Harvard' },
+  { name: 'Fritz Simmel Lab', link: 'http://www.e14.ph.tum.de/', inst: 'LMU' },
+  { name: 'Hanadi Sleiman Lab', link: 'http://www.hanadisleiman.com/', inst: 'McGill' },
+  { name: 'Milan Stojanovic Lab', link: 'https://digamma.cs.unm.edu/wiki/bin/view/McogPublicWeb/WebHome', inst: 'Columbia' },
+  { name: 'Hiroshi Sugiyama Lab', link: 'http://kuchem.kyoto-u.ac.jp/chembio/', inst: 'Kyoto U' },
+  { name: 'Andrew Turberfield Lab', link: 'http://www.physics.ox.ac.uk/cm/people/turberfield.htm', inst: 'Oxford' },
+  { name: 'Itamar Willner Lab', link: 'http://chem.ch.huji.ac.il/willner/', inst: 'Hebrew' },
+  { name: 'Erik Winfree Lab', link: 'http://www.dna.caltech.edu/', inst: 'Caltech' },
+  { name: 'Peng Yin Lab', link: 'http://yinlab.org/', inst: 'Harvard' },
+  { name: 'Bernie Yurke Lab', link: 'http://coen.boisestate.edu/departments/faculty.asp?ID=134', inst: 'BSU' },
+];
+
+const downloads = [
+  { name: 'Tiamat (Windows)', link: 'https://www.yanlab-asu.com/Tiamat.exe', desc: 'Graphical user interface program for the design of DNA nanostructures and sequences.' },
+  { name: 'Tiamat User Manual', link: 'http://link.springer.com/chapter/10.1007%2F978-3-642-03076-5_8', desc: 'User manual for Tiamat.' },
+  { name: 'Tiamat 2.exe', link: 'https://www.yanlab-asu.com/Tiamat%202.exe', desc: 'New version of Tiamat with RNA design, user-defined constraints, and oxDNA-friendly export.' },
+  { name: 'Double crossover (DAE) tile (.dna)', link: 'https://www.yanlab-asu.com/DX.dna', desc: 'DNA model file.' },
+  { name: '4x4 tile (.dna)', link: 'https://www.yanlab-asu.com/4x4.dna', desc: 'DNA model file.' },
+  { name: 'Four-helix tile (.dna)', link: 'https://www.yanlab-asu.com/4%20HT.dna', desc: 'DNA model file.' },
+  { name: 'Tetrahedron (.dna)', link: 'https://www.yanlab-asu.com/tetrahedron.dna', desc: 'DNA model file.' },
+  { name: 'Rectangular origami (.dna)', link: 'https://www.yanlab-asu.com/origami.dna', desc: 'DNA model file.' },
+  { name: '4x4 tile animation (.asf)', link: 'https://www.yanlab-asu.com/4x4.asf', desc: 'Cartoon animation using Tiamat.' },
+  { name: 'Three-helix bundle animation (.asf)', link: 'https://www.yanlab-asu.com/3%20helix%20bundle.asf', desc: 'Cartoon animation using Tiamat.' },
+  { name: 'Tetrahedron animation (.asf)', link: 'https://www.yanlab-asu.com/tetrahedron.asf', desc: 'Cartoon animation using Tiamat.' },
+];
 
 const Resources = () => {
-  const resources = [
-    {
-      category: "Software & Tools",
-      icon: FaLaptopCode,
-      color: "#3b82f6",
-      items: [
-        {
-          name: "DNA Designer",
-          description: "Web-based tool for designing DNA origami structures and predicting folding patterns.",
-          type: "Web Tool",
-          link: "#"
-        },
-        {
-          name: "Sequence Analyzer",
-          description: "Python package for analyzing DNA sequences and optimizing strand design.",
-          type: "Python Package",
-          link: "#"
-        },
-        {
-          name: "Nanostructure Simulator",
-          description: "Molecular dynamics simulation software specifically designed for DNA nanostructures.",
-          type: "Software",
-          link: "#"
-        }
-      ]
-    },
-    {
-      category: "Databases",
-      icon: FaDatabase,
-      color: "#10b981",
-      items: [
-        {
-          name: "DNA Origami Library",
-          description: "Comprehensive database of DNA origami designs with detailed structural information.",
-          type: "Database",
-          link: "#"
-        },
-        {
-          name: "Sequence Repository",
-          description: "Collection of optimized DNA sequences for various nanotechnology applications.",
-          type: "Repository",
-          link: "#"
-        },
-        {
-          name: "Structure Gallery",
-          description: "Visual gallery of DNA nanostructures with 3D models and experimental data.",
-          type: "Gallery",
-          link: "#"
-        }
-      ]
-    },
-    {
-      category: "Protocols & Methods",
-      icon: FaDna,
-      color: "#f59e0b",
-      items: [
-        {
-          name: "DNA Origami Synthesis",
-          description: "Step-by-step protocol for synthesizing DNA origami structures in the laboratory.",
-          type: "Protocol",
-          link: "#"
-        },
-        {
-          name: "Purification Methods",
-          description: "Advanced techniques for purifying and characterizing DNA nanostructures.",
-          type: "Method",
-          link: "#"
-        },
-        {
-          name: "Imaging Guidelines",
-          description: "Best practices for AFM and TEM imaging of DNA nanostructures.",
-          type: "Guide",
-          link: "#"
-        }
-      ]
-    },
-    {
-      category: "Educational Materials",
-      icon: FaGraduationCap,
-      color: "#8b5cf6",
-      items: [
-        {
-          name: "Introduction to DNA Nanotechnology",
-          description: "Comprehensive course materials covering the fundamentals of DNA nanotechnology.",
-          type: "Course",
-          link: "#"
-        },
-        {
-          name: "Video Lectures",
-          description: "Collection of recorded lectures on advanced topics in molecular design.",
-          type: "Videos",
-          link: "#"
-        },
-        {
-          name: "Interactive Tutorials",
-          description: "Hands-on tutorials for learning DNA structure design and analysis.",
-          type: "Tutorial",
-          link: "#"
-        }
-      ]
-    }
-  ];
-
-  const publications = [
-    {
-      title: "DNA Nanotechnology: Foundations and Applications",
-      authors: "Yan, H., et al.",
-      journal: "Nature Reviews Materials",
-      year: "2024",
-      type: "Review"
-    },
-    {
-      title: "Programmable DNA Nanostructures for Biomedical Applications",
-      authors: "Yan, H., et al.",
-      journal: "Science",
-      year: "2023",
-      type: "Research"
-    },
-    {
-      title: "Advances in DNA Origami Design and Synthesis",
-      authors: "Yan, H., et al.",
-      journal: "Chemical Reviews",
-      year: "2023",
-      type: "Review"
-    }
-  ];
-
   return (
     <main className="resources-main-container">
       <div className="resources-content-wrapper fade-in" style={{ borderRadius: 0 }}>
         <section className="page-content">
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="page-title">Resources</h1>
-            <p className="page-subtitle">
-              Tools, databases, protocols, and educational materials for DNA nanotechnology research
-            </p>
-          </motion.div>
-
-          {/* Quick Access */}
-          <motion.div
-            className="card"
-            style={{ background: 'linear-gradient(135deg, #1e293b, #334155)', color: 'white' }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <h3 style={{ fontSize: '1.2375rem', marginBottom: '1.5rem' }}>Quick Access</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
-              <a 
-                href="#software" 
-                style={{ 
-                  color: 'white', 
-                  textDecoration: 'none', 
-                  padding: '1rem', 
-                  background: 'rgba(255,255,255,0.1)', 
-                  borderRadius: '4px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.75rem',
-                  transition: 'background 0.2s ease'
-                }}
-                onMouseOver={(e) => e.target.style.background = 'rgba(255,255,255,0.2)'}
-                onMouseOut={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}
-              >
-                <FaLaptopCode style={{ fontSize: '1.2375rem' }} />
-                <div>
-                  <div style={{ fontWeight: '600' }}>Software Tools</div>
-                  <div style={{ fontSize: '0.70125rem', opacity: '0.8' }}>Design & Analysis</div>
-                </div>
-              </a>
-              
-              <a 
-                href="#databases" 
-                style={{ 
-                  color: 'white', 
-                  textDecoration: 'none', 
-                  padding: '1rem', 
-                  background: 'rgba(255,255,255,0.1)', 
-                  borderRadius: '4px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.75rem',
-                  transition: 'background 0.2s ease'
-                }}
-                onMouseOver={(e) => e.target.style.background = 'rgba(255,255,255,0.2)'}
-                onMouseOut={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}
-              >
-                <FaDatabase style={{ fontSize: '1.2375rem' }} />
-                <div>
-                  <div style={{ fontWeight: '600' }}>Databases</div>
-                  <div style={{ fontSize: '0.70125rem', opacity: '0.8' }}>Structures & Sequences</div>
-                </div>
-              </a>
-              
-              <a 
-                href="#protocols" 
-                style={{ 
-                  color: 'white', 
-                  textDecoration: 'none', 
-                  padding: '1rem', 
-                  background: 'rgba(255,255,255,0.1)', 
-                  borderRadius: '4px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.75rem',
-                  transition: 'background 0.2s ease'
-                }}
-                onMouseOver={(e) => e.target.style.background = 'rgba(255,255,255,0.2)'}
-                onMouseOut={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}
-              >
-                                    <FaDna style={{ fontSize: '1.2375rem' }} />
-                <div>
-                  <div style={{ fontWeight: '600' }}>Protocols</div>
-                  <div style={{ fontSize: '0.70125rem', opacity: '0.8' }}>Methods & Procedures</div>
-                </div>
-              </a>
-              
-              <a 
-                href="#education" 
-                style={{ 
-                  color: 'white', 
-                  textDecoration: 'none', 
-                  padding: '1rem', 
-                  background: 'rgba(255,255,255,0.1)', 
-                  borderRadius: '4px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.75rem',
-                  transition: 'background 0.2s ease'
-                }}
-                onMouseOver={(e) => e.target.style.background = 'rgba(255,255,255,0.2)'}
-                onMouseOut={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}
-              >
-                <FaGraduationCap style={{ fontSize: '1.2375rem' }} />
-                <div>
-                  <div style={{ fontWeight: '600' }}>Education</div>
-                  <div style={{ fontSize: '0.70125rem', opacity: '0.8' }}>Courses & Tutorials</div>
-                </div>
-              </a>
+            <p className="page-subtitle">Downloads, scientific tools, and links to labs in DNA nanotechnology</p>
+            <div style={{ margin: '1.5rem 0 2.5rem 0', color: '#334155', fontSize: '1.05rem', maxWidth: 800 }}>
+              In collaboration with Sean Williams (Programmer, now at UC Davis), Peter Wonka (ASU) and Stuart Lindsay (ASU), we developed a graphical user interface program for the design of DNA nanostructures and sequences. Please click to download this program and a user manual associated with it.
             </div>
           </motion.div>
 
-          {/* Resource Categories */}
-          {resources.map((category, categoryIndex) => (
-            <motion.div
-              key={categoryIndex}
-              id={category.category.toLowerCase().replace(/\s+/g, '')}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 + categoryIndex * 0.2 }}
-            >
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '0.75rem',
-                margin: '3rem 0 1.5rem 0'
-              }}>
-                <category.icon style={{ fontSize: '1.2375rem', color: category.color }} />
-                <h2 className="section-title" style={{ margin: 0 }}>{category.category}</h2>
-              </div>
-
-              <div style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-                gap: '1.5rem',
-                maxWidth: '1000px',
-                margin: '0 auto'
-              }}>
-                {category.items.map((item, itemIndex) => (
-                  <motion.div
-                    key={itemIndex}
-                    className="card"
-                    style={{ 
-                      textAlign: 'left',
-                      border: '1px solid #e2e8f0',
-                      position: 'relative',
-                      paddingBottom: '3rem'
-                    }}
-                    whileHover={{ y: -3, transition: { duration: 0.2 } }}
-                  >
-                    <div style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'start',
-                      marginBottom: '1rem'
-                    }}>
-                      <h3 style={{
-                        fontSize: '1.03125rem',
-                        fontWeight: '600',
-                        color: '#1e293b',
-                        margin: 0
-                      }}>
-                        {item.name}
-                      </h3>
-                      <span style={{
-                        background: `${category.color}20`,
-                        color: category.color,
-                        padding: '0.25rem 0.75rem',
-                        borderRadius: '4px',
-                        fontSize: '0.78375rem',
-                        fontWeight: '600'
-                      }}>
-                        {item.type}
-                      </span>
-                    </div>
-
-                    <p style={{
-                      color: '#64748b',
-                      lineHeight: '1.6',
-                      marginBottom: '1rem'
-                    }}>
-                      {item.description}
-                    </p>
-
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '1rem',
-                      left: '2rem',
-                      right: '2rem'
-                    }}>
-                      <a
-                        href={item.link}
-                        className="btn"
-                        style={{
-                          background: category.color,
-                          fontSize: '0.78375rem', fontWeight: '500',
-                          padding: '0.5rem 1rem',
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '0.5rem'
-                        }}
-                      >
-                        <FaExternalLinkAlt style={{ fontSize: '0.78375rem', fontWeight: '500' }} />
-                        Access Resource
-                      </a>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-
-          {/* Key Publications */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-          >
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.75rem',
-              margin: '3rem 0 1.5rem 0'
-            }}>
-              <FaBook style={{ fontSize: '1.2375rem', color: '#ef4444' }} />
-              <h2 className="section-title" style={{ margin: 0 }}>Key Publications</h2>
-            </div>
-
-            <div className="card" style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto' }}>
-              {publications.map((pub, index) => (
-                <div
-                  key={index}
-                  style={{
-                    padding: '1.5rem 0',
-                    borderBottom: index < publications.length - 1 ? '1px solid #e2e8f0' : 'none'
-                  }}
-                >
-                  <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'start',
-                    marginBottom: '0.5rem',
-                    flexWrap: 'wrap',
-                    gap: '0.5rem'
-                  }}>
-                    <h3 style={{
-                      fontSize: '0.78375rem',
-                      fontWeight: '600',
-                      color: '#1e293b',
-                      margin: 0,
-                      flex: 1
-                    }}>
-                      {pub.title}
-                    </h3>
-                    <span style={{
-                      background: pub.type === 'Review' ? '#f59e0b20' : '#3b82f620',
-                      color: pub.type === 'Review' ? '#f59e0b' : '#3b82f6',
-                      padding: '0.25rem 0.75rem',
-                      borderRadius: '4px',
-                        fontSize: '0.78375rem', fontWeight: '600'
-                    }}>
-                      {pub.type}
-                    </span>
-                  </div>
-                  <p style={{ color: '#64748b', marginBottom: '0.25rem' }}>
-                    {pub.authors}
-                  </p>
-                  <p style={{ color: '#1e293b', fontWeight: '600' }}>
-                    {pub.journal} ({pub.year})
-                  </p>
-                </div>
+          {/* Downloads */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+            <h2 className="section-title" style={{ marginTop: '2.5rem' }}>Downloads</h2>
+            <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0 }}>
+              {downloads.map((item, idx) => (
+                <li key={idx} style={{ marginBottom: '0.5rem' }}>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: '#3b82f6' }}>{item.name}</a>
+                  {item.desc && <span style={{ marginLeft: 8, color: '#64748b' }}>— {item.desc}</span>}
+                </li>
               ))}
-              <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
-                <a href="/publications" className="btn">
-                  View All Publications
-                </a>
-              </div>
-            </div>
+            </ul>
           </motion.div>
 
-          {/* Contact */}
-          <motion.div
-            className="card"
-            style={{ background: 'linear-gradient(135deg, #ef4444, #dc2626)', color: 'white' }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
-          >
-            <h3 style={{ fontSize: '1.2375rem', marginBottom: '1rem' }}>Need Help?</h3>
-            <p style={{ marginBottom: '1.5rem', opacity: '0.9' }}>
-              Can't find what you're looking for? Contact us for assistance with protocols, 
-              software usage, or access to additional resources.
-            </p>
-            <a href="mailto:hao.yan@asu.edu" className="btn" style={{ background: 'white', color: '#ef4444' }}>
-              Contact Us
-            </a>
+          {/* Scientific Tools */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
+            <h2 className="section-title" style={{ marginTop: '2.5rem' }}>Scientific Tools</h2>
+            <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0 }}>
+              {scientificTools.map((tool, idx) => (
+                <li key={idx} style={{ marginBottom: '0.5rem' }}>
+                  <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: '#3b82f6' }}>{tool.name}</a>
+                  {tool.desc && <span style={{ marginLeft: 8, color: '#64748b' }}>— {tool.desc}</span>}
+                </li>
+              ))}
+            </ul>
           </motion.div>
+
+          {/* Labs */}
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
+            <h2 className="section-title" style={{ marginTop: '2.5rem' }}>Labs Working on Structural DNA Nanotechnology</h2>
+            <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0 }}>
+              {dnaLabs.map((lab, idx) => (
+                <li key={idx} style={{ marginBottom: '0.5rem' }}>
+                  <a href={lab.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: '#3b82f6' }}>{lab.name}</a>
+                  {lab.inst && <span style={{ marginLeft: 8, color: '#64748b' }}>@ {lab.inst}</span>}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
         </section>
       </div>
     </main>
