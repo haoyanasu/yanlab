@@ -1,3 +1,15 @@
+.section-block.assembly-publications .section-block-image {
+	align-items: flex-start;
+	justify-content: center;
+}
+.section-block.assembly-publications .section-block-image img {
+	max-width: 650px;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
 /* SectionBlock: side-by-side image and text layout */
 .section-block {
 	display: flex;
@@ -22,7 +34,7 @@
 }
 
 .section-block-image img {
-	max-width: 320px;
+	max-width: 400px;
 	width: 100%;
 	height: auto;
 	border-radius: 0;
@@ -32,12 +44,12 @@
 	display: block;
 }
 
-.section-block-text {
-	flex: 2 1 700px;
-	text-align: left;
-	max-width: 900px;
+.section-block-image {
+	flex: 1 1 300px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
 }
-
 .section-block-text h3 {
 	font-size: 1.35rem;
 	font-weight: 700;
