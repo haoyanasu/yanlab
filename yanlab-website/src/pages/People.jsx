@@ -26,7 +26,7 @@ const People = () => {
     office: "BDA 124B",
     phone: "(480) 727-8570",
     email: "hao.yan@asu.edu",
-    bio: "Dr. Hao Yan is a leading expert in DNA nanotechnology and molecular design. His research focuses on structural DNA nanotechnology and DNA-directed self-assembly.",
+    bio: "",
     awards: [
       "Foresight Institute Feynman Prize in Nanotechnology",
       "Rozenberg Tulip Award in DNA Computing",
@@ -139,7 +139,7 @@ const People = () => {
                 </div>
 
                 <div style={{ textAlign: 'left', lineHeight: '1.6' }}>
-                  <p style={{ marginBottom: '0.5rem', color: '#475569', fontSize: '0.78375rem', fontWeight: '500' }}>{faculty.bio}</p>
+                  {/* Description removed as requested */}
                   
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '1rem', fontSize: '0.78375rem', fontWeight: '500' }}>
                     <div>

@@ -426,7 +426,7 @@ body {
   width: 100%;
   max-width: min(75vw, 1000px);
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.75);
   border-radius: clamp(8px, 2vw, 16px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -457,7 +457,7 @@ body {
   width: 100%;
   max-width: min(75vw, 1000px);
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.75);
   border-radius: clamp(8px, 2vw, 16px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -523,7 +523,7 @@ body {
 }
 
 /* Background image with 50% transparency */
-.research-main-container::before {
+ .research-main-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -535,15 +535,15 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 0.5;
+  opacity: 1;
   z-index: 0;
 }
 
-.research-content-wrapper {
+ .research-content-wrapper {
   width: 100%;
   max-width: min(75vw, 1000px);
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.75);
   border-radius: 0;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -574,7 +574,7 @@ body {
   width: 100%;
   max-width: min(75vw, 1000px);
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.75);
   border-radius: clamp(8px, 2vw, 16px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   overflow: hidden;
