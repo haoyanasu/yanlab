@@ -38,35 +38,34 @@ const Navbar = () => {
         alignItems: 'center'
       }}>
         {/* Logo */}
-        <Link 
-          to="/" 
-          style={{
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.75rem'
-          }}
-        >
-                        <FaDna style={{ fontSize: '1.44375rem', color: '#3b82f6' }} />
-          <div>
-            <div style={{
-              fontSize: '1.2375rem',
-              fontWeight: '800',
-              color: '#0f172a',
-              letterSpacing: '-0.01em'
-            }}>
-              THE YAN LAB
+          <Link 
+            to="/" 
+            style={{
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.75rem'
+            }}
+          >
+            <div>
+              <div style={{
+                fontSize: '1.2375rem',
+                fontWeight: '800',
+                color: '#0f172a',
+                letterSpacing: '-0.01em'
+              }}>
+                YAN LAB
+              </div>
+              <div style={{
+                fontSize: '0.61875rem',
+                color: '#64748b',
+                fontWeight: '400',
+                marginTop: '-2px'
+              }}>
+                                Molecular Engineering
+              </div>
             </div>
-            <div style={{
-              fontSize: '0.61875rem',
-              color: '#64748b',
-              fontWeight: '400',
-              marginTop: '-2px'
-            }}>
-              molecular design
-            </div>
-          </div>
-        </Link>
+          </Link>
 
         {/* Desktop Navigation */}
         <div style={{

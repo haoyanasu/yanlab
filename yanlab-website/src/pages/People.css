@@ -10,7 +10,7 @@
 }
 
 .team-section .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(3.6rem, 7.2vw, 5.4rem);
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 3rem;
@@ -26,7 +26,7 @@
 
 .section-icon {
   color: #4a90e2;
-  font-size: 2rem;
+  font-size: 3.6rem;
 }
 
 .expandable-title {
@@ -38,7 +38,16 @@
 
 .expandable-title:hover {
   color: #4a90e2;
+  }
+
+  .people-content-wrapper h3,
+  .people-content-wrapper p,
+  }
+
+    font-size: 1.4rem !important;
+  }
 }
+    font-size: 2rem !important;
 
 .team-grid {
   display: grid;
@@ -102,13 +111,13 @@
   justify-content: center;
   margin: 0 auto 1.5rem auto;
   color: white;
-  font-size: 2rem;
+  font-size: 3.6rem;
 }
 
 .faculty .person-avatar {
   width: 100px;
   height: 100px;
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   background: linear-gradient(135deg, #e67e22, #f39c12);
 }
 
@@ -117,40 +126,40 @@
 }
 
 .person-name {
-  font-size: 2rem !important;
-  font-size: 2rem;
+  font-size: 3.6rem !important;
+  font-size: 3.6rem;
   color: #1a1a1a;
   margin-bottom: 0.5rem;
 }
 
 .faculty .person-name {
-  font-size: 2rem;
+  font-size: 3.6rem;
   margin-bottom: 1rem;
 }
 
 .person-title {
-  font-size: 2rem !important;
-  font-size: 2rem !important;
+  font-size: 3.6rem !important;
+  font-size: 3.6rem !important;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .person-position {
-  font-size: 1.1rem;
-  font-size: 2rem;
+  font-size: 1.98rem;
+  font-size: 3.6rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
 .person-department {
-  font-size: 1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-size: 3.6rem;
   margin-bottom: 0.5rem;
 }
 
 .person-institute {
-  font-size: 1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-size: 3.6rem;
   margin-bottom: 2rem;
   font-style: italic;
 }
@@ -166,8 +175,8 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.8rem;
-  font-size: 0.9rem;
-  font-size: 2rem;
+  font-size: 1.62rem;
+  font-size: 3.6rem;
 }
 
 .contact-item svg {
@@ -178,7 +187,7 @@
 
 .contact-item a {
   color: #4a90e2;
-  font-size: 2rem;
+  font-size: 3.6rem;
   transition: color 0.3s ease;
 }
 
@@ -196,7 +205,7 @@
 
 .research-interests h4,
 .awards h4 {
-  font-size: 1.1rem;
+  font-size: 1.98rem;
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1rem;
@@ -211,7 +220,7 @@
 }
 
 .research-interests li {
-  font-size: 0.9rem;
+  font-size: 1.62rem;
   color: #666;
   margin-bottom: 0.5rem;
   padding-left: 1rem;
@@ -227,7 +236,7 @@
 }
 
 .awards li {
-  font-size: 0.9rem;
+  font-size: 1.62rem;
   color: #666;
   margin-bottom: 0.5rem;
   display: flex;
@@ -243,7 +252,7 @@
 /* Student Information */
 .research-focus,
 .research-area {
-  font-size: 0.9rem;
+  font-size: 1.62rem;
   color: #666;
   margin-bottom: 1rem;
   font-style: italic;
@@ -256,7 +265,7 @@
 .program,
 .university,
 .current-position {
-  font-size: 0.9rem;
+  font-size: 1.62rem;
   color: #666;
   margin-bottom: 0.5rem;
 }
@@ -282,14 +291,14 @@
 }
 
 .lab-info-content h2 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 2rem;
 }
 
 .lab-info-content > p {
-  font-size: 1.2rem;
+  font-size: 2.16rem;
   color: #666;
   margin-bottom: 3rem;
   max-width: 800px;
@@ -321,14 +330,14 @@
 }
 
 .opportunity-card h3 {
-  font-size: 1.3rem;
+  font-size: 2.34rem;
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1rem;
 }
 
 .opportunity-card p {
-  font-size: 1rem;
+  font-size: 1.8rem;
   color: #666;
   line-height: 1.6;
 }
@@ -340,14 +349,14 @@
 }
 
 .contact-cta h3 {
-  font-size: 2.7rem;
+  font-size: 4.86rem;
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1rem;
 }
 
 .contact-cta p {
-  font-size: 1.65rem;
+  font-size: 2.97rem;
   color: #666;
   margin-bottom: 2rem;
 }
@@ -362,7 +371,7 @@
   border-radius: 0;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.98rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
 }
