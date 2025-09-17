@@ -454,6 +454,282 @@ const publications2018 = [
   }
 ];
 
+const publications2017 = [
+  {
+    number: '178',
+    authors: 'Y. R. Yang, J. Fu, S. Wootten, X. Qi, M. Liu, H. Yan, Y. Liu*',
+    title: '2D Enzyme Cascade Network with Efficient Substrate Channeling by Swinging Arms',
+    journal: 'ChemBioChem. DOI: 10.1002/cbic.201700613 (2017).'
+  },
+  {
+    number: '177',
+    authors: "D. Han', X. Qi', C. Myhrvold, B. Wang, M. Dai, S. Jiang, M. Bates, Y. Liu, B. An*, F. Zhang*, H. Yan* and P. Yin*", 
+    title: 'Single-stranded DNA and RNA Origami',
+    journal: 'Science 358, eaao2648, (2017).'
+  },
+  {
+    number: '176',
+    authors: 'F. Zhang, H. Yan*',
+    title: 'DNA self-assembly scaled up',
+    journal: 'Nature 552, 34-35, (2017).'
+  },
+  {
+    number: '175',
+    authors: 'A. Carey, H. Zhang, M. Liu, D. Sharaf, N. Akram, H. Yan, S. Lin, N. Woodbury*, D. Seo*',
+    title: 'Enhancing Photocurrent Generation in Photosynthetic Reaction Center-based Photoelectrochemical Cells with Biomimetic DNA Antenna',
+    journal: 'ChemSusChem 10, 4457-4460, (2017).'
+  },
+  {
+    number: '174',
+    authors: 'S. Jiang, F. Hong, H. Hu, H. Yan*, Y. Liu*',
+    title: 'Understanding the Elementary Steps in DNA Tile-Based Self-Assembly',
+    journal: 'ACS Nano. 11, 9370-9381, (2017).'
+  },
+  {
+    number: '173',
+    authors: 'J. Li, A. A. Green, H. Yan, C. Fan',
+    title: 'Engineering nucleic acid structures for programmable molecular circuitry and intracellular biocomputation',
+    journal: 'Nature Chem. 9, 1056-1067, (2017).'
+  },
+  {
+    number: '172',
+    authors: 'C. Simmons, F. Zhang, T. MacCulloch, N. Fahmi, N. Stephanopoulos, Y. Liu, N. Seeman, H. Yan',
+    title: 'Tuning the Cavity Size and Chirality of Self-Assembling 3D DNA Crystals.',
+    journal: 'J. Am. Chem. Soc. 139, 11254-11260, (2017).'
+  },
+  {
+    number: '171',
+    authors: 'D. Mieritz, X. Li, A. Volosin, M. Liu, H. Yan, N. Walter, D. Seo',
+    title: 'Tracking Single DNA Nanodevices in Herarchically Meso-Macroporous Antimony-Doped Tin Oxide Demonstrates Finite Confinement',
+    journal: 'Langmuir 33, 6410-6418, (2017).'
+  },
+  {
+    number: '170',
+    authors: 'F. Hong, F. Zhang, Y. Liu*, H. Yan*',
+    title: 'DNA Origami:Scaffolds for Creating Higher Order Structures',
+    journal: 'Chem. Rev. 117, 12584-12640, (2017).'
+  },
+  {
+    number: '169',
+    authors: 'H. Zhang, A. Carey, K. Jeon, M. Liu, T. Murell, J. Locsin, S. Lin, H. Yan, N. Woodbury, D. Seo',
+    title: 'A Highly Stable and Scalable Photosynthetic Reaction Center-Graphene Hybrid Electrode System for Biomimetic Solar Energy Transduction',
+    journal: 'J. Mater. Chem. A. 5, 6038-6041, (2017).'
+  },
+  {
+    number: '168',
+    authors: 'F. Zhang, F. Hong, H. Yan*',
+    title: 'DNA Origami Tiles: Nanoscale Mazes',
+    journal: 'Nature Nanotechnol.12, 189-190, (2017).'
+  },
+  {
+    number: '167',
+    authors: 'Y. Dong, Y. Yang, Y. Zhang, D. Wang, X. Wei, S. Banerjee, Y. Liu, Z. Yang, H. Yan*, D. Liu*',
+    title: 'Cuboid Vesicles Formed by Frame-guided Assembly on DNA Origami Scaffolds',
+    journal: 'Angew Chem Int Ed. 156, 1586-1589, (2017).'
+  },
+  {
+    number: '166',
+    authors: 'A. Andreoni, S. Lin, H. Liu, R. E. Blankenship, H. Yan, N. Woodbury',
+    title: 'Orange Carotenoid Protein as a Control Element in an Antenna System based on a DNA Nanostructure',
+    journal: 'Nano Letters 17, 1174-1180, (2017).'
+  }
+];
+
+const publications2016 = [
+  {
+    number: '165',
+    authors: 'F. Hong, S. Jiang, T. Wang, Y. Liu*, H. Yan*',
+    title: '3D Framework DNA origami with Layered Crossovers',
+    journal: 'Angew Chem Int Ed. 128, 13024-13027, (2016).'
+  },
+  {
+    number: '164',
+    authors: 'A. Carey, H. Zhang, D. Mieritz, A. Volosin, A. Gardiner, R. Cogdell, H. Yan, D. Seo, S. lin, N. Woodbury*',
+    title: 'Photocurrent generation by photosynthetic purple bacterial reaction centers interfaced with a porous antimony-doped tin oxide (ATO) electrode',
+    journal: 'ACS Appl. Matter. Interfaces 8, 25104-25110, (2016).'
+  },
+  {
+    number: '163',
+    authors: 'J. Fu*, Y. Yang, S. Dhakal, Z. Zhao, M. Liu, T. Zhang, N. Walter, H. Yan',
+    title: 'Assembly of Multi-Enzyme Complexes on DNA Nanostructures',
+    journal: 'Nature Protocols 11, 2243-2273, (2016).'
+  },
+  {
+    number: '162',
+    authors: 'C. Simmons, F. Zhang, J. Birktoft, X. Qi, D. Han, Y. Liu, R. Sha, H. Abdallah, C. Hernandez, Y. Ohayon, N. Seeman*, H. Yan*',
+    title: 'Construction and Structure Determination of a Three-dimensional DNA Crystal',
+    journal: 'J. Am. Chem. Soc. 138, 10047-10054, (2016).'
+  },
+  {
+    number: '161',
+    authors: 'R. Veneziano, S. Ratanalert, K. Zhang, F. Zhang, H. Yan, W. Chiu, M. Bathe*',
+    title: 'Designer nanoscale DNA assemblies programmed from the top down',
+    journal: 'Science 10.1126/science.aaf4388 (2016).'
+  },
+  {
+    number: '160',
+    authors: 'F. Zhang*, S. Jiang, W. Li, A. Hunt, Y. Liu*, H. Yan*',
+    title: 'Self-assembly of Complex DNA Tessellations using low symmetry multi-arm DNA tiles',
+    journal: 'Angew Chem Int Ed. 55, 8860-8863, (2016).'
+  },
+  {
+    number: '159',
+    authors: 'G. Ke, M. Liu, S. Jiang, X. Qi, Y. R. Yang, S. Wootten, F. Zhang, Z. Zhu, Y. Liu*, C. J. Yang*, H. Yan*',
+    title: 'Directional Regulation of Enzyme Pathways via the Control of Substrate Channeling on a DNA Origami Scaffold',
+    journal: 'Angew Chem Int Ed. 55, 7483-7486, (2016).'
+  },
+  {
+    number: '158',
+    authors: 'M. Liu, J. Fu, X. Qi, S. Wootten, N. Woodbury, Y. Liu*, H. Yan*',
+    title: 'A three-enzyme pathway with an optimized geometric arrangement to facilitate substrate transfer',
+    journal: 'ChemBioChem 17, 1097-1101, (2016).'
+  },
+  {
+    number: '157',
+    authors: 'W. Li, F. Zhang, H. Yan*, Y. Liu*',
+    title: 'DNA Based Arithmetic Function: Half Adder Based on DNA Strand Displacement',
+    journal: 'Nanoscale 8, 3775-3784, (2016).'
+  },
+  {
+    number: '156',
+    authors: 'Z. Zhao, J. Fu, S. Dhakal, A. Johnson-Buck, M. Liu, T. Zhang, N. Woodbury, Y. Liu, N. Walter, H. Yan*',
+    title: 'Nano-caged Enzymes with Enhanced Catalytic Activity and Increased Stability against Protease Digestion',
+    journal: 'Nature Commun. 7, 10619 (2016).'
+  },
+  {
+    number: '155',
+    authors: 'S. Dhakal, M. R. Adendorff, M. Liu, H. Yan*, M. Bathe*, N. G. Walter*',
+    title: 'Rational design of DNA-actuated enzyme nanoreactors guided by single molecule analysis',
+    journal: 'Nanoscale 8, 3125-3137, (2016).'
+  },
+  {
+    number: '154',
+    authors: 'C. Zhang, J. Yang, S. Jiang, Y. Liu*, H. Yan*',
+    title: 'DNAzyme-based Logic Gate-mediated DNA Self-assembly',
+    journal: 'Nano Letters 16, 736-741, (2016).'
+  }
+];
+
+const publications2015 = [
+  {
+    number: '153',
+    authors: 'H. Yan, Y. Zhang',
+    title: 'DNA/RNA-Based Nanostructures for Cancer Nanomedicine',
+    journal: 'Section III: Novel Nanometerials for Diagnosis and Therapy, CaNanoPlan 14-19, (2015).'
+  },
+  {
+    number: '152',
+    authors: 'F. Zhang, S. Jiang, S. Wu, Y. Li, C. Mao, Y. Liu*, H. Yan*',
+    title: 'Complex wireframe DNA origami nanostructures with multi-arm junction vertices',
+    journal: 'Nature Nanotechnol. 10, 779-784, (2015).'
+  },
+  {
+    number: '151',
+    authors: 'Y. Yang, Y. Liu, H. Yan*',
+    title: 'DNA nanostructures as programmable biomolecular scaffolds',
+    journal: 'Bioconjugate Chemistry 26, 1381-1395, (2015).'
+  },
+  {
+    number: '150',
+    authors: 'J. F. Georges, X. Liu, J. Eschbacher, J. Nichols, M. A. Mooney, A. Joy, R. F. Spetzler, B. G. Feuerstein, M. C. Preu, T. Anderson, H. Yan, P. Nakaji*',
+    title: 'Use of a Conformational Switching Aptamer for Rapid and Specific Ex Vivo Identification of Central Nervous System Lymphoma in a Xenograft Model.',
+    journal: 'PloS one 10(4), (2015).'
+  },
+  {
+    number: '149',
+    authors: 'A. Samanta, S. Banerjee, Y. Liu*',
+    title: 'DNA nanotechnology for nanophotonic applications',
+    journal: 'Nanoscale 7, 2210-2220, (2015).'
+  }
+];
+
+const publications2014 = [
+  {
+    number: '148',
+    authors: 'K. Pan, D. N. Kim, F. Zhang, M. Adendorff, H. Yan*, M. Bathe*',
+    title: 'Lattice-free prediction of three-dimensional structure of programmed DNA assemblies.',
+    journal: 'Nature Commun. 5, 5078, (2014).'
+  },
+  {
+    number: '147',
+    authors: 'P. Dutta, S. Levenberg, A. Loskutov, D. Jun, R. Saer, J. Beatty, S. Lin, Y. Liu*, N. Woodbury*, H. Yan*',
+    title: 'A DNA-Directed Light-Harvesting/Reaction Center System',
+    journal: 'J. Am. Chem. Soc. 136, 16618-16625 (2014).'
+  },
+  {
+    number: '146',
+    authors: 'A. Samanta, Y. Zhou, S. Zou, H. Yan, Y. Liu*',
+    title: 'Fluorescence Quenching of Quantum Dots by Gold Nanoparticles: a Potential Long Range Spectroscopic Ruler',
+    journal: 'Nano Letters 14, 5052-5057, (2014).'
+  },
+  {
+    number: '145',
+    authors: 'F. Zhang, J. Nangreave, Y. Liu, H. Yan*',
+    title: 'Structural DNA Nanotechnology: State of the Art and Future Perspective',
+    journal: 'J. Am. Chem. Soc. 136, 11198-11211, (2014).'
+  },
+  {
+    number: '144',
+    authors: 'D. Wang, S. Capehart, S. Pal, M. Liu, L. Zhang, J. Schuck, Y. Liu, H. Yan, M. Francis, J. De Yoreo*',
+    title: 'Hierarchical Assembly of Plasmonic Nanostructures using Virus Capsid Scaffolds on DNA Origami Templates',
+    journal: 'ACS Nano 8, 7896-7904, (2014).'
+  },
+  {
+    number: '143',
+    authors: 'X. Wei, J. Nangreave, Y. Liu*',
+    title: 'Uncovering the Self-Assembly of DNA Nanostructures by Thermodynamics and Kinetics',
+    journal: 'Accounts Chem. Res. 47, 1861-1870, (2014).'
+  },
+  {
+    number: '142',
+    authors: 'J. Flory, C. Simmons, S. Lin, T. Jonhson, A. Andreoni, J. Zook, G. Chirlanda, Y. Liu, H. Yan, and P. Fromme*',
+    title: 'Low Temperature Assembly of Functional 3D DNA-PNA-Protein Complexes',
+    journal: 'J. Am. Chem. Soc. 136, 8283-8295, (2014).'
+  },
+  {
+    number: '141',
+    authors: 'A. Johnson-Buck, S. Jiang, H. Yan, and N. G. Walter*',
+    title: 'DNA-Cholesterol Barges as Programmable Membrane-Exploring Agents',
+    journal: 'ACS Nano 8, 5641-5649, (2014).'
+  },
+  {
+    number: '140',
+    authors: 'L. Liang, J. Li, Q. Li, Q. Huang, J. Shi, H. Yan, and C. Fan*',
+    title: 'Single-particle Tracking and Modulation of Cell Entry Pathways of a Tetrahedral DNA Nanostructure in Live Cells',
+    journal: 'Angew Chem Int Ed. 126, 7879-7884, (2014).'
+  },
+  {
+    number: '139',
+    authors: 'J. Fu*, Y. R. Yang, A. Johnson-Buck, Y. Liu, N. G. Walter, N. W. Woodbury, and H. Yan*',
+    title: 'Multi-enzyme Complexes on DNA Scaffolds Capable of Substrate Channeling with an Artificial Swinging Arm',
+    journal: 'Nature Nanotechnol. 9, 531-536, (2014).'
+  },
+  {
+    number: '138',
+    authors: 'S. Jiang, H. Yan, and Y. Liu*',
+    title: 'Kinetics of DNA Tile Dimerization',
+    journal: 'ACS Nano. 8, 5826-5832, (2014).'
+  },
+  {
+    number: '137',
+    authors: 'P. K. Dutta, S. Lin, A. Loskutov, S. Levenberg, R. Saer, J. T. Beatty, Y. Liu, H. Yan,* N. Woodbury*',
+    title: 'An Engineered System to Enhance and Control the Absorption Cross-section of Photosynthetic Reaction Center',
+    journal: 'J. Am. Chem. Soc. 136, 4599-4604, (2014).'
+  },
+  {
+    number: '136',
+    authors: 'W. Li, Y. Yang, S. Jiang, H. Yan, Y. Liu*',
+    title: 'Controlled Nucleation and Growth of DNA Tile Arrays within Prescribed DNA Origami Frames and Their Dynamics',
+    journal: 'J. Am. Chem. Soc. 136, 3724-3727, (2014).'
+  },
+  {
+    number: '135',
+    authors: 'A. Samanta, Z. Deng, Y. Liu*',
+    title: 'Infrared Emitting Quantum Dots: DNA Conjugation and DNA Origami Directed Self-Assembly',
+    journal: 'Nano Scale 6, 4486-4490, (2014).'
+  }
+];
+
 const Publications = () => (
   <div className="publications-page">
     <div className="publications-container" style={{
@@ -738,6 +1014,158 @@ const Publications = () => (
         ))}
         <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2018</h2>
         {publications2018.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2017</h2>
+        {publications2017.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2016</h2>
+        {publications2016.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2015</h2>
+        {publications2015.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2014</h2>
+        {publications2014.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
               <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
