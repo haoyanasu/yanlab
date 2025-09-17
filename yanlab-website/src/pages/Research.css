@@ -31,7 +31,7 @@
 }
 
 .research-areas {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem; /* reduced from 8rem */
   width: 100%;
 }
 
@@ -40,8 +40,8 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
-  margin: 4rem 0;
+  gap: 1.5rem; /* reduced from 3rem */
+  margin: 2rem 0; /* reduced from 4rem 0 */
   width: 100%;
 }
 
@@ -50,6 +50,7 @@
   flex: 1;
   min-width: 250px;
   max-width: 300px;
+  margin-bottom: 1.5rem; /* add margin to reduce vertical gap */
 }
 
 .research-area h3 {
@@ -358,4 +359,4 @@
   .final-arrow {
     font-size: 2.5rem;
   }
-} 
+}

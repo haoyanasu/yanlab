@@ -82,24 +82,24 @@ const People = () => {
             transition={{ duration: 0.8 }}
           >
             {/* Removed page title 'People' as requested */}
-            <p className="page-subtitle">
+            <p className="page-subtitle" style={{ fontSize: '1rem' }}>
               Meet the talented researchers and students driving innovation in DNA nanotechnology
             </p>
             <h2 style={{
               fontSize: '1.5rem',
               fontWeight: '600',
               color: '#1e293b',
-              marginBottom: '0.5rem',
+                marginBottom: '0.25rem',
               letterSpacing: '0.1em',
               fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
               textAlign: 'center',
-              marginTop: '2.5rem'
+                marginTop: '1.5rem'
             }}>PI Yan</h2>
             <div style={{
               width: '300px',
               height: '3px',
               background: '#3b82f6',
-              margin: '0 auto 2.5rem auto',
+                margin: '0 auto 1.5rem auto',
               borderRadius: '2px',
             }} />
           </motion.div>
@@ -113,7 +113,7 @@ const People = () => {
 
 
               <div className="card" style={{ maxWidth: '900px', margin: '0 auto' }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
                   <img 
                     src="/hyan.jpg" 
                     alt="Dr. Hao Yan"
@@ -139,7 +139,7 @@ const People = () => {
                 </div>
 
                 <div style={{ textAlign: 'left', lineHeight: '1.6' }}>
-                  <p style={{ marginBottom: '1rem', color: '#475569', fontSize: '0.78375rem', fontWeight: '500' }}>{faculty.bio}</p>
+                  <p style={{ marginBottom: '0.5rem', color: '#475569', fontSize: '0.78375rem', fontWeight: '500' }}>{faculty.bio}</p>
                   
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '1rem', fontSize: '0.78375rem', fontWeight: '500' }}>
                     <div>
@@ -153,7 +153,7 @@ const People = () => {
                   </div>
 
                   <div style={{ marginBottom: '1rem' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                       <FaEnvelope style={{ color: '#3b82f6' }} />
                       <a href={`mailto:${faculty.email}`} style={{ color: '#3b82f6', textDecoration: 'none', fontSize: '0.78375rem', fontWeight: '500' }}>
                         {faculty.email}
@@ -165,7 +165,7 @@ const People = () => {
                     <strong style={{ fontWeight: '600' }}>Selected Awards:</strong>
                     <ul style={{ marginTop: '0.5rem', paddingLeft: '1.5rem' }}>
                       {faculty.awards.map((award, index) => (
-                        <li key={index} style={{ marginBottom: '0.25rem', color: '#475569', fontSize: '0.78375rem', fontWeight: '500' }}>{award}</li>
+                        <li key={index} style={{ marginBottom: '0.15rem', color: '#475569', fontSize: '0.78375rem', fontWeight: '500' }}>{award}</li>
                       ))}
                     </ul>
                   </div>
@@ -183,8 +183,8 @@ const People = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '0.5rem',
-              margin: '1.5rem 0 0.75rem 0',
+              gap: '0.3rem',
+              margin: '1rem 0 0.5rem 0',
               cursor: 'pointer',
               textAlign: 'center'
             }} onClick={() => toggleSection('staff')}>
@@ -192,7 +192,7 @@ const People = () => {
                 fontSize: '1.5rem',
                 fontWeight: '600',
                 color: '#1e293b',
-                marginBottom: '0.5rem',
+                marginBottom: '0.25rem',
                 letterSpacing: '0.1em',
                 fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
                 textAlign: 'center',
@@ -201,7 +201,7 @@ const People = () => {
                 width: '300px',
                 height: '3px',
                 background: '#3b82f6',
-                margin: '0 auto 2.5rem auto',
+                margin: '0 auto 1.5rem auto',
                 borderRadius: '2px',
               }} />
               {expandedSections.staff ? <FaChevronUp /> : <FaChevronDown />}
@@ -262,15 +262,15 @@ const People = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '0.5rem',
-              margin: '1.5rem 0 0.75rem 0',
+              gap: '0.3rem',
+              margin: '1rem 0 0.5rem 0',
               cursor: 'pointer'
             }} onClick={() => toggleSection('students')}>
               <h2 style={{
                 fontSize: '1.5rem',
                 fontWeight: '600',
                 color: '#1e293b',
-                marginBottom: '0.5rem',
+                marginBottom: '0.25rem',
                 letterSpacing: '0.1em',
                 fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
                 textAlign: 'center',
@@ -279,7 +279,7 @@ const People = () => {
                 width: '300px',
                 height: '3px',
                 background: '#3b82f6',
-                margin: '0 auto 2.5rem auto',
+                margin: '0 auto 1.5rem auto',
                 borderRadius: '2px',
               }} />
               {expandedSections.students ? <FaChevronUp /> : <FaChevronDown />}
@@ -340,15 +340,15 @@ const People = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '0.5rem',
-              margin: '2rem 0 1rem 0',
+              gap: '0.3rem',
+              margin: '1.5rem 0 0.7rem 0',
               cursor: 'pointer'
             }} onClick={() => toggleSection('mentees')}>
               <h2 style={{
                 fontSize: '1.5rem',
                 fontWeight: '600',
                 color: '#1e293b',
-                marginBottom: '0.5rem',
+                marginBottom: '0.25rem',
                 letterSpacing: '0.1em',
                 fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
                 textAlign: 'center',
@@ -357,7 +357,7 @@ const People = () => {
                 width: '300px',
                 height: '3px',
                 background: '#3b82f6',
-                margin: '0 auto 2.5rem auto',
+                margin: '0 auto 1.5rem auto',
                 borderRadius: '2px',
               }} />
               {expandedSections.mentees ? <FaChevronUp /> : <FaChevronDown />}
