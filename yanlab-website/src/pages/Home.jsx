@@ -13,11 +13,87 @@ const Home = () => {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          style={{ width: '100%', textAlign: 'center', marginTop: '3rem', marginBottom: '1.5rem' }}
+          style={{
+            width: '100vw',
+            maxWidth: '100vw',
+            left: '50%',
+            right: '50%',
+            marginLeft: '-50vw',
+            marginRight: '-50vw',
+            position: 'relative',
+            minHeight: '50vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflow: 'hidden',
+            textAlign: 'center',
+            marginTop: '3rem',
+            marginBottom: '1.5rem',
+          }}
         >
-          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#22223b', letterSpacing: '-1px', marginBottom: '0.5rem' }}>YAN LAB</h1>
-    <div style={{ fontSize: '1.1rem', color: '#64748b', fontWeight: 500, marginBottom: '0.5rem' }}>Molecular engineers drawing inspiration from nature, we build programmable medicines for advanced sensing, computation, and responsive functions in biology.</div>
+          {/* Background image */}
+          <img src="/biod.jpg" alt="Background" style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            minWidth: '100vw',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: 0,
+            opacity: 0.55,
+            pointerEvents: 'none',
+            userSelect: 'none',
+          }} />
+          {/* Semi-transparent overlay */}
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'rgba(255,255,255,0.45)',
+            zIndex: 1,
+          }} />
+          {/* Foreground text */}
+          <div style={{ position: 'relative', zIndex: 2, width: '100%' }}>
+            <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#111', letterSpacing: '-1px', marginBottom: '0.5rem' }}>YAN LAB</h1>
+            <div style={{ fontSize: '1.1rem', color: '#111', fontWeight: 500, marginBottom: '0.5rem' }}>Molecular engineers drawing inspiration from nature, we build programmable medicines for advanced sensing, computation, and responsive functions in biology.</div>
+          </div>
         </motion.div>
+
+        {/* Video Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          style={{ width: '100%', height: '50vh', overflow: 'hidden', position: 'relative', background: '#000', marginBottom: '0' }}
+        >
+          <video
+            src="/nanobots.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+              background: '#000',
+            }}
+          />
+        </motion.div>
+
+        {/* Gap above 1.jpg section */}
+        <div style={{ width: '100%', height: '2.5rem' }}></div>
+        {/* Blank Section 1 with image */}
+        <div style={{ width: '100%', height: '50vh', background: '#f3f4f6', position: 'relative', overflow: 'hidden', marginBottom: '2.5rem' }}>
+          <img src="/1.jpg" alt="Yan Lab" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0', display: 'block' }} />
+        </div>
+        {/* Blank Section 2 */}
+        <div style={{ width: '100%', height: '50vh', background: '#e0e7ef', marginBottom: '2.5rem' }}></div>
 
         {/* 2. Video Banner */}
         <motion.div
@@ -43,22 +119,6 @@ const Home = () => {
         </motion.div>
 
         {/* 3. Description */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2.5rem' }}
-        >
-          <p style={{ fontSize: '1.05rem', fontWeight: '500', color: '#64748b', marginBottom: '1.2rem', textAlign: 'center', maxWidth: '900px' }}>
-            Advancing structural DNA nanotechnology and molecular design for biomedical applications
-          </p>
-          <p style={{ fontSize: '1.25rem', fontWeight: '400', lineHeight: '1.7', color: '#22223b', background: 'none', textAlign: 'center', margin: '0 auto', maxWidth: '1000px' }}>
-            Our laboratory focuses on the rational design and engineering of DNA nanostructures 
-            for applications in biotechnology, medicine, and materials science. We develop innovative 
-            approaches to create programmable molecular systems that can sense, compute, and respond 
-            to their environment.
-          </p>
-        </motion.div>
 
         {/* 4. Selected Publications */}
         <motion.section
