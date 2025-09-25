@@ -15,6 +15,11 @@ import { FaLaptopCode, FaExternalLinkAlt } from 'react-icons/fa';
       link: 'https://sulcgroup.github.io/oxdna-viewer/',
       desc: 'by Sulc group'
     },
+    {
+      name: 'DNAxis',
+      link: 'https://caddna.cs.duke.edu/',
+      desc: 'by Reif lab at Duke with Yan lab'
+    },
   { name: 'Mfold', link: 'http://frontend.bioinfo.rpi.edu/applications/mfold/', desc: 'by Michael Zuker at Rensselaer Polytechnic Institute.' },
   { name: 'Nanoengineer-1', link: 'http://nanoengineer-1.com/content/', desc: 'by Nanorex.' },
   { name: 'NUPACK', link: 'http://nupack.org/', desc: 'by Niles Pierce and Colleagues at Caltech.' },
