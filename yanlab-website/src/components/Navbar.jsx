@@ -8,7 +8,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { path: '/', label: 'Home' },
     { path: '/research', label: 'Research' },
     { 
       label: 'People',
@@ -54,12 +53,12 @@ const Navbar = () => {
           >
             <div>
               <div style={{
-                fontSize: '1.60875rem',
+                fontSize: '1.9305rem', // 1.60875rem * 1.2
                 fontWeight: '800',
                 color: '#fff',
                 letterSpacing: '-0.01em'
               }}>
-                YAN LAB
+                Yan Lab
               </div>
               {/* Removed 'Molecular Engineering' subtitle as requested */}
             </div>
