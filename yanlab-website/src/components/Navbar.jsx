@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav style={{
       background: '#000',
       borderBottom: '1px solid #222',
-      padding: '1rem 0',
+      padding: '2rem 0',
       position: 'fixed',
       top: 0,
       left: 0,

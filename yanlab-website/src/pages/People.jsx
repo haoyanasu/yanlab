@@ -72,8 +72,8 @@ const People = () => {
   ];
 
   return (
-    <main className="people-main-container">
-      <div className="people-content-wrapper fade-in" style={{ borderRadius: 0 }}>
+  <main className="people-main-container" style={{ background: '#fff', marginTop: '1rem' }}>
+      <div className="people-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff' }}>
         <section className="page-content">
           {/* Header */}
           <motion.div
@@ -89,11 +89,11 @@ const People = () => {
               fontSize: '1.5rem',
               fontWeight: '600',
               color: '#1e293b',
-                marginBottom: '0.25rem',
+              marginBottom: '0.25rem',
               letterSpacing: '0.1em',
               fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
               textAlign: 'center',
-                marginTop: '1.5rem'
+              marginTop: 0
             }}>PI Yan</h2>
             <div style={{
               width: '300px',

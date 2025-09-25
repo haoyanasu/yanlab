@@ -65,8 +65,8 @@ const downloads = [
 
 const Resources = () => {
   return (
-    <main className="resources-main-container">
-      <div className="resources-content-wrapper fade-in" style={{ borderRadius: 0 }}>
+    <main className="resources-main-container" style={{ background: '#fff' }}>
+      <div className="resources-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff' }}>
         <section className="page-content">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="page-title">Resources</h1>

@@ -40,8 +40,8 @@ const Research = () => {
   ];
 
   return (
-    <main className="research-main-container">
-  <div className="research-content-wrapper fade-in" style={{ borderRadius: 0 }}>
+    <main className="research-main-container" style={{ background: '#fff' }}>
+  <div className="research-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff' }}>
         <section className="page-content">
           {/* Header */}
           <motion.div

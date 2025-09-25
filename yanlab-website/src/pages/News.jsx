@@ -682,8 +682,8 @@ const News = () => {
   };
 
   return (
-    <main className="news-main-container">
-      <div className="news-content-wrapper fade-in" style={{ borderRadius: 0 }}>
+    <main className="news-main-container" style={{ background: '#fff' }}>
+      <div className="news-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff' }}>
         <section className="page-content">
           {/* Header */}
           <motion.div
