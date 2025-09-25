@@ -2,9 +2,11 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Research from './pages/Research';
-import People from './pages/People';
-import Publications from './pages/Publications';
 
+import People from './pages/People';
+import PIYan from './pages/PIYan';
+import OurTeam from './pages/OurTeam';
+import Publications from './pages/Publications';
 import News from './pages/News';
 import Resources from './pages/Resources';
 import Contact from './pages/Contact';
@@ -21,7 +23,9 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/research" element={<Research />} />
         <Route path="/team" element={<People />} />
-  <Route path="/publications" element={<Publications />} />
+        <Route path="/team/pi-yan" element={<PIYan />} />
+        <Route path="/team/our-team" element={<OurTeam />} />
+        <Route path="/publications" element={<Publications />} />
         <Route path="/news" element={<News />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/contact" element={<Contact />} />
