@@ -691,62 +691,6 @@ const News = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="page-title" style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>News & Updates</h1>
-            {/* <p className="page-subtitle" style={{ fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.4rem', color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px' }}>
-              Latest news, publications, and achievements from the Yan Lab
-            </p> */}
-            
-            {/* Group Picture */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                marginBottom: '2.5rem'
-              }}
-            >
-              <img 
-                src="/group.jpg" 
-                alt="Yan Lab Group Photo"
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                  borderRadius: '4px',
-                  boxShadow: '0 12px 48px rgba(0, 0, 0, 0.15)',
-                  border: '2px solid rgba(255, 255, 255, 0.1)'
-                }}
-              />
-            </motion.div>
-
-            {/* YouTube Videos Row */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', gap: 0, marginBottom: '2.5rem', flexWrap: 'wrap' }}>
-              <div style={{ flex: 1, minWidth: 280, display: 'flex', justifyContent: 'flex-end' }}>
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/4ZF-PHp6Soc"
-                  title="YouTube video player 1"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  style={{ maxWidth: 420, borderRadius: 0, boxShadow: '0 2px 12px rgba(0,0,0,0.07)', marginRight: 0 }}
-                ></iframe>
-              </div>
-              <div style={{ flex: 1, minWidth: 280, display: 'flex', justifyContent: 'flex-start' }}>
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed/_TOzkOIhEKE"
-                  title="YouTube video player 2"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  style={{ maxWidth: 420, borderRadius: 0, boxShadow: '0 2px 12px rgba(0,0,0,0.07)', marginLeft: 0 }}
-                ></iframe>
-              </div>
-            </div>
           </motion.div>
 
 
@@ -757,7 +701,7 @@ const News = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}
+            style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginTop: '0.5rem', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}
           >
             Latest News
           </motion.h2>
@@ -769,71 +713,87 @@ const News = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             {newsItems.map((item, index) => (
-              <motion.div
-                key={index}
-                style={{
-                  display: 'block',
-                  textAlign: 'left',
-                  marginBottom: '2rem',
-                  background: 'none',
-                  border: 'none',
-                  boxShadow: 'none',
-                  padding: 0,
-                  position: 'relative'
-                }}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-              >
-                <div style={{
-                  marginBottom: '0.75rem',
-                  color: '#232946',
-                  fontSize: '1.05rem',
-                  fontWeight: 400,
-                  fontFamily: 'Inter, Arial, sans-serif'
-                }}>
-                  {formatDate(item.date)}
-                </div>
-                <h3 style={{
-                  fontSize: '1.3rem',
-                  fontWeight: 600,
-                  marginBottom: '0.5rem',
-                  color: '#232946',
-                  fontFamily: 'Inter, Arial, sans-serif'
-                }}>
-                  {item.title}
-                </h3>
-                <p style={{
-                  color: '#232946',
-                  lineHeight: '1.5',
-                  fontSize: '1.05rem',
-                  fontFamily: 'Inter, Arial, sans-serif'
-                }}>
-                  {item.description}
-                </p>
-                {/* Type Badge on the right, floated */}
-                <span
+              <React.Fragment key={index}>
+                <motion.div
                   style={{
-                    position: 'absolute',
-                    top: '1.5rem',
-                    right: 0,
-                    color: item.color,
-                    fontSize: '1.3rem',
-                    fontWeight: '600',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    display: 'block',
+                    textAlign: 'left',
+                    marginBottom: '2rem',
+                    background: 'none',
+                    border: 'none',
+                    boxShadow: 'none',
+                    padding: 0,
+                    position: 'relative'
                   }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                 >
-                  {item.type === 'award' && <FaTrophy style={{ color: item.color, fontSize: '1.3rem' }} />}
-                  {item.type === 'defense' && <FaGraduationCap style={{ color: item.color, fontSize: '1.3rem' }} />}
-                  {item.type !== 'award' && item.type !== 'defense' && (
-                    <span style={{ textTransform: 'capitalize', fontSize: '0.78375rem', color: item.color }}>
-                      {item.type}
-                    </span>
-                  )}
-                </span>
-              </motion.div>
+                  <div style={{
+                    marginBottom: '0.75rem',
+                    color: '#232946',
+                    fontSize: '1.05rem',
+                    fontWeight: 400,
+                    fontFamily: 'Inter, Arial, sans-serif'
+                  }}>
+                    {formatDate(item.date)}
+                  </div>
+                  <h3 style={{
+                    fontSize: '1.3rem',
+                    fontWeight: 600,
+                    marginBottom: '0.5rem',
+                    color: '#232946',
+                    fontFamily: 'Inter, Arial, sans-serif'
+                  }}>
+                    {item.title}
+                  </h3>
+                  <p style={{
+                    color: '#232946',
+                    lineHeight: '1.5',
+                    fontSize: '1.05rem',
+                    fontFamily: 'Inter, Arial, sans-serif'
+                  }}>
+                    {item.description}
+                  </p>
+                  {/* Type Badge on the right, floated */}
+                  <span
+                    style={{
+                      position: 'absolute',
+                      top: '1.5rem',
+                      right: 0,
+                      color: item.color,
+                      fontSize: '1.3rem',
+                      fontWeight: '600',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {item.type === 'award' && <FaTrophy style={{ color: item.color, fontSize: '1.3rem' }} />}
+                    {item.type === 'defense' && <FaGraduationCap style={{ color: item.color, fontSize: '1.3rem' }} />}
+                    {item.type !== 'award' && item.type !== 'defense' && (
+                      <span style={{ textTransform: 'capitalize', fontSize: '0.78375rem', color: item.color }}>
+                        {item.type}
+                      </span>
+                    )}
+                  </span>
+                </motion.div>
+                {/* Insert video after Regents Professor news */}
+                {item.title === "Prof. Hao Yan Bestowed as Regents Professor" && (
+                  <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/_TOzkOIhEKE"
+                      title="Hao Yan Named Regents Professor at ASU"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      style={{ borderRadius: '8px', boxShadow: '0 12px 48px rgba(0,0,0,0.15)', maxWidth: '100%' }}
+                    ></iframe>
+                  </div>
+                )}
+              </React.Fragment>
             ))}
           </motion.div>
 
