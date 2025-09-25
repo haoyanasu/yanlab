@@ -1,24 +1,29 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const OurTeam = () => {
-  const [expandedSections, setExpandedSections] = useState({
-    staff: true,
-    students: true,
-    former: false,
-    mentees: true
-  });
+  // Remove dropdown/expand logic; always show all sections
 
-  const toggleSection = (section) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
+  // PI Yan profile for grid
+  const piYan = {
+    name: "Hao Yan",
+    title: "Regents Professor",
+    subtitle: "Milton D. Glick Distinguished Professor",
+    department: "School of Molecular Sciences and School of Medicine",
+    office: "BDA 124B",
+    phone: "(480) 727-8570",
+    email: "hao.yan@asu.edu",
+    image: "hyan.jpg",
+    awards: [
+      "Foresight Institute Feynman Prize in Nanotechnology",
+      "Rozenberg Tulip Award in DNA Computing",
+      "Humboldt Research Award"
+    ]
   };
 
   const staff = [
+    piYan,
     {
       name: "Chad R Simmons",
       title: "Research Professional",
@@ -55,192 +60,92 @@ const OurTeam = () => {
     { name: "Hao Liu", title: "PhD 2018-2023", current: "Postdoc, Arizona State University" }
   ];
 
+  // Combine staff and students for unified grid
+  const team = [...staff, ...students];
+
   return (
-    <main className="people-main-container" style={{ background: '#fff', marginTop: '1rem' }}>
-      <div className="people-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff' }}>
-        <section className="page-content">
+    <main className="resources-main-container" style={{ background: '#fff', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
+      <div className="resources-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff', fontFamily: 'Inter, Arial, sans-serif', color: '#232946', paddingLeft: '2.5rem' }}>
+        <section className="page-content" style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="page-subtitle" style={{ fontSize: '1rem' }}>
-              Meet the talented researchers and students driving innovation in DNA nanotechnology
-            </p>
-            <h2 style={{
-              fontSize: '1.5rem',
-              fontWeight: '600',
-              color: '#1e293b',
-              marginBottom: '0.25rem',
-              letterSpacing: '0.1em',
-              fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
-              textAlign: 'center',
-              marginTop: 0
-            }}>Our Team</h2>
-            <div style={{
-              width: '300px',
-              height: '3px',
-              background: '#3b82f6',
-              margin: '0 auto 1.5rem auto',
-              borderRadius: '2px',
-            }} />
+            <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '1.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif', textAlign: 'center' }}>Current Team</h1>
           </motion.div>
 
-          {/* Research Staff Section */}
+          {/* Unified Team Grid Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.3rem',
-              margin: '1rem 0 0.5rem 0',
-              cursor: 'pointer',
-              textAlign: 'center'
-            }} onClick={() => toggleSection('staff')}>
-              <h2 style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                color: '#1e293b',
-                marginBottom: '0.25rem',
-                letterSpacing: '0.1em',
-                fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
-                textAlign: 'center',
-              }}>Research Staff</h2>
-              <div style={{
-                width: '300px',
-                height: '3px',
-                background: '#3b82f6',
-                margin: '0 auto 1.5rem auto',
-                borderRadius: '2px',
-              }} />
-              {expandedSections.staff ? <FaChevronUp /> : <FaChevronDown />}
-            </div>
-
-            {expandedSections.staff && (
-              <div className="grid-container">
-                {staff.map((member, index) => (
-                  <div key={index} className="grid-item">
-                    <div style={{
-                      width: '216px',
-                      height: '216px',
-                      borderRadius: '50%',
-                      overflow: 'hidden',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      margin: '0 auto 0.5rem auto',
-                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
-                    }}>
-                      <img 
-                        src={`/${member.image}`} 
-                        alt={member.name}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                          objectPosition: 'center top'
-                        }}
-                      />
-                    </div>
-                    <h3 style={{ fontSize: '0.78375rem', fontWeight: '600', marginBottom: '0.125rem', textAlign: 'center' }}>
-                      {member.name}
-                    </h3>
-                    <p style={{ color: '#3b82f6', fontWeight: '600', marginBottom: '0.125rem', fontSize: '0.78375rem' }}>
-                      {member.title}
-                    </p>
-                    <p style={{ color: '#64748b', marginBottom: '0.25rem', fontSize: '0.78375rem', fontWeight: '500' }}>
-                      {member.focus}
-                    </p>
-                    <a href={`mailto:${member.email}`} style={{ color: '#3b82f6', textDecoration: 'none', fontSize: '0.78375rem', fontWeight: '500' }}>
-                      <FaEnvelope style={{ marginRight: '0.5rem' }} />
-                      {member.email}
-                    </a>
+            <div className="grid-container" style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+              justifyItems: 'center',
+              alignItems: 'flex-start',
+              gap: '3.5rem',
+              maxWidth: '900px',
+              margin: '0 auto'
+            }}>
+              {team.map((member, index) => (
+                <div key={index} className="grid-item" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', marginBottom: '3.5rem' }}>
+                  <div style={{
+                    width: '259px',
+                    height: '259px',
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                    margin: '0 auto 0.5rem auto',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+                    display: 'block'
+                  }}>
+                    <img 
+                      src={`/${member.image}`} 
+                      alt={member.name}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center top',
+                        display: 'block',
+                        margin: '0 auto'
+                      }}
+                    />
                   </div>
-                ))}
-              </div>
-            )}
-          </motion.div>
-
-          {/* Students Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.3rem',
-              margin: '1rem 0 0.5rem 0',
-              cursor: 'pointer'
-            }} onClick={() => toggleSection('students')}>
-              <h2 style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                color: '#1e293b',
-                marginBottom: '0.25rem',
-                letterSpacing: '0.1em',
-                fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif',
-                textAlign: 'center',
-              }}>Graduate Students</h2>
-              <div style={{
-                width: '300px',
-                height: '3px',
-                background: '#3b82f6',
-                margin: '0 auto 1.5rem auto',
-                borderRadius: '2px',
-              }} />
-              {expandedSections.students ? <FaChevronUp /> : <FaChevronDown />}
+                  <h3 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '0.125rem', textAlign: 'center', color: '#232946', fontFamily: 'Inter, Arial, sans-serif' }}>
+                    {member.name}
+                  </h3>
+                  {/* Special formatting for PI Yan */}
+                  {member.name === 'Hao Yan' ? (
+                    <>
+                      <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>{member.title}</p>
+                      <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>Biomolecular Programmer and Engineer</p>
+                      <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center', marginBottom: '0.125rem' }}>
+                        Email
+                      </a>
+                    </>
+                  ) : member.focus ? (
+                    <>
+                      <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>{member.title}</p>
+                      <p style={{ color: '#64748b', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.25rem', textAlign: 'center' }}>{member.focus}</p>
+                      <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center' }}>
+                        Email
+                      </a>
+                    </>
+                  ) : (
+                    <>
+                      <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>{member.level}</p>
+                      <p style={{ color: '#64748b', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.25rem', textAlign: 'center' }}>{member.research}</p>
+                      <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center' }}>
+                        Email
+                      </a>
+                    </>
+                  )}
+                </div>
+              ))}
             </div>
-
-            {expandedSections.students && (
-              <div className="grid-container">
-                {students.map((student, index) => (
-                  <div key={index} className="grid-item">
-                    <div style={{
-                      width: '216px',
-                      height: '216px',
-                      borderRadius: '50%',
-                      overflow: 'hidden',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      margin: '0 auto 0.5rem auto',
-                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
-                    }}>
-                      <img 
-                        src={`/${student.image}`} 
-                        alt={student.name}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                          objectPosition: 'center top'
-                        }}
-                      />
-                    </div>
-                    <h3 style={{ fontSize: '0.78375rem', fontWeight: '600', marginBottom: '0.125rem', textAlign: 'center' }}>
-                      {student.name}
-                    </h3>
-                    <p style={{ color: '#f59e0b', fontWeight: '600', marginBottom: '0.125rem', fontSize: '0.78375rem' }}>
-                      {student.level}
-                    </p>
-                    <p style={{ color: '#64748b', marginBottom: '0.25rem', fontSize: '0.78375rem', fontWeight: '500' }}>
-                      {student.research}
-                    </p>
-                    <a href={`mailto:${student.email}`} style={{ color: '#3b82f6', textDecoration: 'none', fontSize: '0.78375rem', fontWeight: '500' }}>
-                      <FaEnvelope style={{ marginRight: '0.5rem' }} />
-                      {student.email}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            )}
           </motion.div>
 
           {/* Graduate Student Mentees Section */}
