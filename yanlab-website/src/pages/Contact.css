@@ -5,6 +5,8 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  font-family: 'Inter, Arial, sans-serif';
+  color: #232946;
 }
 
 .contact-header {
@@ -15,12 +17,16 @@
 .contact-header h1 {
   font-size: 2.5rem;
   margin-bottom: 8px;
-  color: #1a237e;
+  color: #232946;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-family: 'Inter, Arial, sans-serif';
 }
 
 .contact-header p {
-  color: #444;
-  font-size: 1.1rem;
+  color: #232946;
+  font-size: 1.05rem;
+  font-family: 'Inter, Arial, sans-serif';
 }
 
 .contact-info {
@@ -32,12 +38,16 @@
 
 .contact-info h2 {
   margin-bottom: 8px;
-  color: #283593;
+  color: #232946;
+  font-family: 'Inter, Arial, sans-serif';
+  font-weight: 700;
 }
 
 .contact-info p {
   margin: 6px 0;
-  color: #333;
+  color: #232946;
+  font-size: 1.05rem;
+  font-family: 'Inter, Arial, sans-serif';
 }
 
 .contact-form-section h2 {

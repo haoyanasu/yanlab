@@ -1,6 +1,8 @@
  .research-page {
   min-height: 100vh;
   width: 100%;
+  font-family: 'Inter, Arial, sans-serif';
+  color: #232946;
 }
 
 .research-hero {
@@ -8,6 +10,8 @@
   padding: 4rem 0;
   margin-bottom: 6rem;
   background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  font-family: 'Inter, Arial, sans-serif';
+  color: #232946;
 }
 
 .research-description {
@@ -19,13 +23,14 @@
 }
 
 .research-text {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: #1a1a1a;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #232946;
+  line-height: 1.5;
   max-width: 900px;
   margin: 0 auto;
   padding: 0 2rem;
   font-weight: 400;
+  font-family: 'Inter, Arial, sans-serif';
 }
 
 .research-areas {
@@ -52,11 +57,12 @@
 }
 
 .research-area h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #1a1a1a;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #232946;
   margin-bottom: 1.5rem;
-  letter-spacing: 1px;
+  letter-spacing: -1px;
+  font-family: 'Inter, Arial, sans-serif';
 }
 
 .area-circle {

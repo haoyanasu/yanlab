@@ -682,17 +682,17 @@ const News = () => {
   };
 
   return (
-    <main className="news-main-container" style={{ background: '#fff' }}>
-      <div className="news-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff' }}>
-        <section className="page-content">
+    <main className="news-main-container" style={{ background: '#fff', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
+      <div className="news-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
+  <section className="page-content" style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="page-title">News & Updates</h1>
-            <p className="page-subtitle">
+            <h1 className="page-title" style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>News & Updates</h1>
+            <p className="page-subtitle" style={{ fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.4rem', color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px' }}>
               Latest news, publications, and achievements from the Yan Lab
             </p>
             
@@ -757,6 +757,7 @@ const News = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}
           >
             Latest News
           </motion.h2>
@@ -786,23 +787,27 @@ const News = () => {
               >
                 <div style={{
                   marginBottom: '0.75rem',
-                  color: '#64748b',
-                  fontSize: '0.78375rem', fontWeight: '500'
+                  color: '#232946',
+                  fontSize: '1.05rem',
+                  fontWeight: 400,
+                  fontFamily: 'Inter, Arial, sans-serif'
                 }}>
                   {formatDate(item.date)}
                 </div>
                 <h3 style={{
-                  fontSize: '1.03125rem',
-                  fontWeight: '600',
+                  fontSize: '1.3rem',
+                  fontWeight: 600,
                   marginBottom: '0.5rem',
-                  color: '#1e293b'
+                  color: '#232946',
+                  fontFamily: 'Inter, Arial, sans-serif'
                 }}>
                   {item.title}
                 </h3>
                 <p style={{
-                  color: '#64748b',
-                  lineHeight: '1.6',
-                  fontSize: '0.78375rem'
+                  color: '#232946',
+                  lineHeight: '1.5',
+                  fontSize: '1.05rem',
+                  fontFamily: 'Inter, Arial, sans-serif'
                 }}>
                   {item.description}
                 </p>
@@ -841,7 +846,7 @@ const News = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
-            <p style={{ color: '#64748b', fontSize: '0.78375rem', fontWeight: '500' }}>
+            <p style={{ color: '#232946', fontSize: '1.05rem', fontWeight: 400, fontFamily: 'Inter, Arial, sans-serif' }}>
               Looking for older news? Contact us for our complete news archive.
             </p>
           </motion.div>

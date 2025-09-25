@@ -4,7 +4,17 @@ import { motion } from 'framer-motion';
 import { FaLaptopCode, FaExternalLinkAlt } from 'react-icons/fa';
 
 
-const scientificTools = [
+  const scientificTools = [
+    {
+      name: 'oxDNA',
+      link: 'https://dna.physics.ox.ac.uk/index.php?title=Main_Page',
+      desc: 'by University of Oxford team'
+    },
+    {
+      name: 'oxView',
+      link: 'https://sulcgroup.github.io/oxdna-viewer/',
+      desc: 'by Sulc group'
+    },
   { name: 'Mfold', link: 'http://frontend.bioinfo.rpi.edu/applications/mfold/', desc: 'by Michael Zuker at Rensselaer Polytechnic Institute.' },
   { name: 'Nanoengineer-1', link: 'http://nanoengineer-1.com/content/', desc: 'by Nanorex.' },
   { name: 'NUPACK', link: 'http://nupack.org/', desc: 'by Niles Pierce and Colleagues at Caltech.' },
@@ -65,55 +75,79 @@ const downloads = [
 
 const Resources = () => {
   return (
-    <main className="resources-main-container" style={{ background: '#fff' }}>
-      <div className="resources-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff' }}>
-        <section className="page-content">
+    <main className="resources-main-container" style={{ background: '#fff', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
+      <div className="resources-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
+  <section className="page-content" style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="page-title">Resources</h1>
-            <p className="page-subtitle">Downloads, scientific tools, and links to labs in DNA nanotechnology</p>
-            <div style={{ margin: '1.5rem 0 2.5rem 0', color: '#334155', fontSize: '1.05rem', maxWidth: 800 }}>
-              In collaboration with Sean Williams (Programmer, now at UC Davis), Peter Wonka (ASU) and Stuart Lindsay (ASU), we developed a graphical user interface program for the design of DNA nanostructures and sequences. Please click to download this program and a user manual associated with it.
-            </div>
+            <h1 className="page-title" style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>Resources</h1>
           </motion.div>
 
           {/* Downloads */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            <h2 className="section-title" style={{ marginTop: '2.5rem' }}>Downloads</h2>
-            <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0 }}>
-              {downloads.map((item, idx) => (
-                <li key={idx} style={{ marginBottom: '0.5rem' }}>
-                  <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: '#3b82f6' }}>{item.name}</a>
-                  {item.desc && <span style={{ marginLeft: 8, color: '#64748b' }}>— {item.desc}</span>}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '2.5rem',
+            alignItems: 'start',
+            marginTop: '2.5rem',
+            marginBottom: '2.5rem',
+            width: '100%'
+          }}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} style={{ textAlign: 'left' }}>
+              <h2 className="section-title" style={{ fontSize: '1.5625rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif', textAlign: 'left' }}>Downloads</h2>
+              <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0, fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontSize: '1.05rem', textAlign: 'left' }}>
+                {/* Example files index for insertion */}
+                {downloads.map((item, idx) => {
+                  // List of example file names to match
+                  const exampleFiles = [
+                    'Double crossover (DAE) tile (.dna)',
+                    '4x4 tile (.dna)',
+                    'Four-helix tile (.dna)',
+                    'Tetrahedron (.dna)',
+                    'Rectangular origami (.dna)',
+                    '4x4 tile animation (.asf)',
+                    'Three-helix bundle animation (.asf)',
+                    'Tetrahedron animation (.asf)'
+                  ];
+                  // Find the first example file index
+                  const firstExampleIdx = downloads.findIndex(d => exampleFiles.includes(d.name));
+                  // Insert 'Example files' label before the first example file
+                  const insertExampleLabel = idx === firstExampleIdx;
+                  // Is this an example file?
+                  const isExample = exampleFiles.includes(item.name);
+                  return (
+                    <React.Fragment key={item.name}>
+                      {insertExampleLabel && (
+                        <li style={{ margin: '1.2rem 0 0.5rem 0', textAlign: 'left', lineHeight: 1.2 }}>
+                          <span style={{ fontWeight: 700, color: '#232946', fontFamily: 'Inter, Arial, sans-serif' }}>Example files</span>
+                        </li>
+                      )}
+                      <li style={{ marginBottom: '1.1rem', textAlign: 'left', lineHeight: 1.2 }}>
+                        <span style={{ display: 'inline-block' }}>
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: isExample ? 400 : 700, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{item.name}</a>
+                          {item.desc && <span style={{ marginLeft: 6, color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontWeight: 400, marginBottom: 0 }}>- {item.desc}</span>}
+                        </span>
+                      </li>
+                    </React.Fragment>
+                  );
+                })}
+              </ul>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} style={{ textAlign: 'left' }}>
+              <h2 className="section-title" style={{ fontSize: '1.5625rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif', textAlign: 'left' }}>Scientific Tools</h2>
+              <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0, fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontSize: '1.05rem', textAlign: 'left' }}>
+                {scientificTools.map((tool, idx) => (
+                  <li key={idx} style={{ marginBottom: '1.1rem', textAlign: 'left', lineHeight: 1.2 }}>
+                    <span style={{ display: 'inline-block' }}>
+                        <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 700, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{tool.name}</a>
+                      {tool.desc && <span style={{ marginLeft: 6, color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontWeight: 400, marginBottom: 0 }}>- {tool.desc}</span>}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
 
-          {/* Scientific Tools */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-            <h2 className="section-title" style={{ marginTop: '2.5rem' }}>Scientific Tools</h2>
-            <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0 }}>
-              {scientificTools.map((tool, idx) => (
-                <li key={idx} style={{ marginBottom: '0.5rem' }}>
-                  <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: '#3b82f6' }}>{tool.name}</a>
-                  {tool.desc && <span style={{ marginLeft: 8, color: '#64748b' }}>— {tool.desc}</span>}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
 
-          {/* Labs */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
-            <h2 className="section-title" style={{ marginTop: '2.5rem' }}>Labs Working on Structural DNA Nanotechnology</h2>
-            <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0 }}>
-              {dnaLabs.map((lab, idx) => (
-                <li key={idx} style={{ marginBottom: '0.5rem' }}>
-                  <a href={lab.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: '#3b82f6' }}>{lab.name}</a>
-                  {lab.inst && <span style={{ marginLeft: 8, color: '#64748b' }}>@ {lab.inst}</span>}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
 
         </section>
       </div>

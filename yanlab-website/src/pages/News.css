@@ -1,6 +1,8 @@
 .news-page {
   min-height: 100vh;
   width: 100%;
+  font-family: 'Inter, Arial, sans-serif';
+  color: #232946;
 }
 
 .news-hero {
@@ -81,16 +83,18 @@
 .news-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #232946;
   margin-bottom: 1.5rem;
   line-height: 1.4;
   flex-grow: 1;
+  font-family: 'Inter, Arial, sans-serif';
 }
 
 .news-content {
-  color: #666;
-  line-height: 1.7;
-  font-size: 1rem;
+  color: #232946;
+  line-height: 1.5;
+  font-size: 1.05rem;
+  font-family: 'Inter, Arial, sans-serif';
 }
 
 .subscribe-section {

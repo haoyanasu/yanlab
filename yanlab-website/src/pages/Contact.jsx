@@ -5,14 +5,14 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <main className="home-main-container">
-      <div className="home-content-wrapper fade-in" style={{ background: 'rgba(255,255,255,0.65)', backdropFilter: 'blur(6px)', borderRadius: 0 }}>
+    <main className="home-main-container" style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
+      <div className="home-content-wrapper fade-in" style={{ background: 'rgba(255,255,255,0.65)', backdropFilter: 'blur(6px)', borderRadius: 0, fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
         <section className="page-content">
           {/* Contact Info Section */}
           <div style={{ width: '100%', marginBottom: '2rem', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '120px' }}>
-            <h1 style={{ fontSize: '2.2rem', color: '#1a237e', margin: 0 }}>Contact Us</h1>
+            <h1 style={{ fontSize: '2.5rem', color: '#232946', margin: 0, fontWeight: 700, letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>Contact Us</h1>
           </div>
-          <p style={{ fontSize: '0.78375rem', fontWeight: '500', color: '#64748b', marginBottom: '2rem', textAlign: 'center' }}>
+          <p style={{ fontSize: '1.05rem', fontWeight: 400, color: '#232946', marginBottom: '2rem', textAlign: 'center', fontFamily: 'Inter, Arial, sans-serif' }}>
             We'd love to hear from you! Reach out to us using the information below.
           </p>
 
@@ -33,14 +33,14 @@ const Contact = () => {
               width: '100%'
             }}>
               {/* Contact Info Left */}
-              <div style={{ minWidth: 280, maxWidth: 350, textAlign: 'left', flex: '1 1 320px' }}>
-                <h2 style={{ color: '#283593', marginBottom: '0.5rem', textAlign: 'left', fontWeight: 700 }}>Yan Lab</h2>
-                <p style={{ margin: '6px 0', color: '#222', fontSize: '1.15rem' }}>Office: Biodesign A 124B</p>
-                <p style={{ margin: '6px 0', color: '#222', fontSize: '1.15rem' }}>Lab: Biodesign A 131</p>
-                <p style={{ margin: '6px 0', color: '#222', fontSize: '1.15rem' }}>Phone: (480) 727-8570</p>
-                <p style={{ margin: '6px 0', color: '#222', fontSize: '1.15rem' }}>Lab Phone: (480) 727-0428</p>
-                <p style={{ margin: '6px 0', color: '#222', fontSize: '1.15rem' }}>Fax: (480) 965-2747</p>
-                <p style={{ margin: '6px 0', color: '#222', fontSize: '1.15rem' }}>Email: <a href="mailto:hao.yan@asu.edu" style={{ color: '#1a237e', textDecoration: 'underline' }}>hao.yan@asu.edu</a></p>
+              <div style={{ minWidth: 280, maxWidth: 350, textAlign: 'left', flex: '1 1 320px', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
+                <h2 style={{ color: '#232946', marginBottom: '0.5rem', textAlign: 'left', fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif' }}>Yan Lab</h2>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Office: Biodesign A 124B</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Lab: Biodesign A 131</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Phone: (480) 727-8570</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Lab Phone: (480) 727-0428</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Fax: (480) 965-2747</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Email: <a href="mailto:hao.yan@asu.edu" style={{ color: '#3b82f6', textDecoration: 'underline', fontFamily: 'Inter, Arial, sans-serif' }}>hao.yan@asu.edu</a></p>
               </div>
               {/* Google Map Right */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '1 1 350px', minWidth: 280, maxWidth: 400 }}>
@@ -58,7 +58,7 @@ const Contact = () => {
                   href="https://www.google.com/maps/place/Biodesign+Institute,+Building+A115,+Arizona+State+University/@33.4212049,-111.9313337,17z"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#1a237e', fontWeight: 500, textDecoration: 'underline', fontSize: '1rem', marginBottom: '1.5rem' }}
+                  style={{ color: '#3b82f6', fontWeight: 500, textDecoration: 'underline', fontSize: '1.05rem', marginBottom: '1.5rem', fontFamily: 'Inter, Arial, sans-serif' }}
                 >
                   View on Google Maps
                 </a>
@@ -85,17 +85,17 @@ const Contact = () => {
             margin: '0 auto',
           }}>
             <p style={{
-              color: '#374151',
-              fontSize: '1.15rem',
-              fontFamily: 'Inter, Helvetica, Arial, sans-serif',
+              color: '#232946',
+              fontSize: '1.05rem',
+              fontFamily: 'Inter, Arial, sans-serif',
               fontWeight: 400,
               margin: 0,
               textAlign: 'justify',
               textAlignLast: 'center',
               letterSpacing: '0.01em',
-              lineHeight: 1.6
+              lineHeight: 1.5
             }}>
-              We are always seeking to recruit highly motivated individuals who are interested in joining our team. Whether you are an undergraduate or graduate student, postdoctoral researcher, or visiting scholar interested in joining our team, please send your application materials including your CV with a list of references and cover letter describing your background and interests to: <a href="mailto:Hao.Yan@asu.edu" style={{ color: '#1a237e', textDecoration: 'underline', fontWeight: 500 }}>Hao.Yan@asu.edu</a>
+              We are always seeking to recruit highly motivated individuals who are interested in joining our team. Whether you are an undergraduate or graduate student, postdoctoral researcher, or visiting scholar interested in joining our team, please send your application materials including your CV with a list of references and cover letter describing your background and interests to: <a href="mailto:Hao.Yan@asu.edu" style={{ color: '#3b82f6', textDecoration: 'underline', fontWeight: 500, fontFamily: 'Inter, Arial, sans-serif' }}>Hao.Yan@asu.edu</a>
             </p>
           </div>
         </section>
