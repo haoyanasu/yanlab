@@ -1,67 +1,24 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLaptopCode, FaExternalLinkAlt } from 'react-icons/fa';
-
-
-  const scientificTools = [
-    {
-      name: 'oxDNA',
-      link: 'https://dna.physics.ox.ac.uk/index.php?title=Main_Page',
-      desc: 'by University of Oxford team'
-    },
-    {
-      name: 'oxView',
-      link: 'https://sulcgroup.github.io/oxdna-viewer/',
-      desc: 'by Sulc group'
-    },
-    {
-      name: 'DNAxis',
-      link: 'https://caddna.cs.duke.edu/',
-      desc: 'by Reif lab at Duke with Yan lab'
-    },
-  { name: 'Mfold', link: 'http://frontend.bioinfo.rpi.edu/applications/mfold/', desc: 'by Michael Zuker at Rensselaer Polytechnic Institute.' },
-  { name: 'Nanoengineer-1', link: 'http://nanoengineer-1.com/content/', desc: 'by Nanorex.' },
-  { name: 'NUPACK', link: 'http://nupack.org/', desc: 'by Niles Pierce and Colleagues at Caltech.' },
-  { name: 'Fluorescence SpectraViewer', link: 'http://www.invitrogen.com/site/us/en/home/support/Research-Tools/Fluorescence-SpectraViewer.html', desc: 'by Invitrogen.' },
-  { name: 'Oligo Analyzer', link: 'http://www.idtdna.com/Scitools/Scitools.aspx', desc: 'by Integrated DNA Technologies.' },
-  { name: 'caDNAno', link: 'http://cadnano.org/', desc: 'by Shawn Douglas and William Shih at Harvard.' },
-  { name: 'CanDo', link: 'http://cando-dna-origami.org/', desc: 'by Mark Bathe at MIT.' },
-  { name: 'SARSE-DNA origami', link: 'http://www.cdna.dk/index.php/software.html', desc: 'by Kurt Gothelf and Colleagues at Aarhus.' },
+const designTools = [
+  { name: 'caDNAno', link: 'http://cadnano.org/' },
+  { name: 'MagicDNA', link: 'https://github.com/cmhuang2011/MagicDNA' },
+  { name: 'Oligo Analyzer', link: 'http://www.idtdna.com/Scitools/Scitools.aspx' },
+  { name: 'NUPACK', link: 'http://nupack.org/' },
+  { name: 'TALOS', link: 'https://talos-dna-origami.org/about/' },
+  { name: 'PERDIX', link: 'https://perdix-dna-origami.org/' },
+  { name: 'DNAxis', link: 'https://caddna.cs.duke.edu/' }
 ];
 
-const dnaLabs = [
-  { name: 'Paul Alivisatos Lab', link: 'http://www.cchem.berkeley.edu/pagrp/', inst: 'UC Berkeley' },
-  { name: 'Mark Bathe Lab', link: 'http://lcbb.mit.edu/index.html', inst: 'MIT' },
-  { name: 'Hendrik Dietz Lab', link: 'http://bionano.physik.tu-muenchen.de/', inst: 'TU Munchen' },
-  { name: 'Chunhai Fan Lab', link: 'http://www.sinap.ac.cn/physbio/index-en.htm', inst: 'Shanghai Institute of Applied Physics' },
-  { name: 'Deborah Fygenson Lab', link: 'http://www.physics.ucsb.edu/~deborah/', inst: 'UCSB' },
-  { name: 'Kurt Gothelf Lab', link: 'http://www.cdna.dk/index.php/home.html', inst: 'Aarhus' },
-  { name: 'Luc Jaeger Lab', link: 'http://www.chem.ucsb.edu/people/faculty/jaeger/', inst: 'UCSB' },
-  { name: 'Makoto Komiyama', link: 'http://www.mkomi.rcast.u-tokyo.ac.jp/index_e_link_e.html', inst: 'U of Tokyo' },
-  { name: 'Yamuna Krishnan Lab', link: 'http://www.ncbs.res.in/index.php?option=com_content&task=view&id=60&Itemid=69', inst: 'NCBS' },
-  { name: 'Thom LaBean Lab', link: 'http://www.cs.duke.edu/~thl/', inst: 'Duke' },
-  { name: 'Tim Liedl Lab', link: 'http://www.softmatter.physik.uni-muenchen.de/tiki-index.php?page=GroupLiedlHome', inst: 'LMU Munchen' },
-  { name: 'Dongsheng Liu Lab', link: 'http://liuds.chem.tsinghua.edu.cn/LabTour.html', inst: 'Tsinghua' },
-  { name: 'Dan Luo Lab', link: 'http://luolabs.bee.cornell.edu/index.html', inst: 'Cornell' },
-  { name: 'Chengde Mao Lab', link: 'http://www.chem.purdue.edu/people/faculty/faculty.asp?itemID=46', inst: 'Purdue' },
-  { name: 'Michael Mertig Lab', link: 'http://www.digs-bb.de/digs-bb/research-groups/Mertig', inst: 'Dresden' },
-  { name: 'Yongli Mi Lab', link: 'http://ihome.ust.hk/~keymix/', inst: 'HKUST' },
-  { name: 'Christof Niemeyer', link: 'http://www.chemie.uni-dortmund.de/groups/niemeyer/index.html', inst: 'Dortmund' },
-  { name: 'Niles Pierce Lab', link: 'http://www.piercelab.caltech.edu/', inst: 'Caltech' },
-  { name: 'John Reif Lab', link: 'http://www.cs.duke.edu/~reif/', inst: 'Duke' },
-  { name: 'Paul Rothemund Lab', link: 'http://www.dna.caltech.edu/~pwkr/', inst: 'Caltech' },
-  { name: 'Ned Seeman Lab', link: 'http://seemanlab4.chem.nyu.edu/', inst: 'NYU' },
-  { name: 'William Shih Lab', link: 'http://research2.dfci.harvard.edu/shih/SHIH_LAB/Home.html', inst: 'Harvard' },
-  { name: 'Fritz Simmel Lab', link: 'http://www.e14.ph.tum.de/', inst: 'LMU' },
-  { name: 'Hanadi Sleiman Lab', link: 'http://www.hanadisleiman.com/', inst: 'McGill' },
-  { name: 'Milan Stojanovic Lab', link: 'https://digamma.cs.unm.edu/wiki/bin/view/McogPublicWeb/WebHome', inst: 'Columbia' },
-  { name: 'Hiroshi Sugiyama Lab', link: 'http://kuchem.kyoto-u.ac.jp/chembio/', inst: 'Kyoto U' },
-  { name: 'Andrew Turberfield Lab', link: 'http://www.physics.ox.ac.uk/cm/people/turberfield.htm', inst: 'Oxford' },
-  { name: 'Itamar Willner Lab', link: 'http://chem.ch.huji.ac.il/willner/', inst: 'Hebrew' },
-  { name: 'Erik Winfree Lab', link: 'http://www.dna.caltech.edu/', inst: 'Caltech' },
-  { name: 'Peng Yin Lab', link: 'http://yinlab.org/', inst: 'Harvard' },
-  { name: 'Bernie Yurke Lab', link: 'http://coen.boisestate.edu/departments/faculty.asp?ID=134', inst: 'BSU' },
+const simulationTools = [
+  { name: 'oxDNA', link: 'https://dna.physics.ox.ac.uk/index.php?title=Main_Page' },
+  { name: 'CanDo', link: 'https://cando-dna-origami.org/about/#ref_11' }
+];
+
+const visualizationTools = [
+  { name: 'oxView', link: 'https://sulcgroup.github.io/oxdna-viewer/' },
+  { name: 'ChimeraX', link: 'https://www.rbvi.ucsf.edu/chimerax/' },
+  { name: 'Fluorescence SpectraViewer', link: 'http://www.invitrogen.com/site/us/en/home/support/Research-Tools/Fluorescence-SpectraViewer.html' }
 ];
 
 const downloads = [
@@ -81,7 +38,7 @@ const downloads = [
 const Resources = () => {
   return (
     <main className="resources-main-container" style={{ background: '#fff', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
-      <div className="resources-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
+  <div className="resources-content-wrapper fade-in" style={{ borderRadius: 0, background: '#fff', fontFamily: 'Inter, Arial, sans-serif', color: '#232946', paddingLeft: '2.5rem' }}>
   <section className="page-content" style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="page-title" style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>Resources</h1>
@@ -97,6 +54,7 @@ const Resources = () => {
             marginBottom: '2.5rem',
             width: '100%'
           }}>
+            {/* Downloads Section */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} style={{ textAlign: 'left' }}>
               <h2 className="section-title" style={{ fontSize: '1.5625rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif', textAlign: 'left' }}>Downloads</h2>
               <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0, fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontSize: '1.05rem', textAlign: 'left' }}>
@@ -128,7 +86,7 @@ const Resources = () => {
                       )}
                       <li style={{ marginBottom: '1.1rem', textAlign: 'left', lineHeight: 1.2 }}>
                         <span style={{ display: 'inline-block' }}>
-                          <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: isExample ? 400 : 700, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{item.name}</a>
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 400, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{item.name}</a>
                           {item.desc && <span style={{ marginLeft: 6, color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontWeight: 400, marginBottom: 0 }}>- {item.desc}</span>}
                         </span>
                       </li>
@@ -137,17 +95,76 @@ const Resources = () => {
                 })}
               </ul>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} style={{ textAlign: 'left' }}>
+            {/* Scientific Tools Section */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} style={{ textAlign: 'left', marginLeft: '4.5rem' }}>
               <h2 className="section-title" style={{ fontSize: '1.5625rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif', textAlign: 'left' }}>Scientific Tools</h2>
               <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0, fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontSize: '1.05rem', textAlign: 'left' }}>
-                {scientificTools.map((tool, idx) => (
-                  <li key={idx} style={{ marginBottom: '1.1rem', textAlign: 'left', lineHeight: 1.2 }}>
+                <li style={{ margin: '1.2rem 0 0.5rem 0', textAlign: 'left', lineHeight: 1.2 }}>
+                  <span style={{ fontWeight: 700, color: '#232946', fontFamily: 'Inter, Arial, sans-serif' }}>Design tools</span>
+                </li>
+                {designTools.map((item) => (
+                  <li key={item.name} style={{ marginBottom: '1.1rem', textAlign: 'left', lineHeight: 1.2 }}>
                     <span style={{ display: 'inline-block' }}>
-                        <a href={tool.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 700, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{tool.name}</a>
-                      {tool.desc && <span style={{ marginLeft: 6, color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontWeight: 400, marginBottom: 0 }}>- {tool.desc}</span>}
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 400, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{item.name}</a>
                     </span>
                   </li>
                 ))}
+                <li style={{ margin: '1.2rem 0 0.5rem 0', textAlign: 'left', lineHeight: 1.2 }}>
+                  <span style={{ fontWeight: 700, color: '#232946', fontFamily: 'Inter, Arial, sans-serif' }}>Simulation tools</span>
+                </li>
+                {simulationTools.map((item) => (
+                  <li key={item.name} style={{ marginBottom: '1.1rem', textAlign: 'left', lineHeight: 1.2 }}>
+                    <span style={{ display: 'inline-block' }}>
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 400, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{item.name}</a>
+                    </span>
+                  </li>
+                ))}
+                <li style={{ margin: '1.2rem 0 0.5rem 0', textAlign: 'left', lineHeight: 1.2 }}>
+                  <span style={{ fontWeight: 700, color: '#232946', fontFamily: 'Inter, Arial, sans-serif' }}>Visualization tools</span>
+                </li>
+                {visualizationTools.map((item) => (
+                  <li key={item.name} style={{ marginBottom: '1.1rem', textAlign: 'left', lineHeight: 1.2 }}>
+                    <span style={{ display: 'inline-block' }}>
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 400, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{item.name}</a>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+          {/* ASU Resources Section - below the two columns, aligned with container */}
+          <div style={{ maxWidth: '100%', margin: '0 auto', paddingLeft: 0, paddingRight: 0 }}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} style={{ textAlign: 'left', marginTop: '2.5rem' }}>
+              <h2 className="section-title" style={{ fontSize: '1.5625rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif', textAlign: 'left' }}>ASU Resources</h2>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginTop: '1.2rem' }}>Biodesign Resources</h3>
+              <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0, fontSize: '1.05rem' }}>
+                <li>
+                  <a href="https://biodesign.asu.edu/" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'none' }}>Biodesign Institute</a> – Nature-inspired science & innovation
+                </li>
+                <li>
+                  <a href="https://biodesign.asu.edu/molecular-design-and-biomimetics/" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'none' }}>Biodesign Center for Molecular Design and Biomimetics</a> – Our Center
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@ASUBiodesign/videos" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'none' }}>ASU Biodesign YouTube</a> – Media & outreach
+                </li>
+              </ul>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginTop: '1.2rem' }}>SMS Resources</h3>
+              <ul style={{ lineHeight: 2, listStyleType: 'none', paddingLeft: 0, fontSize: '1.05rem' }}>
+                <li>
+                  <a href="https://sms.asu.edu/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'none' }}>SMS Home</a> – Main portal
+                </li>
+                <li>
+                  <a href="https://sms.asu.edu/node/1681?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'none' }}>SMS Resources Directory</a> – Tools & forms
+                </li>
+                <li>
+                  <a href="https://sms.asu.edu/Research?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'none' }}>Research in SMS</a> – Labs & themes
+                </li>
+                <li>
+                  <a href="http://sms.asu.edu/Research/Facilities-and-Instrumentation?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'none' }}>Facilities & Instrumentation</a> – Shared equipment
+                </li>
+                <li>
+                  <a href="https://sms.asu.edu/About/Contact-Us?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style={{ color: '#1a0dab', textDecoration: 'none' }}>Contact SMS</a> – Admin & offices
+                </li>
               </ul>
             </motion.div>
           </div>

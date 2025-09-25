@@ -692,9 +692,9 @@ const News = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="page-title" style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>News & Updates</h1>
-            <p className="page-subtitle" style={{ fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.4rem', color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px' }}>
+            {/* <p className="page-subtitle" style={{ fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.4rem', color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px' }}>
               Latest news, publications, and achievements from the Yan Lab
-            </p>
+            </p> */}
             
             {/* Group Picture */}
             <motion.div
