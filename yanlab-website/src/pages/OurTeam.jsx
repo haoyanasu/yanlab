@@ -7,7 +7,7 @@ const OurTeam = () => {
 
   // PI Yan profile for grid
   const piYan = {
-  name: "Hao Yan",
+  name: "Dr. Hao Yan",
   title: "Principal Investigator",
     subtitle: "Milton D. Glick Distinguished Professor",
     department: "School of Molecular Sciences and School of Medicine",
@@ -32,14 +32,14 @@ const OurTeam = () => {
       image: "chad.jpg"
     },
     {
-      name: "Yang Xu",
+      name: "Dr. Yang Xu",
       title: "Assistant Research Professor", 
       email: "yangxu3@asu.edu",
   focus: "Biomolecular Therapeutics and Diagnostics",
       image: "yangxu.jpg"
     },
     {
-      name: "Kun Dai",
+      name: "Dr Kun Dai",
       title: "Assistant Research Professor",
       email: "",
   focus: "RNA origami Therapeutics",
@@ -126,13 +126,13 @@ const OurTeam = () => {
                     {member.name}
                   </h3>
                   {/* Special formatting for PI Yan */}
-                  {member.name === 'Hao Yan' ? (
+                    {member.name === 'Dr. Hao Yan' ? (
                     <>
-                      <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>{member.title}</p>
-                      <p style={{ color: '#64748b', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>Biomolecular Programmer and Engineer</p>
-                      <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center', marginBottom: '0.125rem' }}>
-                        Email
-                      </a>
+                        <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>Principal Investigator</p>
+                        <p style={{ color: '#64748b', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>Biomolecular Programmer and Engineer</p>
+                        <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center', marginBottom: '0.125rem' }}>
+                          Email
+                        </a>
                     </>
                   ) : member.focus ? (
                     <>

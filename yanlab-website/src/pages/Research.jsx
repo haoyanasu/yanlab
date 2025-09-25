@@ -50,16 +50,7 @@ const Research = () => {
             transition={{ duration: 0.8 }}
             style={{ textAlign: 'left' }}
           >
-            <p className="page-subtitle" style={{
-              fontWeight: 700,
-              fontFamily: 'Inter, Arial, sans-serif',
-              fontSize: '1.4rem',
-              color: '#232946',
-              marginBottom: '0.5rem',
-              letterSpacing: '-1px'
-            }}>
-              Exploring the frontiers of DNA nanotechnology and molecular design
-            </p>
+            {/* Removed subtitle as requested */}
           </motion.div>
 
           {/* Mission Statement */}
@@ -91,12 +82,12 @@ const Research = () => {
             style={{ textAlign: 'center', margin: '4rem 0 2.5rem 0' }}
           >
             <h2 style={{
-              fontSize: '2.5rem',
-              fontWeight: 700,
-              color: '#232946',
-              marginBottom: '0.5rem',
-              letterSpacing: '-1px',
-              fontFamily: 'Inter, Arial, sans-serif'
+              fontSize: '2.2rem',
+              fontWeight: 400,
+              color: '#22223b',
+              marginBottom: '1.2rem',
+              fontFamily: 'Georgia, serif',
+              lineHeight: 1.1
             }}>
               Research Areas
             </h2>
@@ -164,13 +155,13 @@ const Research = () => {
             transition={{ duration: 0.8, delay: 1.6 }}
             style={{ textAlign: 'center', margin: '4rem 0' }}
           >
-            <h2 style={{ 
-              fontSize: '2.5rem', 
-              fontWeight: 700, 
-              color: '#232946',
-              marginBottom: '0.5rem',
-              letterSpacing: '-1px',
-              fontFamily: 'Inter, Arial, sans-serif'
+            <h2 style={{
+              fontSize: '2.2rem',
+              fontWeight: 400,
+              color: '#22223b',
+              marginBottom: '1.2rem',
+              fontFamily: 'Georgia, serif',
+              lineHeight: 1.1
             }}>
               Funding Agencies
             </h2>

@@ -4,6 +4,71 @@ import React from 'react';
 const Home = () => {
   return (
     <div style={{ minHeight: '100vh', width: '100vw', position: 'relative', background: '#fff' }}>
+      {/* Half-half section */}
+      <div style={{
+        display: 'flex',
+        width: '100%',
+        height: '400px',
+        marginBottom: '0',
+        marginTop: '112px', // 2rem navbar padding top + bottom (2*32px) + 48px approx
+      }}>
+        {/* Colored box */}
+        <div style={{
+          flex: 1,
+          background: '#fff',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'flex-start',
+          paddingLeft: '6vw',
+          color: '#22223b',
+          height: '100%',
+        }}>
+          {/* Top dark line */}
+          <div style={{
+            width: '220px',
+            height: '6px',
+            background: '#22223b',
+            marginBottom: '2rem',
+            marginTop: '0',
+            borderRadius: '2px',
+            opacity: 0.9
+          }} />
+          {/* Title */}
+          <div style={{
+            fontSize: '2.2rem', // 2rem * 1.1
+            fontWeight: 400,
+            marginBottom: '1.2rem',
+            color: '#22223b',
+            fontFamily: 'Georgia, serif',
+            lineHeight: 1.1
+          }}>
+            The Yan Research Group
+          </div>
+          {/* Description */}
+          <div style={{
+            fontSize: '1.1rem', // 1rem * 1.1
+            fontWeight: 400,
+            color: '#444',
+            maxWidth: '90%',
+            marginBottom: '2rem',
+            fontFamily: 'Inter, Arial, sans-serif',
+            lineHeight: 1.5
+          }}>
+            Biomolecular and Engineering Lab using Nature's Design Rules as Inspiration to Expand the Frontiers of Biomedicine, Material Science and Nanotechnology.
+          </div>
+        </div>
+        {/* Image */}
+        <div style={{
+          flex: 1,
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+          <img src="/cancer.jpg" alt="Cancer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        </div>
+      </div>
       <footer style={{
         width: '100%',
         background: '#000',

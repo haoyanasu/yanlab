@@ -8,7 +8,14 @@ const SectionBlock = ({ image, title, description, reverse, imageStyle }) => {
         <img src={image} alt={title} style={imageStyle} />
       </div>
       <div className="section-block-text">
-        <h3>{title}</h3>
+        <h3 style={{
+          fontFamily: 'Georgia, serif',
+          fontSize: '2.2rem',
+          fontWeight: 400,
+          color: '#22223b',
+          lineHeight: 1.1,
+          marginBottom: '1.2rem',
+        }}>{title}</h3>
         <p>{description}</p>
       </div>
     </section>

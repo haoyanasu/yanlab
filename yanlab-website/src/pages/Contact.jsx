@@ -12,9 +12,7 @@ const Contact = () => {
           <div style={{ width: '100%', marginBottom: '2rem', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '120px' }}>
             <h1 style={{ fontSize: '2.5rem', color: '#232946', margin: 0, fontWeight: 700, letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>Contact Us</h1>
           </div>
-          <p style={{ fontSize: '1.05rem', fontWeight: 400, color: '#232946', marginBottom: '2rem', textAlign: 'center', fontFamily: 'Inter, Arial, sans-serif' }}>
-            We'd love to hear from you! Reach out to us using the information below.
-          </p>
+
 
           {/* Main Contact Details */}
           <motion.div
@@ -34,13 +32,11 @@ const Contact = () => {
             }}>
               {/* Contact Info Left */}
               <div style={{ minWidth: 280, maxWidth: 350, textAlign: 'left', flex: '1 1 320px', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
-                <h2 style={{ color: '#232946', marginBottom: '0.5rem', textAlign: 'left', fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif' }}>Yan Lab</h2>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Office: Biodesign A 124B</p>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Lab: Biodesign A 131</p>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Phone: (480) 727-8570</p>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Lab Phone: (480) 727-0428</p>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Fax: (480) 965-2747</p>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Email: <a href="mailto:hao.yan@asu.edu" style={{ color: '#3b82f6', textDecoration: 'underline', fontFamily: 'Inter, Arial, sans-serif' }}>hao.yan@asu.edu</a></p>
+                <h2 style={{ color: '#232946', marginBottom: '0.5rem', textAlign: 'left', fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif' }}>The Yan Lab</h2>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Center for Molecular Design and Biomimetics</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>1001 S McAllister Ave, Tempe, Az, 85281</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>CELL: 480.727.8570 / Fax: 480.965.2747</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>E: <a href="mailto:hao.yan@asu.edu" style={{ color: '#3b82f6', textDecoration: 'underline', fontFamily: 'Inter, Arial, sans-serif' }}>hao.yan@asu.edu</a></p>
               </div>
               {/* Google Map Right */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '1 1 350px', minWidth: 280, maxWidth: 400 }}>
@@ -49,7 +45,7 @@ const Contact = () => {
                   src="https://www.google.com/maps?q=Biodesign+Institute,+Building+A115,+Arizona+State+University&output=embed"
                   width="350"
                   height="300"
-                  style={{ border: 0, borderRadius: '12px', marginBottom: '0.5rem', width: '100%', maxWidth: 400 }}
+                  style={{ border: 0, borderRadius: 0, marginBottom: '0.5rem', width: '100%', maxWidth: 400 }}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
