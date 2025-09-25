@@ -19,9 +19,8 @@ const Navbar = () => {
 
   return (
     <nav style={{
-      background: 'rgba(255, 255, 255, 0.65)',
-      backdropFilter: 'blur(10px)',
-      borderBottom: '1px solid #e2e8f0',
+      background: '#000',
+      borderBottom: '1px solid #222',
       padding: '1rem 0',
       position: 'fixed',
       top: 0,
@@ -49,21 +48,14 @@ const Navbar = () => {
           >
             <div>
               <div style={{
-                fontSize: '1.2375rem',
+                fontSize: '1.60875rem',
                 fontWeight: '800',
-                color: '#0f172a',
+                color: '#fff',
                 letterSpacing: '-0.01em'
               }}>
                 YAN LAB
               </div>
-              <div style={{
-                fontSize: '0.61875rem',
-                color: '#64748b',
-                fontWeight: '400',
-                marginTop: '-2px'
-              }}>
-                                Molecular Engineering
-              </div>
+              {/* Removed 'Molecular Engineering' subtitle as requested */}
             </div>
           </Link>
 
@@ -79,12 +71,13 @@ const Navbar = () => {
               to={item.path}
               style={{
                 textDecoration: 'none',
-                color: location.pathname === item.path ? '#3b82f6' : '#64748b',
+                color: '#fff',
                 fontWeight: location.pathname === item.path ? '600' : '500',
-                fontSize: '0.78375rem',
+                fontSize: '1.0189rem',
                 transition: 'color 0.2s ease',
                 padding: '0.5rem 0',
-                borderBottom: location.pathname === item.path ? '2px solid #3b82f6' : '2px solid transparent'
+                borderBottom: location.pathname === item.path ? '2px solid #fff' : '2px solid transparent',
+                fontFamily: 'Inter, Arial, sans-serif'
               }}
             >
               {item.label}
@@ -100,7 +93,7 @@ const Navbar = () => {
             background: 'none',
             border: 'none',
             fontSize: '1.2375rem',
-            color: '#64748b',
+            color: '#fff',
             cursor: 'pointer'
           }}
           className="mobile-menu-btn"
@@ -115,8 +108,8 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           style={{
-            background: '#ffffff',
-            borderTop: '1px solid #e2e8f0',
+            background: '#000',
+            borderTop: '1px solid #222',
             padding: '1rem 0',
             display: 'none'
           }}
@@ -131,11 +124,12 @@ const Navbar = () => {
                 style={{
                   display: 'block',
                   textDecoration: 'none',
-                  color: location.pathname === item.path ? '#3b82f6' : '#64748b',
+                  color: '#fff',
                   fontWeight: location.pathname === item.path ? '600' : '500',
                   padding: '0.75rem 0',
-                  borderBottom: '1px solid #f1f5f9',
-                  fontSize: '0.825rem'
+                  borderBottom: '1px solid #333',
+                  fontSize: '1.0725rem',
+                  fontFamily: 'Inter, Arial, sans-serif'
                 }}
               >
                 {item.label}

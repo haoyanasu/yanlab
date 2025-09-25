@@ -734,7 +734,7 @@ const Publications = () => (
   <div className="publications-page">
     <div className="publications-container" style={{
       maxWidth: '900px',
-      margin: '48px auto',
+      margin: '96px auto 48px auto',
       background: 'rgba(255,255,255,0.65)',
       borderRadius: '0',
       boxShadow: '0 2px 16px rgba(0,0,0,0.08)',
@@ -743,7 +743,7 @@ const Publications = () => (
     }}>
       <div className="publications-hero" style={{ padding: '48px 0 0 0', textAlign: 'center' }}>
         <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>Publications</h1>
-        <p style={{ color: '#232946', fontSize: '1.08rem', fontWeight: 500, marginBottom: 0, fontFamily: 'Inter, Arial, sans-serif' }}>Recent research articles from the Yan Lab</p>
+  {/* Removed subtitle as requested */}
       </div>
       <div className="publications-list" style={{ marginTop: '32px' }}>
         <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2025</h2>
