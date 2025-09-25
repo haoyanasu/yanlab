@@ -14,7 +14,7 @@ const OurTeam = () => {
     office: "BDA 124B",
     phone: "(480) 727-8570",
     email: "hao.yan@asu.edu",
-    image: "hyan.jpg",
+  image: "hyan_3.jpg",
     awards: [
       "Foresight Institute Feynman Prize in Nanotechnology",
       "Rozenberg Tulip Award in DNA Computing",
@@ -162,151 +162,60 @@ const OurTeam = () => {
 
         {/* Group Alumni Section */}
   <section className="alumni-section" style={{ marginTop: '4rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
-          <h2 style={{ fontSize: '2.2rem', fontWeight: 600, background: '#cce2fc', display: 'inline-block', padding: '0.25em 0.75em', borderRadius: '0.2em', color: '#64748b', marginBottom: '1.5rem' }}>GROUP ALUMNI</h2>
+          <h2 style={{
+            fontSize: '2.5rem',
+            fontWeight: 700,
+            color: '#232946',
+            marginBottom: '1.5rem',
+            letterSpacing: '-1px',
+            fontFamily: 'Inter, Arial, sans-serif',
+            textAlign: 'center',
+            width: '100%'
+          }}>GROUP ALUMNI</h2>
           <div style={{ margin: '2rem 0 0 0', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-            <div style={{ background: '#cce2fc', display: 'inline-block', padding: '0.25em 0.75em', borderRadius: '0.2em', fontWeight: 600, fontSize: '1.5rem', color: '#2d4a5a', marginBottom: '0.5rem' }}>Graduate Students</div>
-            <div style={{ fontStyle: 'italic', fontSize: '1.2rem', color: '#2d4a5a', marginBottom: '1rem', background: '#cce2fc', display: 'inline-block', padding: '0.1em 0.5em', borderRadius: '0.2em' }}>
-              McGill 1992–present<br />Toronto 1988–1992
-            </div>
+            <div style={{ fontWeight: 600, fontSize: '1.5rem', color: '#232946', marginBottom: '0.5rem', textAlign: 'center' }}>Graduate Students and Postdoctoral Fellows</div>
             <div style={{ marginBottom: '2rem', display: 'inline-block', textAlign: 'left' }}>
-              1. Alicia Montulet, M.Sc. 2024<br />
-              2. James Thorpe, Ph.D. 2023<br />
-              3. Roberto El Khoury, Ph.D. 2022<br />
-              4. Ada McVean, M.Sc. 2022<br />
-              5. Leonora Abdullahu, Ph.D. 2021<br />
-              6. Daniel O'Reilly, Ph.D. 2019<br />
-              7. Hala Abou Assi, Ph.D. 2018<br />
-              8. Danielle Vlaho, Ph.D. 2017<br />
-              9. Maryam Habibian, Ph.D. 2017<br />
-              10. Elise Malek-Adamian, M.Sc. 2017<br />
-              11. Jovanka Bogojeski, Ph.D. 2017<br />
-              12. Maryam Yahyaee Anzahaee, Ph.D. 2015<br />
-              13. Adam Katolik, Ph.D. 2015<br />
-              14. Glen F. Deleavey, Ph.D 2013<br />
-              15. Matthew Hassler, Ph.D. 2013<br />
-              16. Fereshteh Azizi, M.Sc. 2013<br />
-              17. Pascal Gallant, M.Sc. 2011<br />
-              18. Robert A. Donga, Ph.D. 2010<br />
-              19. Alexander S. Wahba, Ph.D. 2010<br />
-              20. Jeremy G. Lackey, Ph.D. 2010<br />
-              21. Siara Isaac, M.Sc. 2008<br />
-              22. Jonathan K. Watts, Ph.D. 2008<br />
-              23. David Sabatino, Ph.D. 2007<br />
-              24. Debbie Mitra, Ph.D. 2008 (co-supervised with H. Sleiman)<br />
-              25. Chang Geng Peng, Ph.D. 2007<br />
-              26. Bénédicte Pâtureau, M.Sc. 2006<br />
-              27. Maria M. Mangos, Ph.D. 2005<br />
-              28. Anna Lisa Tedeschi, M.Sc. 2004<br />
-              29. Sandra Carriero, Ph.D. 2003<br />
-              30. Kazim A. Agha, Ph.D. 2003<br />
-              31. Rami N. Hannoush, Ph.D. 2003<br />
-              32. Rawan Mourani, M.Sc. 2002<br />
-              33. Daniel R. Yazbeck, M.Sc. 2001<br />
-              34. Anita Liscio, M.Sc. 2001<br />
-              35. Christopher J. Wilds, Ph.D. 2000<br />
-              36. Ravinderjit S. Braich, Ph.D. 1999<br />
-              37. Anne M. Noronha, Ph.D. 1999<br />
-              38. Sébastien Robidoux, Ph.D. 1999<br />
-              39. Margherita Scartozzi, M.Sc. 1998<br />
-              40. André H. Uddin, Ph.D. 1996<br />
-              41. Miguel A. Roman, M.Sc. 1995<br />
-              42. Kanjana Ganeshan, Ph.D. 1995<br />
-              43. Robert H. E. Hudson, Ph.D. 1995<br />
-              44. Yunkui Guo, M.Sc. 1992<br />
-              45. Paul A. Giannaris, M.Sc. 1991<br />
-              46. Steven V. Zabarylo, M.Sc. 1990
-            </div>
-            <div style={{ background: '#cce2fc', display: 'inline-block', padding: '0.25em 0.75em', borderRadius: '0.2em', fontWeight: 600, fontSize: '1.5rem', color: '#2d4a5a', marginBottom: '0.5rem' }}>Postdoctoral Fellows & Research Assistants</div>
-            <div style={{ marginBottom: '2rem', display: 'inline-block', textAlign: 'left' }}>
-              James Thorpe, PDF 2024-2025<br />
-              Adam Katolik, Research Scientist 2018-2022<br />
-              Miguel Garavís Cabello, PDF 2019-2020<br />
-              Sunit Jana, PDF 2018-2020; Research Associate 2022-2024<br />
-              Elise Malek-Adamian, Research Assistant 2017-2018<br />
-              Saùl Martinez-Montero, PDF 2012-2016<br />
-              Jory Liétard, PDF 2013-2015<br />
-              Ken Yamada, PDF 2012-2014<br />
-              Richard Johnsson, PDF 2008-2011<br />
-              Nandyala Mallikarjuna Reddy, PDF 2008-2011<br />
-              Nuria Bayo-Puxan, PDF 2007-2009 (co-supervised)<br />
-              Kyung-Lyum Min, PDF 2001-2002; Research Associate 2002-2004<br />
-              Annie Galarneau, Research Assistant 2002-2003<br />
-              Ekaterina Viazovkina, PDF 1997-2001; Research Associate 2001-2004<br />
-              Mohamed Elzagheid, PDF 2002-2004; Research Associate 2004-2005<br />
-              Marita Wasner, PDF 1996-1997
-            </div>
-            <div style={{ background: '#cce2fc', display: 'inline-block', padding: '0.25em 0.75em', borderRadius: '0.2em', fontWeight: 600, fontSize: '1.5rem', color: '#2d4a5a', marginBottom: '0.5rem' }}>Visiting Students</div>
-            <div style={{ marginBottom: '2rem', display: 'inline-block', textAlign: 'left' }}>
-              Jack Barr, Ph.D. (Ghent University), 2025<br />
-              Luca Pisano, Ph.D. (Sapienza Università di Roma), 2023-2024<br />
-              Arnau Dominguez, Ph.D. (Universitat de Barcelona), 2023<br />
-              Wiebke Teich, M.Sc. (University of Münster), 2022-2023<br />
-              Cristina Cabrero Fernández, Ph.D. (Instituto de Química Física Rocasolano), 2022<br />
-              Israel Serrano, Ph.D. (IInstituto de Química Física Rocasolano), 2019<br />
-              Luisa Fernanda López De la Fuente, B.Sc. (Tecnológico de Monterrey), 2018<br />
-              Annabelle Schofield, B.Sc. (U of Nottingham), 2017<br />
-              Nobuhiro Tago, Ph.D. (Tokyo Institute of Technology), 2013<br />
-              Saùl Martinez-Montero, Ph.D. (Universidad de Oviedo), 2012<br />
-              Nerea Martin-Pintado Zugasti, Ph.D. (CSIC-Madrid), 2010<br />
-              Paula Lopez Senin, Ph.D. (Universidad de Barcelona), 2009<br />
-              Júlia Viladoms, Ph.D. (Universidad de Barcelona), 2008<br />
-              Signe Inglev Steffansen, Ph.D. (University of Southern Denmark), 2005<br />
-              Maxie Roessler, B.Sc. (Oxford University), 2004
-            </div>
-            <div style={{ background: '#cce2fc', display: 'inline-block', padding: '0.25em 0.75em', borderRadius: '0.2em', fontWeight: 600, fontSize: '1.5rem', color: '#2d4a5a', marginBottom: '0.5rem' }}>Undergraduate Students</div>
-            <div style={{ fontStyle: 'italic', fontSize: '1.2rem', color: '#2d4a5a', marginBottom: '1rem', background: '#cce2fc', display: 'inline-block', padding: '0.1em 0.5em', borderRadius: '0.2em' }}>
-              McGill 1992–present<br />Toronto 1988–1992
-            </div>
-            <div style={{ marginBottom: '2rem', display: 'inline-block', textAlign: 'left' }}>
-              Lilass Ozturk, 2025<br />
-              Richard Ilianu, 2025<br />
-              Kathleen Maloney, 2025<br />
-              Ali Baghirov, 2024<br />
-              Nicolas Beauparlant, 2024-2025<br />
-              Paige Roehrig, 2024<br />
-              Kaixiang Wang, 2023<br />
-              Diana McCorquodale, 2023<br />
-              Vivian Zhang, 2022<br />
-              David Friedland, 2022<br />
-              Morgane Roman, 2021<br />
-              Henri Zhu, 2019<br />
-              Patrick Nathael Javorcik, 2019<br />
-              Ada McVean, 2018<br />
-              Jeff Guo, 2018<br />
-              Anne Liao, 2016<br />
-              James Thorpe, 2016<br />
-              Yu Chen (Jimmy) Lin, 2016<br />
-              Logan Di Giovanni, 2015<br />
-              Arden Dierker Viik, 2014<br />
-              Michael Thomson, 2013<br />
-              Christine Button, 2012<br />
-              Simon Wisnovsky, 2011<br />
-              Erika Steels, 2011<br />
-              Petra Lindovska, 2011<br />
-              Volodymyr Hrabovskyy, 2010<br />
-              Yi Qiao (Prudence) Wu, 2010<br />
-              Kim Beauregard, 2008<br />
-              Pascal Gallant, 2006<br />
-              Jennifer Pfeiffer, 2006<br />
-              Gail Fernandes, 2004<br />
-              Michael Hunter, 2002<br />
-              Ariel Breiner, 1999<br />
-              Sherri Gavin, 1999<br />
-              Isabelle Paquin, 1996<br />
-              Chris Harrison, 1996<br />
-              Sandra Carriero, 1996<br />
-              Sarah Weeks, 1994<br />
-              Janelle Anderson, 1994<br />
-              Juanita Chan, 1993<br />
-              Christopher Tomalty, 1993<br />
-              Verna Salado, 1990<br />
-              Laura Rubino, 1989<br />
-              Louella Lobo, 1989<br />
-              Dave Dindayal, 1989<br />
-              Barb Helbrecht, 1988<br />
-              Paul A. Giannaris, 1988<br />
-              Adrian Bojko, 1988<br />
-              Steven V. Zabarylo, 1987
+              <b>41. Junping Zhang (Postdoc, 2005-2006)</b><br />Research Scientist, Nanomaterial Scientist<br />Carestream Company, Minnesota, USA<br /><br />
+              <b>40. Qiangbin Wang (Postdoc, 2006-2008)</b><br />Professor<br />Suzhou Institute of Nano-Tech and Nano-Bionics, Chinese Academy of Sciences, Suzhou, P. R. China<br /><br />
+              <b>39. National Center for Nanosciences and Technology, Chinese Academy of Science, Beijing, P. R. China</b><br /><br />
+              <b>38. Xixi Wei (Ph.D. student, 2008-2014)</b><br />Research Scientist<br />Caris Life Sciences<br /><br />
+              <b>37. Zhe Li (Ph.D. student, 2007-2012)</b><br />Postdoc Fellow<br />Yale Universtiy<br /><br />
+              <b>36. Suchetan Pal (Ph.D. student, 2008-2012)</b><br />Postdoc Fellow<br />Sloan Kettering Cancer research Institute<br /><br />
+              <b>35. Xiaowei Liu (Ph.D. student, 2008-2013)</b><br />Postdoc Fellow<br />Arizona State University<br /><br />
+              <b>34. Zhao Zhao (Ph.D. student, 2008-2013)</b><br />Postdoc Fellow<br />Harvard Medical School<br /><br />
+              <b>33. Dongran Han (Ph.D. student, 2009-2013)</b><br />Professor<br />Beijing University of Chinese Medicine<br /><br />
+              <b>32. Anirban Samanta (Ph.D. student, 2009-2014)</b><br />Postdoc Fellow<br />Naval Research Laboratory<br /><br />
+              <b>31. Wei Li (Ph.D. student, 2009-2014)</b><br />Postdoc Fellow<br />California Institute of Technology<br /><br />
+              <b>30. Baoquan Ding (Assistant research professor, 2009-2010)</b><br />Professor<br /><br />
+              <b>29. Andre Pinheiro (Postdoc, 2009-2012)</b><br /><br />
+              <b>28. Zhengtao Deng (Assistant research professor, 2009-2012)</b><br />Professor<br />Nanjing University<br /><br />
+              <b>27. Palash Dutta (Ph.D. student, 2009-2014)</b><br />Postdoc Fellow<br />Georgia Tech and Emory University<br /><br />
+              <b>26. Reji Vargahes (Postdoc, 2010-2011)</b><br />Assitant Professor<br />Indian Institute of Science Education and Research<br /><br />
+              <b>25. Jinglin Fu (Postdoc, 2010-2013)</b><br />Assistant Professor<br />Rutgers University<br /><br />
+              <b>24. Yang Yang (Postdoc, 2010-2012)</b><br />Postdoc<br />Yale<br /><br />
+              <b>23. Fei Zhang (Ph.D. student, 2010-2015)</b><br />Assistant Professor<br />Rutgers University<br /><br />
+              <b>22. Yang Xu (Postdoc, 2011-2012)</b><br />Associate Professor<br />Cancer Institute and Hospital, Chinese Academy of Medical Science, Beijing, P.R. China.<br /><br />
+              <b>21. Jeanette Nangreave (Research Scientist, 2011-2014)</b><br />Teaching Staff<br />ASU Lake Havasu<br /><br />
+              <b>20. Shuoxing Jiang (Ph.D. student, 2011-2016)</b><br />Associate Professor<br />Nanjing University<br /><br />
+              <b>19. Yuhe Yang (Ph.D. student, 2011-2016)</b><br />Postdoc Fellow<br />Scripps Research Institute<br /><br />
+              <b>18. Ryan Nangreave (Postdoc, 2012-2013)</b><br />Teaching Staff<br />ASU Lake Havasu<br /><br />
+              <b>17. Saswata Banerjee (Ph.D. student, 2012-2018)</b><br />Postdoc Fellow<br />Columbia University<br /><br />
+              <b>16. Sarah Henry (Postdoc, 2013-2015)</b><br /><br />
+              <b>15. Alessio Andreoni (Postdoc, 2013-2016)</b><br /><br />
+              <b>14. Yen-ting Lai (Postdoc, 2014-2015)</b><br />Postdoc<br />National Institute of Health<br /><br />
+              <b>13. Fan Hong (Ph.D. student, 2014-2019)</b><br />Postdoc Fellow<br />Harvard University<br /><br />
+              <b>12. Swarup Dey (Ph.D. student, 2015-2021)</b><br />Postdoc Fellow<br />Harvard University<br /><br />
+              <b>11. Raghu Pradeep (Ph.D. student, 2015-2021)</b><br />Postdoc Fellow<br />University of California San Francisco<br /><br />
+              <b>10. Xiang Lan (Postdoc, 2016-2018)</b><br /><br />
+              <b>9. Nour Eddine Fahmi (Research Scientist, 2016-2020)</b><br /><br />
+              <b>8. Xu Zhou (Ph.D. student, 2016-2021)</b><br />Postdoc Fellow<br />University of Wisconsin, Madison<br /><br />
+              <b>7. Guangbao Yao (Postdoc, 2017-2020)</b><br />Associate Professor<br />Shanghai Jiao Tong University<br /><br />
+              <b>6. Bo Ning (Assistant research professor, 2018-2019)</b><br />Assistant Professor<br />Tulane University<br /><br />
+              <b>5. Zhi Zhao (Postdoc, 2018-2019)</b><br /><br />
+              <b>4. Hao Liu (Ph.D. student, 2018-2023)</b><br />Pstdoc Felow<br />Arizona State University<br /><br />
+              <b>3. Yue Tang (Ph.D. student, 2018-2023)</b><br />Assistant Professor<br />Shandong University<br /><br />
+              <b>2. Leeza Abraham (Ph.D. student, 2018-2023)</b><br />Research Scientist<br />Exodigm<br /><br />
+              <b>1. Lu Yu (Ph.D. student, 2019-2024)</b><br />Postdoc Felow<br />University of Washington<br /><br />
             </div>
           </div>
         </section>
