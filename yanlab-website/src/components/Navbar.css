@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  background: #8D1C3F;
+  background: #8C1D40;
 
 /* Navbar link (desktop) styles */
 .nav-link {
@@ -270,7 +270,7 @@
 .hamburger-line {
   width: 24px;
   height: 3px;
-  background: #8D1C3F;
+  background: #8C1D40;
   border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;

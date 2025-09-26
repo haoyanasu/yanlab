@@ -24,8 +24,8 @@ const Navbar = () => {
 
   return (
     <nav style={{
-      background: '#fff',
-  borderBottom: 'none',
+      background: '#8C1D40',
+      borderBottom: 'none',
       padding: '0.85rem 0',
       position: 'fixed',
       top: 0,
@@ -55,7 +55,7 @@ const Navbar = () => {
               <div style={{
                 fontSize: '1.9305rem', // 1.60875rem * 1.2
                 fontWeight: '800',
-                color: '#000',
+                color: '#fff',
                 letterSpacing: '-0.01em'
               }}>
                 Yan Lab
@@ -76,13 +76,13 @@ const Navbar = () => {
               <div key={item.label} className="nav-dropdown" style={{ position: 'relative' }}>
                 <span
                   style={{
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: '500',
                     fontSize: '1.0189rem',
                     cursor: 'pointer',
                     padding: '0.5rem 0',
                     fontFamily: 'Inter, Arial, sans-serif',
-                    borderBottom: location.pathname.startsWith('/team') ? '4px solid #8D1C3F' : '4px solid transparent'
+                    borderBottom: location.pathname.startsWith('/team') ? '4px solid #FFC627' : '4px solid transparent'
                   }}
                   tabIndex={0}
                 >
@@ -145,7 +145,7 @@ const Navbar = () => {
                   to={item.path}
                   style={{
                     textDecoration: 'none',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: location.pathname === item.path ? '600' : '500',
                     fontSize: '1.2227rem', // 20% larger than 1.0189rem
                     transition: 'color 0.2s ease',
@@ -166,7 +166,7 @@ const Navbar = () => {
                     bottom: '-1px', // overlaps the navbar border so the lines touch
                     width: 120,
                     height: 10,
-                    background: '#8D1C3F',
+                    background: '#FFC627',
                     borderRadius: 0,
                     zIndex: 3
                   }} />
