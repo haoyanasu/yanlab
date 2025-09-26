@@ -32,7 +32,7 @@ const Home = () => {
             background: '#FFC627',
             marginBottom: '2rem',
             marginTop: '0',
-            borderRadius: '2px',
+            borderRadius: 0,
             opacity: 0.9
           }} />
           {/* Title */}
@@ -121,7 +121,7 @@ const Home = () => {
             textAlign: 'center',
             color: '#000',
             fontWeight: 700,
-            fontSize: '1.584rem',
+            fontSize: '1.58rem',
             fontFamily: 'Arial, sans-serif',
             textDecoration: 'none',
             letterSpacing: '0.01em',
@@ -132,6 +132,92 @@ const Home = () => {
             margin: 0
           }}>See all publications</a>
         </div>
+
+        {/* Meet our People Section */}
+        <section style={{
+          width: '100%',
+          background: '#fff',
+          padding: '3.5rem 0 0 0',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '3.5rem',
+          maxWidth: '1600px',
+          margin: '0 auto 0 auto',
+          boxSizing: 'border-box',
+        }}>
+          {/* Left: Text */}
+          <div style={{
+            flex: 1,
+            minWidth: 320,
+            maxWidth: 700,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            justifyContent: 'center',
+            paddingLeft: '6vw',
+          }}>
+            {/* Yellow line above title */}
+            <div style={{
+              width: 'fit-content',
+              minWidth: '120px',
+              height: '8px',
+              background: '#FFC627',
+              marginBottom: '2rem',
+              marginTop: '0',
+              borderRadius: 0,
+              opacity: 0.9,
+              paddingLeft: 0,
+              paddingRight: 0,
+              alignSelf: 'flex-start',
+            }}>
+              <span style={{
+                display: 'inline-block',
+                width: '100%',
+                minWidth: '220px',
+                maxWidth: '100%',
+                height: '8px',
+              }}></span>
+            </div>
+            <div style={{
+              fontFamily: 'Georgia, serif',
+              fontSize: '2.2rem',
+              color: '#000',
+              fontWeight: 400,
+              marginBottom: '1.2rem',
+              lineHeight: 1.1,
+            }}>
+              Meet our People
+            </div>
+            <div style={{
+              fontFamily: 'Inter, Arial, sans-serif',
+              fontSize: '1.1rem',
+              color: '#444',
+              fontWeight: 400,
+              maxWidth: '90%',
+              marginBottom: '2rem',
+              lineHeight: 1.5,
+            }}>
+              Learn more about our group members <a href="http://localhost:5173/team/our-team" style={{ color: '#6c3fc5', textDecoration: 'underline', fontWeight: 500 }}>here</a>.
+            </div>
+          </div>
+          {/* Right: Image */}
+          <div style={{
+            flex: 1.2,
+            minWidth: 280,
+            maxWidth: 720,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflow: 'hidden',
+            borderRadius: 0,
+            boxShadow: '0 2px 16px 0 rgba(0,0,0,0.07)',
+            background: '#fff',
+          }}>
+            <img src="/group.jpg" alt="Yan Lab Group" style={{ width: '80%', height: 'auto', objectFit: 'cover', borderRadius: 0 }} />
+          </div>
+        </section>
       </section>
 
       <footer style={{
@@ -152,24 +238,24 @@ const Home = () => {
         {/* Gold box for address/contact */}
         <div style={{
           width: '100%',
-          background: '#FFC627',
-          color: '#000',
+          background: '#111',
+          color: '#fff',
           padding: '2.2rem 0 1.2rem 0',
           fontFamily: 'Inter, Arial, sans-serif',
-          marginTop: '10rem',
+          marginTop: 0,
         }}>
           <div style={{ maxWidth: '700px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
-            <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.15rem', letterSpacing: '0.01em', fontFamily: 'Arial, sans-serif' }}>
+            <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.15rem', letterSpacing: '0.01em', fontFamily: 'Arial, sans-serif', color: '#fff' }}>
               Biodesign Center for Molecular Design and Biomimetics
             </div>
-            <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.35rem', letterSpacing: '0.01em', fontFamily: 'Arial, sans-serif' }}>
+            <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.35rem', letterSpacing: '0.01em', fontFamily: 'Arial, sans-serif', color: '#fff' }}>
               1001 S McAllister Ave, Tempe, Az, 85287
             </div>
-            <div style={{ fontWeight: 600, fontSize: '1.0189rem', marginBottom: '0.35rem', fontFamily: 'Arial, sans-serif' }}>
-              Phone: <span style={{ fontWeight: 400, fontFamily: 'Arial, sans-serif' }}>480.727.8570</span> / Fax: <span style={{ fontWeight: 400, fontFamily: 'Arial, sans-serif' }}>480.965.2747</span>
+            <div style={{ fontWeight: 600, fontSize: '1.0189rem', marginBottom: '0.35rem', fontFamily: 'Arial, sans-serif', color: '#fff' }}>
+              Phone: <span style={{ fontWeight: 400, fontFamily: 'Arial, sans-serif', color: '#fff' }}>480.727.8570</span> / Fax: <span style={{ fontWeight: 400, fontFamily: 'Arial, sans-serif', color: '#fff' }}>480.965.2747</span>
             </div>
-            <div style={{ fontWeight: 700, fontSize: '1.0189rem', marginBottom: '0.35rem', fontFamily: 'Arial, sans-serif' }}>
-              Email: <span style={{ fontWeight: 400, fontFamily: 'Arial, sans-serif' }}>hao.yan@asu.edu</span>
+            <div style={{ fontWeight: 700, fontSize: '1.0189rem', marginBottom: '0.35rem', fontFamily: 'Arial, sans-serif', color: '#fff' }}>
+              Email: <span style={{ fontWeight: 400, fontFamily: 'Arial, sans-serif', color: '#fff' }}>hao.yan@asu.edu</span>
             </div>
           </div>
         </div>
