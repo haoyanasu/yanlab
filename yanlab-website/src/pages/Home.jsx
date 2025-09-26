@@ -55,7 +55,7 @@ const Home = () => {
             fontFamily: 'Inter, Arial, sans-serif',
             lineHeight: 1.5
           }}>
-            Biomolecular and Engineering Lab using Nature's Design Rules as Inspiration to Expand the Frontiers of Biomedicine, Material Science and Nanotechnology.
+            Nucleic Acid Biodesign and Biologics Lab using Nature's Design Rules as Inspiration to Expand the Frontiers of Biomedicine, Material Science and Nanotechnology
           </div>
         </div>
         {/* Image */}
@@ -88,22 +88,22 @@ const Home = () => {
       }}>
         <div style={{ maxWidth: '700px', margin: '0 auto', color: '#fff', fontFamily: 'Inter, Arial, sans-serif' }}>
           <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.15rem', letterSpacing: '0.01em' }}>
-            Center for Molecular Design and Biomimetics
+            Biodesign Center for Molecular Design and Biomimetics
           </div>
           <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.35rem', letterSpacing: '0.01em' }}>
-            1001 S McAllister Ave, Tempe, Az, 85281
+            1001 S McAllister Ave, Tempe, Az, 85287
           </div>
           <div style={{ fontWeight: 600, fontSize: '1.0189rem', marginBottom: '0.35rem' }}>
-            CELL: <span style={{ fontWeight: 400 }}>480.727.8570</span> / Fax: <span style={{ fontWeight: 400 }}>480.965.2747</span>
+            Phone: <span style={{ fontWeight: 400 }}>480.727.8570</span> / Fax: <span style={{ fontWeight: 400 }}>480.965.2747</span>
           </div>
           <div style={{ fontWeight: 700, fontSize: '1.0189rem', marginBottom: '0.35rem' }}>
-            E: <span style={{ fontWeight: 400 }}>hao.yan@asu.edu</span>
+            Email: <span style={{ fontWeight: 400 }}>hao.yan@asu.edu</span>
           </div>
           <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.35rem', color: '#ccc' }}>
-            Copyright: Hao Yan
+            @ Copywrite: Hao Yan
           </div>
           <div style={{ fontWeight: 400, fontSize: '1.0189rem', color: '#ccc' }}>
-            Created by XX
+            @ Creation:
           </div>
         </div>
       </footer>

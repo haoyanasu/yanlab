@@ -26,7 +26,7 @@ const OurTeam = () => {
     piYan,
     {
       name: "Chad R Simmons",
-      title: "Assistant Research Professor",
+      title: "Academic Professional",
       email: "chad.simmons@asu.edu",
   focus: "Biomacromolecular Crystallographer",
       image: "chad.jpg"
@@ -40,9 +40,9 @@ const OurTeam = () => {
     },
     {
       name: "Dr Kun Dai",
-      title: "Assistant Research Professor",
+      title: "Assistant Research Scientist",
       email: "",
-  focus: "RNA origami Therapeutics",
+  focus: "Nucleic Acid Biologics",
       image: "kun.jpg"
     }
   ];
@@ -56,7 +56,7 @@ const OurTeam = () => {
   { name: "Thong Diep", level: "4th Year PhD Candidate", email: "tdiep2@asu.edu", research: "Finite size DNA lattice", image: "thong.jpg" },
   { name: "Aleksandra Petrova", level: "3rd Year PhD Candidate", email: "aleksandra@asu.edu", research: "RNA Nanomedicine", image: "Aleksandra.jpg" },
   { name: "Gengshi Wu", level: "3rd Year PhD Candidate", email: "gengshi@asu.edu", research: "RNA Nanotechnology Design and Assembly", image: "gengshi.jpg" },
-  { name: "Yichen Yan", level: "2nd Year PhD Candidate", email: "yichen@asu.edu", research: "RNA Nanomedicine", image: "yichen.jpg" }
+  { name: "Yichen Yan", level: "2nd Year PhD Candidate", email: "yichen@asu.edu", research: "Nucleic Acid Biology", image: "yichen.jpg" }
   ];
 
   const former = [
@@ -129,7 +129,7 @@ const OurTeam = () => {
                     {member.name === 'Dr. Hao Yan' ? (
                     <>
                         <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>Principal Investigator</p>
-                        <p style={{ color: '#64748b', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>Biomolecular Programmer and Engineer</p>
+                        <p style={{ color: '#64748b', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>Biomolecular Designer and Programmer</p>
                         <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center', marginBottom: '0.125rem' }}>
                           Email
                         </a>
