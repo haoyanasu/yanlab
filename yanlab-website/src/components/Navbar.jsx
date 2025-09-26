@@ -24,9 +24,9 @@ const Navbar = () => {
 
   return (
     <nav style={{
-      background: '#000',
-      borderBottom: '1px solid #222',
-      padding: '2rem 0',
+      background: '#fff',
+  borderBottom: 'none',
+      padding: '0.85rem 0',
       position: 'fixed',
       top: 0,
       left: 0,
@@ -55,7 +55,7 @@ const Navbar = () => {
               <div style={{
                 fontSize: '1.9305rem', // 1.60875rem * 1.2
                 fontWeight: '800',
-                color: '#fff',
+                color: '#000',
                 letterSpacing: '-0.01em'
               }}>
                 Yan Lab
@@ -76,13 +76,13 @@ const Navbar = () => {
               <div key={item.label} className="nav-dropdown" style={{ position: 'relative' }}>
                 <span
                   style={{
-                    color: '#fff',
+                    color: '#000',
                     fontWeight: '500',
                     fontSize: '1.0189rem',
                     cursor: 'pointer',
                     padding: '0.5rem 0',
                     fontFamily: 'Inter, Arial, sans-serif',
-                    borderBottom: location.pathname.startsWith('/team') ? '2px solid #fff' : '2px solid transparent'
+                    borderBottom: location.pathname.startsWith('/team') ? '4px solid #8D1C3F' : '4px solid transparent'
                   }}
                   tabIndex={0}
                 >
@@ -93,7 +93,7 @@ const Navbar = () => {
                   position: 'absolute',
                   top: '2.2rem',
                   left: 0,
-                  background: '#000',
+                  background: '#8D1C3F',
                   borderRadius: 0,
                   boxShadow: '0 4px 16px rgba(0,0,0,0.10)',
                   minWidth: '160px',
@@ -133,29 +133,45 @@ const Navbar = () => {
                     display: block !important;
                   }
                   .dropdown-content a:hover, .dropdown-content a:focus {
-                    color: #fff !important;
+                    color: #000 !important;
                     text-decoration: underline !important;
-                    background: #000 !important;
+                    background: #fff !important;
                   }
                 `}</style>
               </div>
             ) : (
-              <Link
-                key={item.path}
-                to={item.path}
-                style={{
-                  textDecoration: 'none',
-                  color: '#fff',
-                  fontWeight: location.pathname === item.path ? '600' : '500',
-                  fontSize: '1.0189rem',
-                  transition: 'color 0.2s ease',
-                  padding: '0.5rem 0',
-                  borderBottom: location.pathname === item.path ? '2px solid #fff' : '2px solid transparent',
-                  fontFamily: 'Inter, Arial, sans-serif'
-                }}
-              >
-                {item.label}
-              </Link>
+              <div key={item.path} style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+                <Link
+                  to={item.path}
+                  style={{
+                    textDecoration: 'none',
+                    color: '#000',
+                    fontWeight: location.pathname === item.path ? '600' : '500',
+                    fontSize: '1.2227rem', // 20% larger than 1.0189rem
+                    transition: 'color 0.2s ease',
+                    padding: '0.5rem 0',
+                    fontFamily: 'Arial, sans-serif',
+                    position: 'relative',
+                    zIndex: 2
+                  }}
+                >
+                  {item.label}
+                </Link>
+                {/* Maroon underline for active, attached to navbar border */}
+                {location.pathname === item.path && (
+                  <div style={{
+                    position: 'absolute',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    bottom: '-1px', // overlaps the navbar border so the lines touch
+                    width: 120,
+                    height: 10,
+                    background: '#8D1C3F',
+                    borderRadius: 0,
+                    zIndex: 3
+                  }} />
+                )}
+              </div>
             )
           ))}
         </div>
@@ -183,7 +199,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           style={{
-            background: '#000',
+            background: '#fff',
             borderTop: '1px solid #222',
             padding: '1rem 0',
             display: 'none'

@@ -15,6 +15,35 @@ const PIYan = () => {
               <div style={{ maxWidth: 1000, margin: '0 auto', display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '2.5rem', flexWrap: 'wrap' }}>
                 <div style={{ flex: '0 0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                   <img src="/hyan.jpg" alt="Dr. Hao Yan" style={{ width: 320, height: 480, objectFit: 'cover', objectPosition: 'center', borderRadius: 0, boxShadow: '0 4px 16px rgba(0,0,0,0.10)', marginBottom: '1.5rem' }} />
+                  <a
+                    href="/haoyan.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: 300,
+                      height: 70,
+                      background: '#4B0076',
+                      color: '#fff',
+                      fontWeight: 700,
+                      fontFamily: 'Georgia, serif',
+                      fontSize: '2rem',
+                      letterSpacing: '0.03em',
+                      borderRadius: 0,
+                      marginTop: 24,
+                      marginBottom: 0,
+                      textDecoration: 'none',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                      transition: 'background 0.2s',
+                      textTransform: 'uppercase',
+                      textAlign: 'center',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    YAN CV
+                  </a>
                 </div>
                 <div style={{ flex: '1 1 0', minWidth: 280, maxWidth: 600, fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontSize: '1.08rem', lineHeight: 1.7, fontWeight: 400, textAlign: 'justify' }}>
                   <p style={{
@@ -27,14 +56,14 @@ const PIYan = () => {
                     lineHeight: 1.7
                   }}>
                     <span style={{ fontWeight: 400 }}>
-                      Dr. Hao Yan is the <b>Regents Professor</b> and <b>Director of the Center for Molecular Design and Biomimetics</b> at Arizona State University, a world leader in molecular engineering, biomimetic chemistry, and nanotechnology innovation.
+                      Dr. Hao Yan is the <b>Regents Professor</b> and <b>Director of the Biodesign Center for Molecular Design and Biomimetics</b> at Arizona State University, a world leader in molecular engineering, biomimetic chemistry, and nanotechnology innovation.
                     </span>
                   </p>
                   <p style={{ marginBottom: '1.2rem', textAlign: 'justify' }}>
-                    He is a renowned chemist and nanotechnology innovator, best known for his pioneering advances in structural DNA and RNA nanotechnology, DNA-programmed molecular machines, and programmable bio-inspired materials. Yan’s research group has developed interdisciplinary approaches to design self-assembling molecular building blocks, enabling major biomedical, energy, and technological breakthroughs. He received his B.S. from Shandong University (1993) and Ph.D. from New York University (2001), worked at Duke University as an NSF Postdoctoral Fellow and joined ASU, where he became a full professor with early tenure.
+                    He is a renowned chemist and nanotechnology innovator, best known for his pioneering advances in structural DNA and RNA nanotechnology, DNA-programmed molecular machines, and programmable bio-inspired materials. Yan’s research group has developed interdisciplinary approaches to design self-assembling molecular building blocks, enabling major biomedical, energy, and technological breakthroughs. He received his B.S. from Shandong University (1993) and Ph.D. from New York University (2001), worked at Duke University as a Research Assistant Professor (2004) and joined ASU in 2004, where he became a full professor with early tenure.
                   </p>
                   <p style={{ marginBottom: '1.2rem', textAlign: 'justify' }}>
-                    Yan has authored over 240 high-impact research papers and holds numerous patents related to programmable molecular systems and bioengineering. As a leader and educator, he has mentored more than 30 graduate students and postdocs who now hold faculty or senior industry positions worldwide. Yan is elected to multiple prestigious academies, has received over 20 major international awards (including the Feynman Prize, Humboldt Award, and Rozenberg Tulip Award), and serves as Associate Editor for Science Advances and ACS Applied Bio Materials. He continues to advance the frontiers of molecular engineering, inspire the next generation, and translate discoveries into startup innovations and global research leadership.
+                    Yan has authored over 240 high-impact research papers and holds numerous patents related to programmable molecular systems and bioengineering. As a leader and educator, he has mentored more than 70 graduate students and postdocs, among which over 30 now hold faculty and several hold senior industry positions worldwide. Yan is elected to multiple prestigious academies, has received over 20 major international awards (including the Feynman Prize, Humboldt Award, and Rozenberg Tulip Award), and serves as Associate Editor for Science Advances and ACS Applied Bio Materials. He continues to advance the frontiers of molecular engineering, inspire the next generation, and translate discoveries into startup innovations and global research leadership.
                   </p>
                 </div>
               </div>

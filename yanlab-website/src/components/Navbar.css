@@ -1,5 +1,6 @@
 .navbar {
   width: 100%;
+  background: #8D1C3F;
 
 /* Navbar link (desktop) styles */
 .nav-link {
@@ -169,28 +170,7 @@
   transition: all 0.3s ease;
 }
 
-  color: #fff;
-}
-
-  transform: scale(1.1);
-  color: #fff;
-}
-
-  color: #fff;
-}
-
-  color: #fff;
-}
-
-  content: '';
-  position: absolute;
-  bottom: -1.25rem;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #fff;
-  border-radius: 1px;
-}
+  /* ...existing code... */
 
 .navbar-icon {
   display: flex;
@@ -290,7 +270,7 @@
 .hamburger-line {
   width: 24px;
   height: 3px;
-  background: #1a1a1a;
+  background: #8D1C3F;
   border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;
@@ -389,4 +369,3 @@
     left: -1rem;
     right: -1rem;
   }
-} 
