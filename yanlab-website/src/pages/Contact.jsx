@@ -32,11 +32,12 @@ const Contact = () => {
             }}>
               {/* Contact Info Left */}
               <div style={{ minWidth: 280, maxWidth: 350, textAlign: 'left', flex: '1 1 320px', fontFamily: 'Inter, Arial, sans-serif', color: '#232946' }}>
-                <h2 style={{ color: '#232946', marginBottom: '0.5rem', textAlign: 'left', fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif' }}>The Yan Lab</h2>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Center for Molecular Design and Biomimetics</p>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>1001 S McAllister Ave, Tempe, Az, 85281</p>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>CELL: 480.727.8570 / Fax: 480.965.2747</p>
-                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>E: <a href="mailto:hao.yan@asu.edu" style={{ color: '#3b82f6', textDecoration: 'underline', fontFamily: 'Inter, Arial, sans-serif' }}>hao.yan@asu.edu</a></p>
+                <h2 style={{ color: '#232946', marginBottom: '0.5rem', textAlign: 'left', fontWeight: 400, fontFamily: 'Inter, Arial, sans-serif' }}>Biodesign Center for Molecular Design and Biomimetics</h2>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>1001 S McAllister Ave,</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Arizona State University,</p>
+                <p style={{ margin: '6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Tempe, Az, 85287</p>
+                <p style={{ margin: '14px 0 6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Phone: 480.727.8570 / Fax: 480.965.2747</p>
+                <p style={{ margin: '14px 0 6px 0', color: '#232946', fontSize: '1.05rem', fontFamily: 'Inter, Arial, sans-serif' }}>Email: <a href="mailto:hao.yan@asu.edu" style={{ color: '#3b82f6', textDecoration: 'underline', fontFamily: 'Inter, Arial, sans-serif' }}>hao.yan@asu.edu</a></p>
               </div>
               {/* Google Map Right */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '1 1 350px', minWidth: 280, maxWidth: 400 }}>

@@ -9,9 +9,9 @@ const SectionBlock = ({ image, title, description, reverse, imageStyle }) => {
       </div>
       <div className="section-block-text">
         <h3 style={{
-          fontFamily: 'Georgia, serif',
-          fontSize: '2.2rem',
-          fontWeight: 400,
+          fontFamily: 'Arial, sans-serif',
+          fontSize: '1.76rem',
+          fontWeight: 700,
           color: '#22223b',
           lineHeight: 1.1,
           marginBottom: '1.2rem',

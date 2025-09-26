@@ -83,21 +83,19 @@ const Research = () => {
           >
             <h2 style={{
               fontSize: '2.2rem',
-              fontWeight: 400,
-              color: '#22223b',
+              fontWeight: 700,
+              color: '#232323',
               marginBottom: '1.2rem',
-              fontFamily: 'Georgia, serif',
-              lineHeight: 1.1
-            }}>
-              Research Areas
-            </h2>
-            <div style={{
-              width: '200px',
-              height: '4px',
-              background: 'linear-gradient(90deg, #e67e22, #f39c12)',
-              margin: '0 auto 0 auto',
+              fontFamily: 'Arial, sans-serif',
+              lineHeight: 1.1,
+              display: 'inline-block',
+              background: '#FFC627',
+              padding: '0.132em 0.44em',
               borderRadius: '2px',
-            }} />
+              boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
+            }}>
+              Research Directions
+            </h2>
             <div style={{
               width: '100%',
               height: '1px',
@@ -157,20 +155,19 @@ const Research = () => {
           >
             <h2 style={{
               fontSize: '2.2rem',
-              fontWeight: 400,
-              color: '#22223b',
+              fontWeight: 700,
+              color: '#232323',
               marginBottom: '1.2rem',
-              fontFamily: 'Georgia, serif',
-              lineHeight: 1.1
+              fontFamily: 'Arial, sans-serif',
+              lineHeight: 1.1,
+              display: 'inline-block',
+              background: '#FFC627',
+              padding: '0.132em 0.44em',
+              borderRadius: '2px',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
             }}>
               Funding Agencies
             </h2>
-            <div style={{
-              width: '200px',
-              height: '4px',
-              background: 'linear-gradient(90deg, #e67e22, #f39c12)',
-              margin: '0 auto 2.5rem auto'
-            }} />
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',

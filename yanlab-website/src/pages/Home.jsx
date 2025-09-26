@@ -72,9 +72,71 @@ const Home = () => {
           <img src="/cancer.jpg" alt="Cancer" style={{ width: '110%', height: '105%', objectFit: 'cover', marginRight: '-5%', transform: 'translate(0, 4%)' }} />
         </div>
       </div>
+      {/* Featured Publications Section */}
+  <section style={{ width: '100%', background: '#fff', padding: '3.5rem 0 6.5rem 0', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <h2 style={{
+          textAlign: 'center',
+          fontFamily: 'Georgia, serif',
+          fontSize: '2rem',
+          color: '#3a2d4d',
+          marginBottom: '2.5rem',
+          fontWeight: 400
+        }}>Featured Publications</h2>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'flex-start',
+          gap: '3.5rem',
+          width: '100%',
+          maxWidth: '1200px',
+          margin: '0 auto 2.5rem auto',
+          flexWrap: 'wrap'
+        }}>
+          <div style={{ flex: 1, minWidth: 260, maxWidth: 400, textAlign: 'center', color: '#888', fontSize: '1.1rem', fontFamily: 'Inter, Arial, sans-serif', fontWeight: 400 }}>
+            <div style={{ marginBottom: '1.2rem', fontSize: '1.1rem' }}>
+              “DNA Origami with Complex Curvatures in Three-Dimensional Space”
+            </div>
+            <div style={{ fontStyle: 'italic', color: '#888', fontSize: '1.1rem', marginBottom: '0.2rem' }}>Science</div>
+            <div style={{ color: '#888', fontSize: '1.1rem' }}>2011</div>
+          </div>
+          <div style={{ flex: 1, minWidth: 260, maxWidth: 400, textAlign: 'center', color: '#888', fontSize: '1.1rem', fontFamily: 'Inter, Arial, sans-serif', fontWeight: 400 }}>
+            <div style={{ marginBottom: '1.2rem', fontSize: '1.1rem' }}>
+              “Complex wireframe DNA origami nanostructures with multi-arm junction vertices”
+            </div>
+            <div style={{ fontStyle: 'italic', color: '#888', fontSize: '1.1rem', marginBottom: '0.2rem' }}>Nature Nanotechnology</div>
+            <div style={{ color: '#888', fontSize: '1.1rem' }}>2015</div>
+          </div>
+          <div style={{ flex: 1, minWidth: 260, maxWidth: 400, textAlign: 'center', color: '#888', fontSize: '1.1rem', fontFamily: 'Inter, Arial, sans-serif', fontWeight: 400 }}>
+            <div style={{ marginBottom: '1.2rem', fontSize: '1.1rem' }}>
+              “A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo”
+            </div>
+            <div style={{ fontStyle: 'italic', color: '#888', fontSize: '1.1rem', marginBottom: '0.2rem' }}>Nature Biotechnology</div>
+            <div style={{ color: '#888', fontSize: '1.1rem' }}>2018</div>
+          </div>
+        </div>
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}>
+          <a href="/publications" style={{
+            display: 'inline',
+            textAlign: 'center',
+            color: '#000',
+            fontWeight: 700,
+            fontSize: '1.584rem',
+            fontFamily: 'Arial, sans-serif',
+            textDecoration: 'none',
+            letterSpacing: '0.01em',
+            background: 'none',
+            padding: 0,
+            border: 'none',
+            boxShadow: 'none',
+            margin: 0
+          }}>See all publications</a>
+        </div>
+      </section>
+
       <footer style={{
         width: '100%',
-        position: 'absolute',
+        position: 'static',
         left: 0,
         bottom: 0,
         display: 'flex',
@@ -94,6 +156,7 @@ const Home = () => {
           color: '#000',
           padding: '2.2rem 0 1.2rem 0',
           fontFamily: 'Inter, Arial, sans-serif',
+          marginTop: '10rem',
         }}>
           <div style={{ maxWidth: '700px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
             <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.15rem', letterSpacing: '0.01em', fontFamily: 'Arial, sans-serif' }}>
