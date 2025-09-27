@@ -641,8 +641,167 @@ const publications2015 = [
     title: 'DNA nanotechnology for nanophotonic applications',
     journal: 'Nanoscale 7, 2210-2220, (2015).'
   }
+// Removed stray closing bracket
+
+// Removed duplicate/empty publications2014 declaration
 ];
 
+const publications2013 = [
+  { number: '133', authors: 'A. Samanta, Z. Deng, H. Yan, Y. Liu*', title: 'A perspective on Functionalizing Colloidal Quantum Dots with DNA', journal: 'Nano Research 6, 853-870, (2013).' },
+  { number: '132', authors: 'D. Han, S. Jiang, A. Samanta, Y. Liu, H. Yan*', title: 'Unidirectional Scaffold-Strand Arrangement in DNA Origami', journal: 'Angew Chem Int Ed. 52, 9031-9034, (2013).' },
+  { number: '131', authors: 'Q. Mei, R. H. Johnson, X. Wei, F. Su, Y. Liu, L. Kelbauskas, S. Lindsay, D. R. Meldrum, H. Yan', title: 'On-chip isotachophoresis separation of functional DNA origami capture nanoarrays from cell lysate', journal: 'Nano Research 6, 712-719, (2013).' },
+  { number: '130', authors: 'M. Liu, J. Fu*, C. Hejesen, Y. Yang, N. W. Woodbury, K. Gothelf, Y. Liu, H. Yan*', title: 'A DNA Tweezer-Actuated Enzyme Nanoreactor', journal: 'Nature Comm. 4:2127 (2013).' },
+  { number: '129', authors: 'S. Pal, P. Dutta, H. Wang, Z. Deng, S. Zou, H. Yan, Y. Liu*', title: 'Quantum Efficiency Modification of Organic Fluorophores Using Gold Nanoparticles on DNA Origami Scaffolds', journal: 'J. Phys. Chem. C 117, 12735-12744, (2013).' },
+  { number: '128', authors: 'W. Li*, Y. Yang, H. Yan, Y. Liu*', title: '3-Input Majority Logic Gate and Multiple Input Logic Circuit Based on DNA Strand Displacement', journal: 'Nano Letters 13, 2980-2988, (2013).' },
+  { number: '127', authors: 'A. Johnson-Buck, J. Nangreave, S. Jiang, H. Yan, N. Walter*', title: 'Multifactorial Modulation of Binding and Dissociation Kinetics on Two-Dimensional DNA Nanostructures', journal: 'Nano Letters 13, 2754-2759, (2013).' },
+  { number: '126', authors: 'F. Zhang, Y. Liu*, H. Yan*', title: 'Complex Archimedean Tiling Self-assembled from DNA Nanostructures', journal: 'J. Am. Chem. Soc. 135, 7458-7461, (2013).' },
+  { number: '125', authors: 'X. Wei, J. Nangreave, S. Jiang, H. Yan, Y. Liu*', title: 'Mapping the Thermal Behavior of DNA Origami Nanostructures', journal: 'J. Am. Chem. Soc. 135, 6165-6176, (2013).' },
+  { number: '124', authors: 'J. Flory, S. Shinde, S. Lin, Y. Liu, H. Yan, G. Ghirlanda, P. Fromme*', title: 'PNA-peptide Assembly in a 3D DNA Nanocage at Room Temperature', journal: 'J. Am. Chem. Soc. 135, 6985-6993, (2013).' },
+  { number: '123', authors: 'Y. Yang, Z. Zhao, F. Zhang, J. Nangreave, Y. Liu*, H. Yan*', title: 'Self-assembly of DNA Rings from Scaffold Free DNA Tiles', journal: 'Nano letters 13, 1862-1866, (2013).' },
+  { number: '122', authors: 'Z. Deng, S. Pal, A. Samanta, H. Yan, Y. Liu*', title: 'DNA Functionalization of Colloidal II-VI Semiconductor Nanowires', journal: 'Chemical Sciences 3, 2234-2240, (2013).' },
+  { number: '121', authors: 'X. Liu, Y. Liu*, H. Yan*', title: 'Functionalized DNA Nanostructures for Nanomedicine', journal: 'Israel Journal of Chemistry, Special Issue on Supramolecular Chemistry for Materials and Medicine, Invited review, 53, 555-566 (2013).' },
+  { number: '120', authors: 'O. Schulz, Z. Zhao, A. Ward, M. Koenig, F. Koberling, Y. Liu, J. Enderlein, H. Yan*, R. Ros*', title: 'Tip Induced Fluorescence Quenching for Nanometer Optical and Topographical Resolution', journal: 'Optical Nanoscopy, 2:1, (2013).' },
+  { number: '119', authors: 'D. Han*, S. Pal, Y. Yang, S. Jiang, J. Nangreave, Y. Liu*, H. Yan*', title: 'DNA Gridiron Nanostructures Based on Four-Arm Junctions', journal: 'Science, 339, 1412-1415, (2013).' },
+  { number: '118', authors: 'A. Johnson-Buck, J. Nangreave, D. Kim, M. Bathe, H. Yan, N. Walter*', title: 'Super-Resolution Fingerprinting Detects Chemical Reactions and Idiosyncrasies of Single DNA Pegboards', journal: 'Nano Letters, 13, 728-733 (2013).' },
+  { number: '117', authors: 'Z. Zhao, Y. Liu*, H. Yan*', title: 'DNA Origami Templated Self-assembly of Discrete Length Single Wall Carbon Nanotubes', journal: 'Org. Biomol. Chem., 11, 596-598 (2013).' }
+];
+const publications2012 = [
+  { number: '116', authors: 'Z. Deng, A. Samanta, J. Nangreave, H. Yan*, Y. Liu*', title: 'Robust DNA Functionalized Core/Shell Quantum Dots with Fluorescent Emission Spanning from UV-Vis to Near IR and Compatible with DNA Directed Self-Assembly', journal: 'J. Am. Chem. Soc., 134, 17424-17427 (2012).' },
+  { number: '115', authors: 'Y. Yang, D. Han, J. Nangreave, Y. Liu*, H. Yan*', title: 'DNA Origami with Double-Stranded DNA As a Unified Scaffold', journal: 'ACS Nano, 6, 8209-8215 (2012).' },
+  { number: '114', authors: 'N. Lu, H. Pei, Z. Ge, C. R. Simmons, H. Yan*, C. Fan*', title: 'Charge Transport within A Three-Dimensional DNA nanostructure Framework', journal: 'J. Am. Chem. Soc., 134, 13148-13151 (2012).' },
+  { number: '113', authors: 'Q. Jiang, C. Song, J. Nangreave, X. Liu, L. Lin, D. Qiu, Z. Wang, G. Zou, X. Liang, H. Yan*, B. Ding*', title: 'DNA Origami as a Carrier for Circumvention of Drug Resistance', journal: 'J. Am. Chem. Soc., 134, 13396-13403 (2012).' },
+  { number: '112', authors: 'X. Liu, Y. Xu, T. Yu, C. Craig, Y. Liu, H. Yan*, Y. Chang*', title: 'A DNA Nanostructure Platform for Directed Assembly of Synthetic Vaccines', journal: 'Nano Letters, 12, 4254-4259 (2012).' },
+  { number: '111', authors: 'Z. Deng*, D. Cao, J. He, S. Lin, S. M. Lindsay, Y. Liu*', title: 'Solution Synthesis of Ultrathin Single-Crystalline SnS Nanoribbons for Photodetectors via Phase Transition and Surface Processing', journal: 'ACS Nano, 6, 6197-6207 (2012).' },
+  { number: '110', authors: 'A. Samanta, Z. Deng, Y. Liu*', title: 'Aqueous Synthesis of Glutathione-Capped CdTe/CdS/ZnS and CdTe/CdSe/ZnS Core/Shell/Shell Nanocrystal Heterostructures', journal: 'Langmuir, 28, 8205-8215 (2012).' },
+  { number: '109', authors: 'J. Fu, M. Liu, Y. Liu*, H. Yan*', title: 'Spatially-Interactive Biomolecular Networks Organized by Nucleic Acid Nanostructures', journal: 'Acc. Chem. Res. 45, 1215-1226 (2012).' },
+  { number: '108', authors: 'F. Zhang, J. Nangreave, Y. Liu*, H. Yan*', title: 'Reconfigurable DNA Origami to Generate Quasi-Fractal Patterns', journal: 'Nano Letters, 12, 3290-3295 (2012).' },
+  { number: '107', authors: 'A. V. Pinheiro, J. Nangreave, S. Jiang, H. Yan, Y. Liu*', title: 'Steric Crowding and the Kinetics of DNA Hybridization within a DNA Nanostructure System', journal: 'ACS Nano, 6, 5521-5530 (2012).' },
+  { number: '106', authors: 'J. Fu, H. Yan*', title: 'Controlled Drug Release by a Nanorobot', journal: 'Nature Biotechnol. 30, 407-408 (2012).' },
+  { number: '105', authors: 'J. Fu, M. Liu, Y. Liu, N. W. Woodbury*, H. Yan*', title: 'Interenzyme Substrate Diffusion for an Enzyme Cascade Organized on Spatially Addressable DNA Nanostructures', journal: 'J. Am. Chem. Soc. 134, 5516-5519 (2012).' },
+  { number: '104', authors: 'Z. Li, L. Wang, H. Yan, Y. Liu*', title: 'Effect of DNA Hairpin Loops on the Twist of Planar DNA Origami Tiles', journal: 'Langmuir, 28, 1959-1965 (2012).' }
+];
+const publications2011 = [
+  { number: '103', authors: 'A. V. Pinheiro, D. Han, W. M. Shih*, H. Yan*', title: 'Challenges and opportunities for structural DNA nanotechnology', journal: 'Nature Nanotechnol. 6, 763-772 (2011).' },
+  { number: '102', authors: 'S. Pal, Z. Deng, H. Wang, S. Zou, Y. Liu*, H. Yan*', title: 'DNA Directed Self-Assembly of Anisotropic Plasmonic Nanostructures', journal: 'J. Am. Chem. Soc. 133, 17606-17609 (2011).' },
+  { number: '101', authors: 'P. Dutta, R. Varghese, J. Nangreave, S. Lin, H. Yan, Y. Liu*', title: 'DNA Directed Artificial Light Harvesting Antenna', journal: 'J. Am. Chem. Soc. 133, 11985-11993 (2011).' },
+  { number: '100', authors: 'C. R. Simmons, D. Schmitt, X. Wei, D. Han, A. M. Volosin, D. M. Ladd, D. Seo, Y. Liu, H. Yan*', title: 'Size-Selective Incorporation of DNA Nanocages into Nanoporous Antimony-doped Tin Oxide Materials', journal: 'ACS Nano, 5, 6060-6068 (2011).' },
+  { number: '99', authors: 'Z. Zhao, Y. Liu, H. Yan*', title: 'Organizing DNA Origami Tiles Into Larger Structures Using Pre-formed Scaffold Frames', journal: 'Nano Letters, 11, 2997-3002 (2011).' },
+  { number: '98', authors: 'T. Torring, N. V. Voigt, J. Nangreave, H. Yan*, K. Gothelf*', title: 'DNA Origami: A quantum leap for self-assembly of complex structures', journal: 'Chem. Soc. Rev, 40, 5636-5646 (2011).' },
+  { number: '97', authors: 'X. Liu, H. Yan, Y. Liu*, Y. Chang*', title: 'Targeted Cell-Cell Interactions by DNA Nanoscaffold-Templated Multivalent Bi-specific Aptamers', journal: 'Small, 7, 1673-1682 (2011).' },
+  { number: '96', authors: 'D. Han*, S. Pal, J. Nangreave, Z. Deng, Y. Liu*, H. Yan*', title: 'DNA Origami with Complex Curvatures in Three-dimensional Space', journal: 'Science, 332, 342-346 (2011).' },
+  { number: '95', authors: 'S. Pal, R. Varghese, H. Yan*, Y. Liu*', title: 'Site Specific Synthesis and in-situ Immobilization of Fluorescent Silver Nanoclusters on DNA Nanoscaffolds Using Tollens Reaction', journal: 'Angew Chem Int Ed, 50, 4176-4179 (2011).' },
+  { number: '94', authors: 'Z. Deng, L. Tong, S. Lin, M. Flores, J. Cheng, H. Yan, Y. Liu*', title: 'High Quality Manganese-Doped Zinc Sulfide Quantum Rods with Tunable Dual-Color and Multi-Photon Emissions', journal: 'J. Am. Chem. Soc, 133, 5389-5396 (2011).' },
+  { number: '93', authors: 'J. Nangreave, H. Yan, Y. Liu*', title: 'DNA Nanostructures as Models for Evaluating the Role of Enthalpy and Entropy in Polyvalent Binding', journal: 'J. Am. Chem. Soc, 133, 4490-4497 (2011).' },
+  { number: '92', authors: 'Q. Mei, X. Wei, F. Su, Y. Liu, C. Youngbull, R. Johnson, S. Lindsay, H. Yan*, D. Meldrum*', title: 'Stability of DNA Origami Nanoarrays in Cell Lysate', journal: 'Nano Letters, 11, 1477-1482 (2011).' },
+  { number: '91', authors: 'Z. Zhao, Y. Liu*, H. Yan*', title: 'Encapsulation of Gold Nanoparticles in a DNA Origami Cage', journal: 'Angew Chem Int Ed, 50, 2041-2044 (2011).' }
+];
+const publications2010 = [
+  { number: '90', authors: 'B. Ding, H. Wu, W. Xu, Z. Zhao, Y. Liu, H. Yu*, H. Yan*', title: 'Interconnecting Gold Islands with DNA Origami Nanotubes', journal: 'Nano Lett. 10, 5065-5069 (2010).' },
+  { number: '89', authors: 'D. Han, S. Pal, Y. Liu*, H. Yan*', title: 'Folding and Cutting DNA into Reconfigurable Topological Nanostructures', journal: 'Nature Nanotechnol. 5, 712-717 (2010).' },
+  { number: '88', authors: 'Z. Deng, H. Yan, Y. Liu*', title: 'Controlled Colloidal Growth of Ultra-Thin Single-Crystal ZnS Nanowires with Magic-Size Diameter', journal: 'Angew. Chem. Int. Ed. 49, 8695-8698 (2010).' },
+  { number: '87', authors: 'Z. Li, M. Liu, L. Wang, J. Nangreave, H. Yan, Y. Liu*', title: 'Molecular Behavior of DNA Origami in Higher Order Self-assembly', journal: 'J. Am. Chem. Soc. 138, 13545-13552 (2010).' },
+  { number: '86', authors: 'H. Pei, N. Lu, Y. Wen, S. Song, Y. Liu, H. Yan*, C. Fan*', title: 'A DNA Nanostructure-based Biomolecular Probe Carrier Platform for Electrochemical Biosensing', journal: 'Advanced Materials, 22, 4754-4758 (2010).' },
+  { number: '85', authors: 'J. Nangreave, D. Han, Y. Liu, H. Yan*', title: 'DNA Origami: A History and Current Perspective', journal: 'Curr Opin Chem Biol 14, 608-615 (2010).' },
+  { number: '84', authors: 'N. Stephanopoulos, M. Liu, G. Tong, Z. Li, Y. Liu, H. Yan*, M. Francis*', title: 'Immobilization and One-Dimensional Arrangement of Virus Capsids With Nanoscale Precision Using DNA Origami', journal: 'Nano Lett. 10, 2714-2720 (2010).' },
+  { number: '83', authors: 'Z. Deng*, O. Schulz, S. Lin, B. Ding, X. Liu, X. Wei, R. Ros, H. Yan, Y. Liu*', title: 'Aqueous Synthesis of Zinc-Blende CdTe/CdS Magic-Core/Thick-Shell Tetrahedral Shaped Nanocrystals with Emission Tunable to Near-Infrared', journal: 'J. Am. Chem. Soc. 132, 5592-5593 (2010).' },
+  { number: '82', authors: 'K. Lund, A. J. Manzo, N. Dabby, N. Michelotti, A. Johnson-Buck, J. Nangreave, S. Taylor, R. Pei, M. N. Stojanovic*, N. G. Walter*, E. Winfree*, H. Yan*', title: 'Molecular Robots Guided by Prescriptive Landscapes', journal: 'Nature 465, 206-210 (2010).' },
+  { number: '81', authors: 'S. Pal, Z. Deng, B. Ding, H. Yan*, Y. Liu*', title: 'DNA Origami Directed Self-assembly of Discrete Silver Nanoparticle Architectures', journal: 'Angew. Chem. Int. Ed. 49, 2700-2704 (2010).' },
+  { number: '80', authors: 'B. Ding*, Z. Deng, H. Yan, S. Cabrini, R. Zuckermann, J. Bokor*', title: 'Gold Nanoparticles Self-similar Chain Structure Organized by DNA Origami', journal: 'J. Am. Chem. Soc. 132, 3248-3249 (2010).' },
+  { number: '79', authors: 'R. Chhabra, J. Sharma, Y. Liu, S. Rinker, H. Yan*', title: 'DNA Self-assembly for Nanomedicine', journal: 'Advanced Drug Delivery Reviews 62, 617-625 (2010).' },
+  { number: '78', authors: 'Z. Zhao, H. Yan*, Y. Liu*', title: 'A Route to Scale up DNA Origami using DNA Tiles as Folding Staples', journal: 'Angew. Chem. Int. Ed. 49, 1414-1417 (2010).' },
+  { number: '77', authors: 'Q. Wang*, H. Wang, C. Lin, J. Sharma, S. Zou*, Y. Liu*', title: 'Photonic Interactions between Quantum Dots and Gold Nanoparticles in Discrete Nanostructures through DNA Directed Self-Assembly', journal: 'Chem. Commun. 46, 240-242 (2010).' }
+];
+const publications2009 = [
+  { number: '76', authors: 'Z. Deng*, H. Yan, Y. Liu*', title: 'Band Gap Engineering of Quaternary Alloyed ZnCdSSe Quantum Dots via a Facile Phosphine-Free Colloidal Method', journal: 'J. Am. Chem. Soc. 131, 17744-17745 (2009).' },
+  { number: '75', authors: 'R. Chhabra, J. Sharma, H. Wang, S. Zou, S. Lin, H. Yan, S. Lindsay*, Y. Liu*', title: 'Distance-dependent interactions between gold nanoparticles and fluorescent molecules with DNA as tunable spacers', journal: 'Nanotechnology 20, 485201 (2009).' },
+  { number: '74', authors: 'Y. Ke, S. M. Douglas, M. Liu, J. Sharma, A. Cheng, A. Leung, Y. Liu, W. M. Shih*, H. Yan*', title: 'Multilayer DNA Origami Packed on a Square Lattice', journal: 'J. Am. Chem. Soc. 131, 15903-15908 (2009).' },
+  { number: '73', authors: 'L. A. Stearns, R. Chhabra, J. Sharma, Y. Liu, W. T. Petuskey, H. Yan*, J. C. Chaput*', title: 'Template-Directed Nucleation and Growth of Inorganic Nanoparticles on DNA Scaffolds', journal: 'Angew. Chem. Int. Ed. 45, 8494-8496 (2009).' },
+  { number: '72', authors: 'S. Pal, H. Yan, Y. Liu*', title: 'Stable Silver Nanoparticle-DNA Conjugates for Directed Self-assembly of Core-Satellite Silver-Gold Nanoclusters', journal: 'Chem. Commun. 6059-6061 (2009).' },
+  { number: '71', authors: 'Z. Li, B. Wei, J. Nangreave, C. Lin, Y. Liu, Y. Mi*, H. Yan*', title: 'A Replicable Tetrahedral Nanostructure Self-Assembled from a Single DNA Strand', journal: 'J. Am. Chem. Soc. 131, 13093-13098 (2009).' },
+  { number: '70', authors: 'Y. Liu, H. Yan*', title: 'Designer Curvature', journal: 'Science 325, 685-686 (2009).' },
+  { number: '69', authors: 'Y. Liu, H. Yan*', title: 'Coordinating Corners', journal: 'Nature Chemistry 1, 339-340 (2009).' },
+  { number: '68', authors: 'C. S. Andersen, M. M. Knudsen, R. Chhabra, Y. Liu, H. Yan*, K. V. Gothelf*', title: 'Distance Dependent Interhelical Couplings of Organic Rods Incorporated in DNA 4-Helix Bundles', journal: 'Bioconjugate Chem. 20, 1538-1546 (2009).' },
+  { number: '67', authors: 'J. Nangreave, H. Yan*, Y. Liu*', title: 'Studies of Thermal Stability of Multivalent DNA Hybridization in a Nanostructured System', journal: 'Biophys. J. 97, 563-571 (2009).' },
+  { number: '66', authors: 'A. E. Gerdon, S.-S. Oh, W. Hsieh, Y. Ke, H. Yan*, H. T. Soh*', title: 'Controlled Delivery of DNA Origami on Patterned Surface', journal: 'Small 5, 1942-1946 (2009).' },
+  { number: '65', authors: 'Y. Ke, J. Sharma, M. Liu, K. Jahn, Y. Liu*, H. Yan*', title: 'Scaffolded DNA Origami of a DNA Tetrahedron Molecular Container', journal: 'Nano. Lett. 9, 2445-2447 (2009).' },
+  { number: '64', authors: 'C. Lin, H. Yan*', title: 'DNA Nanotechnology: A Cascade of Activity', journal: 'Nature Nanotechnol. 4, 211-212 (2009). Invited News & Views article.' },
+  { number: '63', authors: 'C. Lin, Y. Liu, H. Yan*', title: 'Designer DNA Nanoarchitectures', journal: 'Biochemistry 48, 1663-1674 (2009).' },
+  { number: '62', authors: 'J. Sharma, R. Chhabra, A. Cheng, J. Brownell, Y. Liu*, H. Yan*', title: 'Control of Self-Assembly of DNA Tubules Through Integration of Gold Nanoparticles', journal: 'Science 323, 112-116 (2009).' },
+  { number: '61', authors: 'C. Lin, Y. Ke, Z. Liu, J. Wang, Y. Liu*, H. Yan*', title: 'Designer Nanoarchitectures Self-assembled from Mirror Image DNA', journal: 'Nano Lett. 9, 433-436 (2009).' }
+];
+const publications2008 = [
+  { number: '60', authors: 'C. Lin, S. Rinker, X. Wang, Y. Liu, N. C. Seeman*, H. Yan*', title: 'In-vivo Cloning of DNA Nanostructures', journal: 'Proc. Natl. Acad. Sci. U.S.A. 105, 17626-17635 (2008).' },
+  { number: '59', authors: 'Z. Li, Y. Ke, C. Lin, H. Yan*, Y. Liu*', title: 'Subtractive Assembly of DNA Nanoarchitectures Driven by Fuel Strand Displacement', journal: 'Chem. Commun. 4318-4320 (2008).' },
+  { number: '58', authors: 'C. Lin, J. Nangreave, Z. Li, H. Yan*, Y. Liu*', title: 'Signal Amplification on a DNA Tile based Biosensor with Enhanced Sensitivity', journal: 'Nanomedicine 3, 521-528 (2008).' },
+  { number: '57', authors: 'Y. Xu, Q. Wang, P. He, Q. Dong, F. Liu, Y. Liu, L. Lin, H. Yan*, X. Zhao*', title: 'Cell Nucleus Penetration by Quantum Dots Induced by Nuclear Staining Organic Fluorophore and UV-Irradiation', journal: 'Advanced Materials 20, 3468-3473 (2008).' },
+  { number: '56', authors: 'J. Sharma, R. Chhabra, C. S. Anderson, K. V. Gothelf, H. Yan*, Y. Liu*', title: 'Toward Reliable Gold Nanoparticle Patterning on Self-assembled DNA Nanoscaffold', journal: 'J. Am. Chem. Soc. 130, 7820-2821 (2008).' },
+  { number: '55', authors: 'C. S. Anderson, H. Yan, K. V. Gothelf*', title: 'Bridging One Helical Turn in dsDNA by Templated Dimerization of Molecular Rods', journal: 'Angew. Chem. Int. Ed. 47, 5569-5572 (2008).' },
+  { number: '54', authors: 'J. Sharma, Y. Ke, C. Lin, R. Chhabra, Q. Wang, J. Nangreave, Y. Liu*, H. Yan*', title: 'DNA Tile Directed Self-assembly of Quantum Dots into Two-dimensional Nanopatterns', journal: 'Angew. Chem. Int. Ed. 47, 5157-5159 (2008).' },
+  { number: '53', authors: 'S. Rinker, Y. Ke, Y. Liu*, H. Yan*', title: 'Self-assembled DNA Nanostructures for distance dependent multivalent ligand-protein binding', journal: 'Nature Nanotechnol. 3, 418-422 (2008).' },
+  { number: '52', authors: 'Y. Ke, S. Lindsay, Y. Chang, Y. Liu, H. Yan*', title: 'Self-assembled Water-soluble Nucleic Acid Probe Tiles for Label Free RNA Detection', journal: 'Science 319, 180-183 (2008).' },
+  { number: '51', authors: 'J. Sharma, R. Chhabra, H. Yan, Y. Liu*', title: 'A Facile In situ Generation of Dithiocarbamate Ligands for Stable Gold Nanoparticle-Oligonucleotide Conjugates', journal: 'Chem. Commun. 18, 2140-2142 (2008).' },
+  { number: '50', authors: 'Q. Wang, Y. Liu, Y. Ke, H. Yan*', title: 'Quantum Dots Bioconjugation During Core-Shell Synthesis', journal: 'Angew. Chem. Int. Ed. 47, 316-319 (2008).' }
+];
+const publications2007 = [
+  { number: '49', authors: 'C. Lin, X. Wang, Y. Liu, N. C. Seeman, H. Yan*', title: 'Rolling Circle Enzymatic Replication of a Complex Multi-crossover DNA Nanostructure', journal: 'J. Am. Chem. Soc. 129, 14475-14481 (2007).' },
+  { number: '48', authors: 'R. Chhabra, J. Sharma, Y. Ke, Y. Liu, S. Rinker, S. Lindsay, H. Yan*', title: 'Spatially Addressable Multi-protein Nanoarrays Templated by Aptamer Tagged DNA Nanoarchitectures', journal: 'J. Am. Chem. Soc. 129, 10304-10305 (2007).' },
+  { number: '47', authors: 'Q. Wang, Y. Liu, C. Lin, H. Yan*', title: 'Lay-by-layer Growth of Superparamagnetic and fluorecently barcoded Nanospheres', journal: 'Nanotechnology 18, 40, 405026 (2007).' },
+  { number: '46', authors: 'C. Lin, Y. Ke, Y. Liu, M. Mertig, J. Gu, H. Yan*', title: 'Functional DNA Nanotube Arrays: Bottom-up Meets Top-down', journal: 'Angew. Chem. Int. Ed. 46, 6089-6092 (2007).' },
+  { number: '45', authors: 'Q. Wang, Y. Liu, H. Yan*', title: 'Mechanism of a Self-templating Synthesis of Monodispersed Hollow Silica Nanospheres with Tunable Size and Shell Thickness', journal: 'Chem. Commun. 2339-2341 (2007).' },
+  { number: '44', authors: 'Q. Wang, Y. Xu, X. Zhao, Y. Chang, Y. Liu, L. Jiang, J. Sharma, D.-K. Seo*, H. Yan*', title: 'A Facile One-step In situ Functionalization of Quantum Dots with Preserved Photoluminescence for Bioconjugation', journal: 'J. Am. Chem. Soc.129, 6380-6381 (2007).' },
+  { number: '43', authors: 'B. Williams, K. Lund, Y. Liu, H. Yan*, J. Chaput*', title: 'Self-assembled Peptide Nanoarrays: An Approach to Studying Protein-protein Interactions', journal: 'Angew. Chem. Int. Ed. 46, 3051-3054 (2007).' },
+  { number: '42', authors: 'C. Lin, Y. Liu, H. Yan*', title: 'Self-assembled Combinatorial Encoding Nanoarrays for Multiplexed Biosensing', journal: 'Nano Lett. 7, 507-512 (2007).' },
+  { number: '41', authors: 'J. Sharma, R. Chhabra, H. Yan, Y. Liu*', title: 'pH-driven Conformational Switch of i-motif DNA for Reversible Assembly of Gold Nanoparticles', journal: 'Chem. Commun. 477-479 (2007).' }
+];
+  const publications2006 = [
+    { number: '40', authors: 'C. Lin, M. Xie, J. Chen, Y. Liu, H. Yan*', title: 'Rolling Circle Amplification of a DNA Nano-junction', journal: 'Angew. Chem. Int. Ed. 45, 7537-7539 (2006).' },
+    { number: '39', authors: 'C. Lin, E. Katilius*, Y. Liu, J. Zhang, H. Yan*', title: 'Self-assembled Signaling Aptamer Nanoarrays for Protein Detection', journal: 'Angew. Chem. Int. Ed. 45, 5296-5301 (2006).' },
+    { number: '38', authors: 'C. Lin, Y. Liu, S. Rinker, H. Yan*', title: 'DNA Tile Based Self-assembly: Building Complex Nano-architectures', journal: 'ChemPhysChem 7, 1641-1647 (2006).' },
+    { number: '37', authors: 'K. Lund, Y. Liu, H. Yan*', title: 'Combinatorial Self-Assembly of DNA Nanostructures', journal: 'Organic and Biomolecular Chemistry 4, 3402-3403 (2006).' },
+    { number: '36', authors: 'S. Rinker, Y. Liu, H. Yan*', title: 'Two Dimensional LNA/DNA arrays: Estimating the Helicity of LNA/DNA Hybrid Duplex', journal: 'Chem. Commun. 2675-2677 (2006).' },
+    { number: '35', authors: 'R. Chhabra, J. Sharma, Y. Liu, H. Yan*', title: 'Addressable Molecular Tweezers for DNA Templated Coupling Reactions', journal: 'Nano Lett. 6, 978-983 (2006).' },
+    { number: '34', authors: 'L. Lin, H. Wang, Y. Liu, H. Yan, S. Lindsay*', title: 'Recognition Imaging with a DNA Aptamer', journal: 'Biophysical J. 90, 4236-4238 (2006).' },
+    { number: '33', authors: 'K. Lund, B. Williams, Y. Ke, Y. Liu, H. Yan*', title: 'DNA Nanotechnology: a rapidly evolving field', journal: 'Current Nanoscience 2, 113-122 (2006).' },
+    { number: '32', authors: 'Y. Ke, Y. Liu, J. Zhang, H. Yan*', title: 'A Study of DNA Tube Formation Mechanisms Using 4-, 8- and 12-Helix DNA Nanostructures', journal: 'J. Am. Chem. Soc. 128, 4414-4421 (2006).' },
+    { number: '31', authors: 'J. Zhang, Y, Liu, Y. Ke, H. Yan*', title: 'Periodic Square-like Gold Nanoparticle Arrays Templated by a DNA Nanogrids on a Surface', journal: 'Nano Lett. 6, 248-251 (2006).' },
+    { number: '30', authors: 'H. Yan*, B. Xu', title: 'Towards Rapid DNA Sequencing: Detecting Single-Stranded DNA with a Solid-State Nanopore', journal: 'Small 2, 310-312 (2006).' },
+    { number: '29', authors: 'J. Sharma, R. Chhabra, Y. Liu, Y. Ke, H. Yan*', title: 'DNA Templated Self-assembly of Two-Dimensional and Periodical Gold Nanoparticle Arrays', journal: 'Angew. Chem. Int. Ed. 45, 730-735 (2006).' }
+  ];
+    const publications2005 = [
+      { number: '28', authors: 'K. Lund, Y. Liu, S. Lindsay, H. Yan*', title: 'Self-assembling Molecular Pegboard', journal: 'J. Am. Chem. Soc. 127, 17606-17607 (2005).' },
+      { number: '27', authors: 'Y. Liu, Y. Ke, H. Yan*', title: 'Self-assembly of Symmetric Finite Size DNA Nanoarrays', journal: 'J. Am. Chem. Soc. 127, 17140-17141 (2005).' },
+      { number: '26', authors: 'Y. Liu, C. Lin, H. Li, H. Yan*', title: 'Aptamer Directed Self-assembly of Proteins on a DNA Nanostructure', journal: 'Angew. Chem. Int. Ed. 44, 4333 (2005).' },
+      { number: '25', authors: 'S. H. Park, P. Yin, Y. Liu, J. Reif, T. H. LaBean, H. Yan*', title: 'Programmable DNA Self-assemblies for Nanoscale Organization of Ligands and Proteins', journal: 'Nano Lett. 5, 729 (2005).' },
+      { number: '24', authors: 'S. H. Park, R. Barish, H. Li, J. H. Reif, G. Finkelstein, H. Yan*, T. H. LaBean*', title: 'Three Helix Bundle DNA Tiles Self-assemble into 2D Lattice or 1D Templates for Silver Nanowires', journal: 'Nano Lett. 5, 693 (2005).' },
+      { number: '23', authors: 'Y. Liu, H. Yan*', title: 'Modular Self-assembly of DNA Lattice with Tunable Periodicity', journal: 'Small 1, 327-330 (2005).' },
+      { number: '22', authors: 'J. H. Reif*, T. H. LaBean, S. Sahu, H. Yan, P. Yin', title: 'Design, Simulation, and Experimental Demonstration of Self-assembled DNA Nanostructures and Motors', journal: 'UPP2004, LNCS 3566, Springer-Verlag Berlin Heidelberg, pp. 173-187 (2005).' },
+      { number: '21', authors: 'N. C. Seeman*, B. Ding, S. Liao, T. Wang, W. B. Sherman, P. E. Constantinou, J. Kopatsch, C. Mao, R. Sha, F. Liu, H. Yan, P. S. Lukeman', title: 'Experiments in Structural DNA Nanotechnology: Arrays and Devices', journal: 'Proc. SPIE; Nanofabrication: Technologies, Devices and Applications 5592, 71-81 (2005).' },
+      { number: '20', authors: 'Sha, R., Zhang, X., Liao, S., Constantinou, P. E., Ding, B., Wang, T., Garibotti, A. V., Zhong, H., Israel, L. B., Wang, X., Wu, G., Chakraborty, B., Chen, J., Zhang, Y., Mao, C., Yan, H., Kopatsch, J., Zheng, J., Lukeman, P. S., Sherman, W. B., Seeman, N. C.*', title: 'Motifs and Methods in Structural DNA Nanotechnology', journal: 'Proc. Intl. Conf. Nanomaterials, NANO 2005, V. Rajendran, pp. 3-10 (2005).' }
+    ];
+      const publications2004 = [
+        { number: '19', authors: 'H. Yan*', title: 'Nucleic Acid Technology', journal: 'Science, 306, 2048-2049 (2004).' },
+        { number: '18', authors: 'S. H. Park, H. Yan, J.H. Reif, T. H. LaBean, G. Finkelstein*', title: 'Electronic Nanostructures Templated on Self-assembled DNA Scaffolds', journal: 'Nanotechnology 15, S525-S527 (2004).' },
+        { number: '17', authors: 'H. Yan*, P. Yin, S. H. Park, H. Li, L. Feng, X. Guan, D. Liu, J. H. Reif, T. H. LaBean', title: 'Self-Assembled DNA Structures for Nanoconstruction', journal: 'AIP Proceedings 725 (DNA-Based Molecular Electronics), 43-52 (2004).' },
+        { number: '16', authors: 'P. Yin, H. Yan*, X.J. Guan, A.J. Turberfield*, J. H. Reif*', title: 'An Autonomous Unidirectional DNA Walker', journal: 'Angew. Chem. Int. Ed. 43, 4906-4911 (2004).' },
+        { number: '15', authors: 'H. Li, S. H. Park, J. H. Reif, T. H. LaBean, H. Yan*', title: 'DNA Templated Self-Assembly Of Protein And Nanoparticle Linear Arrays', journal: 'J. Am. Chem. Soc. 126, 418 (2004).' },
+        { number: '14', authors: 'Z. Shen, H. Yan, T. Wang, N. C. Seeman*', title: 'Paranemic Crossover DNA: A Generalized Holliday Structure with Applications in Nanotechnology', journal: 'J. Am. Chem. Soc. 126, 1666 (2004).' }
+      ];
+        const publications2003 = [
+          { number: '13', authors: 'H. Yan*, L. Feng, T. H. LaBean, J. H. Reif*', title: 'Parallel Molecular Computation of Pair-wise Exclusive-Or (XOR) Using DNA String Tile Self-Assembly', journal: 'J. Am. Chem. Soc. 125, 14246 (2003).' },
+          { number: '12', authors: 'H. Yan*, S. H. Park, G. Finkelstein, J. H. Reif, T. H. LaBean*', title: 'DNA Templated Self-assembly of Protein Arrays and Highly Conductive Nanowires', journal: 'Science, 301, 1882 (2003).' },
+          { number: '11', authors: 'L. Feng, S. H. Park, J. H. Reif, H. Yan*', title: 'A Two-State DNA Lattice Switched By DNA Nanoactuator', journal: 'Angew. Chem. Int. Ed. 42, 4342 (2003).' },
+          { number: '10', authors: 'H. Yan, T. H. LaBean, L. Feng, J. H. Reif*', title: 'Directed Nucleation Assembly of DNA Tile Complexes for Barcode Patterned Lattices', journal: 'Proc. Natl. Acad. Sci. U.S.A. 100, 8103 (2003).' },
+          { number: '9', authors: 'H. Yan, N. C. Seeman*', title: 'Edge-Sharing DNA Triangles And One-Dimensional Self-Assembly', journal: 'J. Supramol. Chem., 1, 229-237 (2003).' }
+        ];
+          const publications2002Before = [
+            { number: '8', authors: 'X. Zhang, H. Yan, Z. Shen, N. C. Seeman*', title: 'Paranemic Cohesion of Topologically-Closed DNA Molecules', journal: 'J. Am. Chem. Soc. 124, 12940-12941 (2002).' },
+            { number: '7', authors: 'H. Yan, X. Yang, Z. Shen, N. C. Seeman*', title: 'A Robust Sequence-dependent Rotary DNA Device', journal: 'Nature, 415, 62-65 (2002).' },
+            { number: '6', authors: 'T. H. LaBean, H. Yan, J. Kopatsch, F. Liu, E. Winfree, J. H. Reif, N. C. Seeman*', title: 'The Construction, Analysis, Ligation and Self-assembly of DNA Triple Crossover Molecules', journal: 'J. Am. Chem. Soc. 122, 1848-1860 (2000).' },
+            { number: '5', authors: 'N. C. Seeman, H. Wang, X. Yang, F. Liu, C. Mao, W. Sun, L. Wenzler, Z. Shen, R. Sha, H. Yan, M.H. Wong, P. Sa-Ardyen, B. Liu, H. Qiu, X. Li, J. Qi, S.M. Du, Y. Zhang, J.E. Mueller, T.-J. Fu, Y. Wang, J. Chen', title: 'New Motifs in DNA Nanotechnology', journal: 'Nanotechnology 9, 257-273 (1998).' },
+            { number: '4', authors: 'Y. Ma, Q. Wang*, H. Yan, X. Ji, Q. Qiu', title: 'Zeolite-Catalyzed Esterification. 1. Synthesis Of Acetates, Benzoates And Phthalates', journal: 'Appl. Catal. 139, 51-57 (1996).' },
+            { number: '3', authors: 'Q. Wang*, Y. Ma, X. Ji, H. Yan, Q. Qiu', title: 'Zeolite-Catalyzed Friedel-Crafts Acylation Of Aromatics. 1. Synthesis Of 4-Acyl Anisole With A HY Catalyst', journal: 'Chin. Chem. Lett. 7, 99-102 (1996).' },
+            { number: '2', authors: 'Q. Wang*, Y. Ma, X. Ji, H. Yan, Q. Qiu', title: 'Regioselective Acylation Of Anisole With Carboxylic-Acid Over HZSM-5 Catalyst', journal: 'J. Chem. Soc. Chem. Comm. 22, 2307-2308 (1995).' }
+          ];
 const publications2014 = [
   {
     number: '148',
@@ -757,28 +916,17 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                // Remove DOI and its associated number from the journal string
+                let journalText = item.journal.replace(/"/g, '');
+                journalText = journalText.replace(/DOI:\s*10\.[^ )]+(\s*)?/gi, '');
+                // Remove the specific DOI: 10.1002/cbic.201700613 if present
+                journalText = journalText.replace(/DOI:\s*10\.1002\/cbic\.201700613(\s*)?/gi, '');
+                // Also remove any trailing 'DOI:' if left alone
+                journalText = journalText.replace(/DOI:\s*/gi, '');
+                // Only bold the journal name, not the number after it
+                const journalNameMatch = journalText.match(/^([A-Za-z .]+)/);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
-                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
-                const doiMatch = restText.match(doiRegex);
-                if (doiMatch) {
-                  const prefix = doiMatch[1] ? doiMatch[1] : '';
-                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
-                  const url = `https://doi.org/${doi}`;
-                  const start = doiMatch.index || 0;
-                  const end = start + doiMatch[0].length;
-                  return (
-                    <span>
-                      <span style={{ fontWeight: 700 }}>{journalName}</span>
-                      {restText.slice(0, start)}
-                      {prefix}
-                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
-                      {restText.slice(end)}
-                    </span>
-                  );
-                }
                 return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
               })()}
             </div>
@@ -1202,6 +1350,463 @@ const Publications = () => (
             </div>
           </div>
         ))}
+
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2013</h2>
+        {publications2013.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2012</h2>
+        {publications2012.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2011</h2>
+        {publications2011.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2010</h2>
+        {publications2010.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2009</h2>
+        {publications2009.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2008</h2>
+        {publications2008.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2007</h2>
+        {publications2007.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const journalText = item.journal.replace(/"/g, '');
+                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+          <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2006</h2>
+          {publications2006.map((item) => (
+            <div key={item.number} style={{ marginBottom: '18px' }}>
+              <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+                <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+              </div>
+              <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+                {item.title}
+              </div>
+              <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+                {(() => {
+                  const journalText = item.journal.replace(/"/g, '');
+                  const journalNameMatch = journalText.match(/^([^,.]+)/);
+                  const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                  const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                  const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                  const doiMatch = restText.match(doiRegex);
+                  if (doiMatch) {
+                    const prefix = doiMatch[1] ? doiMatch[1] : '';
+                    const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                    const url = `https://doi.org/${doi}`;
+                    const start = doiMatch.index || 0;
+                    const end = start + doiMatch[0].length;
+                    return (
+                      <span>
+                        <span style={{ fontWeight: 700 }}>{journalName}</span>
+                        {restText.slice(0, start)}
+                        {prefix}
+                        <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                        {restText.slice(end)}
+                      </span>
+                    );
+                  }
+                  return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+                })()}
+              </div>
+            </div>
+          ))}
+            <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2005</h2>
+            {publications2005.map((item) => (
+              <div key={item.number} style={{ marginBottom: '18px' }}>
+                <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+                  <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+                </div>
+                <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+                  {item.title}
+                </div>
+                <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+                  {(() => {
+                    const journalText = item.journal.replace(/"/g, '');
+                    const journalNameMatch = journalText.match(/^([^,.]+)/);
+                    const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                    const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                    const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                    const doiMatch = restText.match(doiRegex);
+                    if (doiMatch) {
+                      const prefix = doiMatch[1] ? doiMatch[1] : '';
+                      const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                      const url = `https://doi.org/${doi}`;
+                      const start = doiMatch.index || 0;
+                      const end = start + doiMatch[0].length;
+                      return (
+                        <span>
+                          <span style={{ fontWeight: 700 }}>{journalName}</span>
+                          {restText.slice(0, start)}
+                          {prefix}
+                          <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                          {restText.slice(end)}
+                        </span>
+                      );
+                    }
+                    return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+                  })()}
+                </div>
+              </div>
+            ))}
+              <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2004</h2>
+              {publications2004.map((item) => (
+                <div key={item.number} style={{ marginBottom: '18px' }}>
+                  <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+                    <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+                  </div>
+                  <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+                    {item.title}
+                  </div>
+                  <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+                    {(() => {
+                      const journalText = item.journal.replace(/"/g, '');
+                      const journalNameMatch = journalText.match(/^([^,.]+)/);
+                      const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                      const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                      const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                      const doiMatch = restText.match(doiRegex);
+                      if (doiMatch) {
+                        const prefix = doiMatch[1] ? doiMatch[1] : '';
+                        const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                        const url = `https://doi.org/${doi}`;
+                        const start = doiMatch.index || 0;
+                        const end = start + doiMatch[0].length;
+                        return (
+                          <span>
+                            <span style={{ fontWeight: 700 }}>{journalName}</span>
+                            {restText.slice(0, start)}
+                            {prefix}
+                            <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                            {restText.slice(end)}
+                          </span>
+                        );
+                      }
+                      return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+                    })()}
+                  </div>
+                </div>
+              ))}
+                <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2003</h2>
+                {publications2003.map((item) => (
+                  <div key={item.number} style={{ marginBottom: '18px' }}>
+                    <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+                      <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+                    </div>
+                    <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+                      {item.title}
+                    </div>
+                    <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+                      {(() => {
+                        const journalText = item.journal.replace(/"/g, '');
+                        const journalNameMatch = journalText.match(/^([^,.]+)/);
+                        const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                        const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                        const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                        const doiMatch = restText.match(doiRegex);
+                        if (doiMatch) {
+                          const prefix = doiMatch[1] ? doiMatch[1] : '';
+                          const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                          const url = `https://doi.org/${doi}`;
+                          const start = doiMatch.index || 0;
+                          const end = start + doiMatch[0].length;
+                          return (
+                            <span>
+                              <span style={{ fontWeight: 700 }}>{journalName}</span>
+                              {restText.slice(0, start)}
+                              {prefix}
+                              <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                              {restText.slice(end)}
+                            </span>
+                          );
+                        }
+                        return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+                      })()}
+                    </div>
+                  </div>
+                ))}
+                  <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2002 and Before</h2>
+                  {publications2002Before.map((item) => (
+                    <div key={item.number} style={{ marginBottom: '18px' }}>
+                      <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+                        <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+                      </div>
+                      <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+                        {item.title}
+                      </div>
+                      <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+                        {(() => {
+                          const journalText = item.journal.replace(/"/g, '');
+                          const journalNameMatch = journalText.match(/^([^,.]+)/);
+                          const journalName = journalNameMatch ? journalNameMatch[1] : '';
+                          const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                          const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
+                          const doiMatch = restText.match(doiRegex);
+                          if (doiMatch) {
+                            const prefix = doiMatch[1] ? doiMatch[1] : '';
+                            const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                            const url = `https://doi.org/${doi}`;
+                            const start = doiMatch.index || 0;
+                            const end = start + doiMatch[0].length;
+                            return (
+                              <span>
+                                <span style={{ fontWeight: 700 }}>{journalName}</span>
+                                {restText.slice(0, start)}
+                                {prefix}
+                                <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                                {restText.slice(end)}
+                              </span>
+                            );
+                          }
+                          return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+                        })()}
+                      </div>
+                    </div>
+                  ))}
       </div>
     </div>
   </div>
