@@ -23,21 +23,22 @@ const PIYan = () => {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      width: 300,
-                      height: 70,
-                      background: '#4B0076',
-                      color: '#fff',
+                      width: 'fit-content',
+                      minWidth: 176,
+                      padding: '0 2rem',
+                      height: 56,
+                      background: '#F7C800',
+                      color: '#232323',
                       fontWeight: 700,
-                      fontFamily: 'Georgia, serif',
-                      fontSize: '2rem',
-                      letterSpacing: '0.03em',
+                      fontFamily: 'Arial, Helvetica, sans-serif',
+                      fontSize: '1.8rem',
+                      letterSpacing: '0.01em',
                       borderRadius: 0,
-                      marginTop: 24,
+                      marginTop: 19,
                       marginBottom: 0,
                       textDecoration: 'none',
                       boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
                       transition: 'background 0.2s',
-                      textTransform: 'uppercase',
                       textAlign: 'center',
                       cursor: 'pointer'
                     }}
@@ -56,14 +57,14 @@ const PIYan = () => {
                     lineHeight: 1.7
                   }}>
                     <span style={{ fontWeight: 400 }}>
-                      Dr. Hao Yan is the <b>Regents Professor</b> and <b>Director of the Biodesign Center for Molecular Design and Biomimetics</b> at Arizona State University, a world leader in molecular engineering, biomimetic chemistry, and nanotechnology innovation.
+                      Dr. Hao Yan is the <b>Regents Professor</b>, <b>Milton D. Glick Distinguished Professor</b> and <b>Director of the Biodesign Center for Molecular Design and Biomimetics</b> at Arizona State University, a world leader in molecular engineering, biomimetic chemistry, and nanotechnology innovation.
                     </span>
                   </p>
                   <p style={{ marginBottom: '1.2rem', textAlign: 'justify' }}>
-                    He is a renowned chemist and nanotechnology innovator, best known for his pioneering advances in structural DNA and RNA nanotechnology, DNA-programmed molecular machines, and programmable bio-inspired materials. Yan’s research group has developed interdisciplinary approaches to design self-assembling molecular building blocks, enabling major biomedical, energy, and technological breakthroughs. He received his B.S. from Shandong University (1993) and Ph.D. from New York University (2001), worked at Duke University as a Research Assistant Professor (2004) and joined ASU in 2004, where he became a full professor with early tenure.
+                    He is a renowned chemist and nanotechnology innovator, best known for his pioneering advances in structural DNA and RNA nanotechnology, DNA-programmed molecular machines, and programmable bio-inspired materials. Yan’s research group has developed interdisciplinary approaches to design self-assembling molecular building blocks, enabling major biomedical, energy, and technological breakthroughs. He received his B.S. from Shandong University (1993) and Ph.D. from New York University (2001), worked at Duke University as a Research Assistant Professor (2004) and joined ASU in 2004, where he became a full professor in 2008 with early tenure.
                   </p>
                   <p style={{ marginBottom: '1.2rem', textAlign: 'justify' }}>
-                    Yan has authored over 240 high-impact research papers and holds numerous patents related to programmable molecular systems and bioengineering. As a leader and educator, he has mentored more than 70 graduate students and postdocs, among which over 30 now hold faculty and several hold senior industry positions worldwide. Yan is elected to multiple prestigious academies, has received over 20 major international awards (including the Feynman Prize, Humboldt Award, and Rozenberg Tulip Award), and serves as Associate Editor for Science Advances and ACS Applied Bio Materials. He continues to advance the frontiers of molecular engineering, inspire the next generation, and translate discoveries into startup innovations and global research leadership.
+                    Yan has authored over 240 high-impact research papers and holds numerous patents related to programmable molecular systems and bioengineering. As a leader and educator, he has mentored more than 70 graduate students and postdocs, among which over 30 now hold faculty and many hold senior industry positions worldwide. Yan is elected to multiple prestigious academies and has received the Feynman Prize, Humboldt Research Award, and Rozenberg Tulip Award, along with more than 20 major international honors. Currently, he serves as Associate Editor for Science Advances and ACS Applied Bio Materials. Yan continues to advance the frontiers of programmable materials and medicine, inspire the next generation, and translate discoveries into startup innovations and global research leadership.
                   </p>
                 </div>
               </div>

@@ -109,10 +109,10 @@ const Home = () => {
           </div>
           <div style={{ flex: 1, minWidth: 260, maxWidth: 400, textAlign: 'center', color: '#888', fontSize: '1.1rem', fontFamily: 'Inter, Arial, sans-serif', fontWeight: 400 }}>
             <div style={{ marginBottom: '1.2rem', fontSize: '1.1rem' }}>
-              “A DNA nanorobot functions as a cancer therapeutic in response to a molecular trigger in vivo”
+              “DNA-templated spatially controlled proteolysis targeting chimera for CyclinD1-CDK4/6 complex protein degradation”
             </div>
-            <div style={{ fontStyle: 'italic', color: '#888', fontSize: '1.1rem', marginBottom: '0.2rem' }}>Nature Biotechnology</div>
-            <div style={{ color: '#888', fontSize: '1.1rem' }}>2018</div>
+            <div style={{ fontStyle: 'italic', color: '#888', fontSize: '1.1rem', marginBottom: '0.2rem' }}>JACS</div>
+            <div style={{ color: '#888', fontSize: '1.1rem' }}>2025</div>
           </div>
         </div>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}>

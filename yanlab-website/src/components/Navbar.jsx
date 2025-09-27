@@ -78,11 +78,11 @@ const Navbar = () => {
                   style={{
                     color: '#fff',
                     fontWeight: '500',
-                    fontSize: '1.0189rem',
+                    fontSize: '1.2227rem',
                     cursor: 'pointer',
                     padding: '0.5rem 0',
                     fontFamily: 'Inter, Arial, sans-serif',
-                    borderBottom: location.pathname.startsWith('/team') ? '4px solid #FFC627' : '4px solid transparent'
+                    borderBottom: 'none'
                   }}
                   tabIndex={0}
                 >
@@ -108,7 +108,7 @@ const Navbar = () => {
                       style={{
                         display: 'block',
                         color: '#fff',
-                        textDecoration: location.pathname === sub.path ? 'underline' : 'none',
+                        textDecoration: 'none',
                         padding: '0.45rem 1.1rem',
                         fontWeight: location.pathname === sub.path ? '700' : '500',
                         background: 'transparent',
@@ -121,8 +121,8 @@ const Navbar = () => {
                         boxSizing: 'border-box',
                         outline: 'none',
                       }}
-                      onMouseOver={e => e.currentTarget.style.textDecoration = 'underline'}
-                      onMouseOut={e => e.currentTarget.style.textDecoration = location.pathname === sub.path ? 'underline' : 'none'}
+                      onMouseOver={e => e.currentTarget.style.textDecoration = 'none'}
+                      onMouseOut={e => e.currentTarget.style.textDecoration = 'none'}
                     >
                       {sub.label}
                     </Link>
@@ -133,9 +133,9 @@ const Navbar = () => {
                     display: block !important;
                   }
                   .dropdown-content a:hover, .dropdown-content a:focus {
-                    color: #000 !important;
-                    text-decoration: underline !important;
-                    background: #fff !important;
+                    color: #8C1D40 !important;
+                    text-decoration: none !important;
+                    background: #F7C800 !important;
                   }
                 `}</style>
               </div>

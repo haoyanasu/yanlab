@@ -7,19 +7,20 @@ const OurTeam = () => {
 
   // PI Yan profile for grid
   const piYan = {
-  name: "Dr. Hao Yan",
-  title: "Principal Investigator",
+    name: "Dr. Hao Yan",
+    title: "Principal Investigator",
     subtitle: "Milton D. Glick Distinguished Professor",
     department: "School of Molecular Sciences and School of Medicine",
     office: "BDA 124B",
     phone: "(480) 727-8570",
     email: "hao.yan@asu.edu",
-  image: "hyan_3.jpg",
+    image: "hyan_3.jpg",
     awards: [
       "Foresight Institute Feynman Prize in Nanotechnology",
       "Rozenberg Tulip Award in DNA Computing",
       "Humboldt Research Award"
-    ]
+    ],
+  description: "Dr. Hao Yan is the Regents Professor and Milton D. Glick Distinguished Professor and Director of the Biodesign Center for Molecular Design and Biomimetics. He received his B.S. from Shandong University (1993) and Ph.D. from New York University (2001), worked at Duke University as a Research Assistant Professor (2004) and joined ASU in 2004, where he became a full professor in 2008 with early tenure."
   };
 
   const staff = [
@@ -48,15 +49,18 @@ const OurTeam = () => {
   ];
 
   const students = [
-  { name: "Deeksha Satyabola", level: "5th Year PhD Candidate", email: "ddeeksha@asu.edu", research: "DNA Photonic Systems", image: "deeksha.jpg" },
-  { name: "Abhay Prasad", level: "5th Year PhD Candidate", email: "aprasa36@asu.edu", research: "Chemical Biology and PROTACs", image: "abhay.jpg" },
-  { name: "Rong Zheng", level: "4th Year PhD Candidate", email: "rzheng22@asu.edu", research: "Molecular Biology and PROTACs", image: "rong.jpg" },
-  { name: "Lanshen Zhao", level: "4th Year PhD Candidate", email: "lzhao89@asu.edu", research: "Diaganostics and Cancer Therapy", image: "lanshen.jpg" },
-  { name: "Xinyi Tu", level: "4th Year PhD Candidate", email: "xinyitu@asu.edu", research: "RNA/DNA nanotechnology for Cancer Therapy", image: "xinyi.jpg" },
-  { name: "Thong Diep", level: "4th Year PhD Candidate", email: "tdiep2@asu.edu", research: "Finite size DNA lattice", image: "thong.jpg" },
-  { name: "Aleksandra Petrova", level: "3rd Year PhD Candidate", email: "aleksandra@asu.edu", research: "RNA Nanomedicine", image: "Aleksandra.jpg" },
-  { name: "Gengshi Wu", level: "3rd Year PhD Candidate", email: "gengshi@asu.edu", research: "RNA Nanotechnology Design and Assembly", image: "gengshi.jpg" },
-  { name: "Yichen Yan", level: "2nd Year PhD Candidate", email: "yichen@asu.edu", research: "Nucleic Acid Biology", image: "yichen.jpg" }
+    { name: "Deeksha Satyabola", level: "5th Year PhD Candidate", email: "ddeeksha@asu.edu", research: "DNA Photonic Systems", image: "deeksha.jpg" },
+    { name: "Abhay Prasad", level: "5th Year PhD Candidate", email: "aprasa36@asu.edu", research: "Chemical Biology and PROTACs", image: "abhay.jpg" },
+    { name: "Rong Zheng", level: "4th Year PhD Candidate", email: "rzheng22@asu.edu", research: "Molecular Biology and PROTACs", image: "rong.jpg" },
+    { name: "Lanshen Zhao", level: "4th Year PhD Candidate", email: "lzhao89@asu.edu", research: "Diaganostics and Cancer Therapy", image: "lanshen.jpg" },
+    { name: "Xinyi Tu", level: "4th Year PhD Candidate", email: "xinyitu@asu.edu", research: "RNA/DNA nanotechnology for Cancer Therapy", image: "xinyi.jpg" },
+    { name: "Thong Diep", level: "4th Year PhD Candidate", email: "tdiep2@asu.edu", research: "Finite size DNA lattice", image: "thong.jpg" },
+    { name: "Aleksandra Petrova", level: "3rd Year PhD Candidate", email: "aleksandra@asu.edu", research: "RNA Nanomedicine", image: "Aleksandra.jpg" },
+    { name: "Gengshi Wu", level: "3rd Year PhD Candidate", email: "gengshi@asu.edu", research: "RNA Nanotechnology Design and Assembly", image: "gengshi.jpg" },
+    { name: "Yichen Yan", level: "2nd Year PhD Candidate", email: "yichen@asu.edu", research: "Nucleic Acid Biology", image: "yichen.jpg" },
+    // New members
+    { name: "Xiang Gu", level: "1st Year PhD Candidate", email: "xianggu2@asu.edu", research: "DNA Nanotechnology", image: "Xiang.jpg" },
+  { name: "Lihui Wang", level: "1st Year PhD Candidate", email: "lwang411@asu.edu", research: "DNA Nanotechnology", image: "lihui.jpg" }
   ];
 
   const former = [
