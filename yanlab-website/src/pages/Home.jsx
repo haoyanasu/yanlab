@@ -240,12 +240,12 @@ const Home = () => {
           width: '100%',
           background: '#111',
           color: '#fff',
-          padding: '1.1rem 0 0.6rem 0',
+          padding: '0.5rem 0 0.3rem 0',
           fontFamily: 'Inter, Arial, sans-serif',
           marginTop: 0,
         }}>
           <div style={{ maxWidth: '700px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.18rem', fontFamily: 'Arial, sans-serif', color: '#fff', fontSize: '1.0189rem', fontWeight: 400, letterSpacing: '0.01em' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.08rem', fontFamily: 'Arial, sans-serif', color: '#fff', fontSize: '1.0189rem', fontWeight: 400, letterSpacing: '0.01em' }}>
               <span style={{ fontSize: '1.0189rem' }}>Biodesign Center for Molecular Design and Biomimetics</span>
               <span style={{ fontSize: '1.0189rem' }}>1001 S McAllister Ave, Tempe, Az, 85287</span>
               <span style={{ fontSize: '1.0189rem' }}>Phone: 480.727.8570 / Fax: 480.965.2747</span>

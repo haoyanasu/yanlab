@@ -900,25 +900,49 @@ const Publications = () => (
       padding: '0 32px 48px 32px',
       backdropFilter: 'blur(6px)'
     }}>
-      <div className="publications-hero" style={{ padding: '48px 0 0 0', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.2rem' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>Publications</h1>
-        <select
-          style={{ fontSize: '1.2rem', padding: '0.3rem 1.2rem', borderRadius: '6px', border: '1px solid #232946', marginLeft: '0.5rem', background: '#fff', color: '#232946', fontWeight: 500, cursor: 'pointer' }}
-          onChange={e => {
-            const year = e.target.value;
-            const el = document.getElementById(`publications-${year}`);
-            if (el) {
-              el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          }}
-          defaultValue=""
-        >
-          <option value="" disabled>Select Year</option>
-          {Array.from({ length: 2025 - 2003 + 1 }, (_, i) => 2025 - i).map(year => (
-            <option key={year} value={year}>{year}</option>
-          ))}
-          <option value="2002Before">2002 and Before</option>
-        </select>
+      <div className="publications-hero" style={{ padding: '48px 0 0 0', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.2rem', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.2rem', width: '100%' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>Publications</h1>
+          <select
+            style={{ fontSize: '1.2rem', padding: '0.3rem 1.2rem', borderRadius: '6px', border: '1px solid #232946', marginLeft: '0.5rem', background: '#fff', color: '#232946', fontWeight: 500, cursor: 'pointer' }}
+            onChange={e => {
+              const year = e.target.value;
+              const el = document.getElementById(`publications-${year}`);
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+            defaultValue=""
+          >
+            <option value="" disabled>Select Year</option>
+            {Array.from({ length: 2025 - 2003 + 1 }, (_, i) => 2025 - i).map(year => (
+              <option key={year} value={year}>{year}</option>
+            ))}
+            <option value="2002Before">2002 and Before</option>
+          </select>
+        </div>
+        {/* Carousel of covers */}
+        <div style={{ width: '100%', overflow: 'hidden', margin: '0 auto', marginTop: '1.5rem', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+          <div id="covers-carousel" style={{ display: 'flex', gap: '1.2rem', animation: 'carousel-move 18s linear infinite' }}>
+            {[...Array(2)].flatMap(() => [1,2,3,4,5,6,7,8,9,10,11]).map(num => (
+              <img
+                key={num + Math.random()}
+                src={`/cover-${num}.jpg`}
+                alt={`Cover ${num}`}
+                style={{ height: '3in', width: 'auto', borderRadius: '0px', boxShadow: '0 2px 12px rgba(0,0,0,0.12)' }}
+              />
+            ))}
+          </div>
+        </div>
+        <style>{`
+          @keyframes carousel-move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          #covers-carousel {
+            width: max-content;
+          }
+        `}</style>
       </div>
       <div className="publications-list" style={{ marginTop: '32px' }}>
         <h2 id="publications-2025" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2025</h2>
