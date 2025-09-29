@@ -199,10 +199,9 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           style={{
-            background: '#fff',
-            borderTop: '1px solid #222',
-            padding: '1rem 0',
-            display: 'none'
+            background: '#8C1D40',
+            borderTop: '1px solid #fff',
+            padding: '1rem 0'
           }}
           className="mobile-nav"
         >
@@ -210,24 +209,32 @@ const Navbar = () => {
             {navItems.map((item) => (
               item.dropdown ? (
                 <div key={item.label} style={{ marginBottom: '0.5rem' }}>
-                  <div style={{ color: '#fff', fontWeight: '600', fontSize: '1.0725rem', marginBottom: '0.25rem' }}>{item.label}</div>
+                  <div style={{ 
+                    color: '#fff !important', 
+                    fontWeight: '600', 
+                    fontSize: '1.2rem', 
+                    marginBottom: '0.25rem',
+                    fontFamily: 'Inter, Arial, sans-serif'
+                  }}>{item.label}</div>
                   {item.dropdown.map((sub) => (
                     <Link
                       key={sub.path}
                       to={sub.path}
                       onClick={() => setIsOpen(false)}
                       style={{
-                        display: 'block',
-                        textDecoration: 'none',
-                        color: '#fff',
+                        display: 'block !important',
+                        textDecoration: 'none !important',
+                        color: '#fff !important',
                         fontWeight: location.pathname === sub.path ? '600' : '500',
                         padding: '0.75rem 1.5rem',
-                        borderBottom: '1px solid #333',
-                        fontSize: '1.0725rem',
+                        borderBottom: '1px solid rgba(255,255,255,0.3)',
+                        fontSize: '1.1rem',
                         fontFamily: 'Inter, Arial, sans-serif',
-                        background: location.pathname === sub.path ? '#3b82f6' : 'transparent',
-                        borderRadius: '0.5rem',
-                        marginBottom: '0.15rem'
+                        background: location.pathname === sub.path ? '#FFC627' : 'transparent',
+                        borderRadius: '0.3rem',
+                        marginBottom: '0.2rem',
+                        minHeight: '40px',
+                        lineHeight: '1.4'
                       }}
                     >
                       {sub.label}
@@ -240,14 +247,17 @@ const Navbar = () => {
                   to={item.path}
                   onClick={() => setIsOpen(false)}
                   style={{
-                    display: 'block',
-                    textDecoration: 'none',
-                    color: '#fff',
+                    display: 'block !important',
+                    textDecoration: 'none !important',
+                    color: '#fff !important',
                     fontWeight: location.pathname === item.path ? '600' : '500',
-                    padding: '0.75rem 0',
-                    borderBottom: '1px solid #333',
-                    fontSize: '1.0725rem',
-                    fontFamily: 'Inter, Arial, sans-serif'
+                    padding: '0.9rem 0',
+                    borderBottom: '1px solid rgba(255,255,255,0.3)',
+                    fontSize: '1.1rem',
+                    fontFamily: 'Inter, Arial, sans-serif',
+                    background: location.pathname === item.path ? '#FFC627' : 'transparent',
+                    minHeight: '40px',
+                    lineHeight: '1.4'
                   }}
                 >
                   {item.label}
@@ -268,6 +278,25 @@ const Navbar = () => {
           }
           .mobile-nav {
             display: block !important;
+            background: #8C1D40 !important;
+          }
+          .mobile-nav a {
+            color: #fff !important;
+            font-size: 1.1rem !important;
+            font-weight: 500 !important;
+            padding: 0.9rem 0 !important;
+            display: block !important;
+            text-decoration: none !important;
+            border-bottom: 1px solid rgba(255,255,255,0.3) !important;
+            font-family: 'Inter', Arial, sans-serif !important;
+          }
+          .mobile-nav a:hover {
+            background: rgba(255,255,255,0.1) !important;
+          }
+        }
+        @media (min-width: 769px) {
+          .mobile-nav {
+            display: none !important;
           }
         }
       `}</style>
