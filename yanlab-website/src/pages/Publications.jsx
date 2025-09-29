@@ -900,12 +900,28 @@ const Publications = () => (
       padding: '0 32px 48px 32px',
       backdropFilter: 'blur(6px)'
     }}>
-      <div className="publications-hero" style={{ padding: '48px 0 0 0', textAlign: 'center' }}>
+      <div className="publications-hero" style={{ padding: '48px 0 0 0', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.2rem' }}>
         <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>Publications</h1>
-  {/* Removed subtitle as requested */}
+        <select
+          style={{ fontSize: '1.2rem', padding: '0.3rem 1.2rem', borderRadius: '6px', border: '1px solid #232946', marginLeft: '0.5rem', background: '#fff', color: '#232946', fontWeight: 500, cursor: 'pointer' }}
+          onChange={e => {
+            const year = e.target.value;
+            const el = document.getElementById(`publications-${year}`);
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }}
+          defaultValue=""
+        >
+          <option value="" disabled>Select Year</option>
+          {Array.from({ length: 2025 - 2003 + 1 }, (_, i) => 2025 - i).map(year => (
+            <option key={year} value={year}>{year}</option>
+          ))}
+          <option value="2002Before">2002 and Before</option>
+        </select>
       </div>
       <div className="publications-list" style={{ marginTop: '32px' }}>
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2025</h2>
+        <h2 id="publications-2025" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2025</h2>
         {publications2025.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -932,7 +948,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2024</h2>
+  <h2 id="publications-2024" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2024</h2>
         {publications2024.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -970,7 +986,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2023</h2>
+  <h2 id="publications-2023" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2023</h2>
         {publications2023.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1008,7 +1024,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2022</h2>
+  <h2 id="publications-2022" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2022</h2>
         {publications2022.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1046,7 +1062,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2021</h2>
+  <h2 id="publications-2021" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2021</h2>
         {publications2021.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1084,7 +1100,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2020</h2>
+  <h2 id="publications-2020" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2020</h2>
         {publications2020.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1122,7 +1138,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2019</h2>
+  <h2 id="publications-2019" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2019</h2>
         {publications2019.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1160,7 +1176,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2018</h2>
+  <h2 id="publications-2018" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2018</h2>
         {publications2018.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1198,7 +1214,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2017</h2>
+  <h2 id="publications-2017" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2017</h2>
         {publications2017.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1236,7 +1252,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2016</h2>
+  <h2 id="publications-2016" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2016</h2>
         {publications2016.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1274,7 +1290,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2015</h2>
+  <h2 id="publications-2015" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2015</h2>
         {publications2015.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1312,7 +1328,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2014</h2>
+  <h2 id="publications-2014" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2014</h2>
         {publications2014.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1351,7 +1367,7 @@ const Publications = () => (
           </div>
         ))}
 
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2013</h2>
+  <h2 id="publications-2013" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2013</h2>
         {publications2013.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1389,7 +1405,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2012</h2>
+  <h2 id="publications-2012" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2012</h2>
         {publications2012.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1427,7 +1443,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2011</h2>
+  <h2 id="publications-2011" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2011</h2>
         {publications2011.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1465,7 +1481,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2010</h2>
+  <h2 id="publications-2010" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2010</h2>
         {publications2010.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1503,7 +1519,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2009</h2>
+  <h2 id="publications-2009" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2009</h2>
         {publications2009.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1541,7 +1557,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2008</h2>
+  <h2 id="publications-2008" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2008</h2>
         {publications2008.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1579,7 +1595,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2007</h2>
+  <h2 id="publications-2007" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2007</h2>
         {publications2007.map((item) => (
           <div key={item.number} style={{ marginBottom: '18px' }}>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1617,7 +1633,7 @@ const Publications = () => (
             </div>
           </div>
         ))}
-          <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2006</h2>
+    <h2 id="publications-2006" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2006</h2>
           {publications2006.map((item) => (
             <div key={item.number} style={{ marginBottom: '18px' }}>
               <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1655,7 +1671,7 @@ const Publications = () => (
               </div>
             </div>
           ))}
-            <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2005</h2>
+      <h2 id="publications-2005" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2005</h2>
             {publications2005.map((item) => (
               <div key={item.number} style={{ marginBottom: '18px' }}>
                 <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1693,7 +1709,7 @@ const Publications = () => (
                 </div>
               </div>
             ))}
-              <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2004</h2>
+        <h2 id="publications-2004" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2004</h2>
               {publications2004.map((item) => (
                 <div key={item.number} style={{ marginBottom: '18px' }}>
                   <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1731,7 +1747,7 @@ const Publications = () => (
                   </div>
                 </div>
               ))}
-                <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2003</h2>
+          <h2 id="publications-2003" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2003</h2>
                 {publications2003.map((item) => (
                   <div key={item.number} style={{ marginBottom: '18px' }}>
                     <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
@@ -1769,7 +1785,7 @@ const Publications = () => (
                     </div>
                   </div>
                 ))}
-                  <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2002 and Before</h2>
+            <h2 id="publications-2002Before" style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>2002 and Before</h2>
                   {publications2002Before.map((item) => (
                     <div key={item.number} style={{ marginBottom: '18px' }}>
                       <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
