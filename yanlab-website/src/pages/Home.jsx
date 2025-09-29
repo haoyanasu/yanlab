@@ -240,22 +240,18 @@ const Home = () => {
           width: '100%',
           background: '#111',
           color: '#fff',
-          padding: '2.2rem 0 1.2rem 0',
+          padding: '1.1rem 0 0.6rem 0',
           fontFamily: 'Inter, Arial, sans-serif',
           marginTop: 0,
         }}>
           <div style={{ maxWidth: '700px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
-            <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.15rem', letterSpacing: '0.01em', fontFamily: 'Arial, sans-serif', color: '#fff' }}>
-              Biodesign Center for Molecular Design and Biomimetics
-            </div>
-            <div style={{ fontWeight: 400, fontSize: '1.0189rem', marginBottom: '0.35rem', letterSpacing: '0.01em', fontFamily: 'Arial, sans-serif', color: '#fff' }}>
-              1001 S McAllister Ave, Tempe, Az, 85287
-            </div>
-            <div style={{ fontWeight: 600, fontSize: '1.0189rem', marginBottom: '0.35rem', fontFamily: 'Arial, sans-serif', color: '#fff' }}>
-              Phone: <span style={{ fontWeight: 400, fontFamily: 'Arial, sans-serif', color: '#fff' }}>480.727.8570</span> / Fax: <span style={{ fontWeight: 400, fontFamily: 'Arial, sans-serif', color: '#fff' }}>480.965.2747</span>
-            </div>
-            <div style={{ fontWeight: 700, fontSize: '1.0189rem', marginBottom: '0.35rem', fontFamily: 'Arial, sans-serif', color: '#fff' }}>
-              Email: <span style={{ fontWeight: 400, fontFamily: 'Arial, sans-serif', color: '#fff' }}>hao.yan@asu.edu</span>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.18rem', fontFamily: 'Arial, sans-serif', color: '#fff', fontSize: '1.0189rem', fontWeight: 400, letterSpacing: '0.01em' }}>
+              <span style={{ fontSize: '1.0189rem' }}>Biodesign Center for Molecular Design and Biomimetics</span>
+              <span style={{ fontSize: '1.0189rem' }}>1001 S McAllister Ave, Tempe, Az, 85287</span>
+              <span style={{ fontSize: '1.0189rem' }}>Phone: 480.727.8570 / Fax: 480.965.2747</span>
+              <span style={{ fontSize: '1.0189rem' }}>Email: hao.yan@asu.edu</span>
+              <span style={{ fontWeight: 500, marginTop: '0.18rem', fontSize: '1.0189rem' }}>Copyright <span style={{ fontSize: '1.2rem', verticalAlign: 'middle', marginRight: '0.18rem' }}>&copy;</span> 2025 Hao Yan</span>
+              <span style={{ fontWeight: 500, fontSize: '1.0189rem' }}>Created by Deeksha</span>
             </div>
           </div>
         </div>
