@@ -923,7 +923,7 @@ const Publications = () => (
         </div>
         {/* Carousel of covers */}
         <div style={{ width: '100%', overflow: 'hidden', margin: '0 auto', marginTop: '1.5rem', marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
-          <div id="covers-carousel" style={{ display: 'flex', gap: '1.2rem', animation: 'carousel-move 18s linear infinite' }}>
+          <div id="covers-carousel" style={{ display: 'flex', gap: '1.2rem', animation: 'carousel-move 36s linear infinite' }}>
             {[...Array(2)].flatMap(() => [1,2,3,4,5,6,7,8,9,10,11]).map(num => (
               <img
                 key={num + Math.random()}
