@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
+import TitleManager from './components/TitleManager';
 import Home from './pages/Home';
 import Research from './pages/Research';
 
@@ -15,6 +17,8 @@ import './App.css';
 function AppContent() {
   return (
     <div className="app-wrapper">
+  <ScrollToTop />
+  <TitleManager />
       <div className="navbar-container">
         <Navbar />
       </div>

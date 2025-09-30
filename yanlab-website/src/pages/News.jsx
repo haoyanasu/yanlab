@@ -703,7 +703,7 @@ const News = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginTop: '0.5rem', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}
           >
-            Latest News
+            News
           </motion.h2>
 
           <motion.div
