@@ -22,17 +22,17 @@ const visualizationTools = [
 ];
 
 const downloads = [
-  { name: 'Tiamat (Windows)', link: 'https://www.yanlab-asu.com/Tiamat.exe', desc: 'Graphical user interface program for the design of DNA nanostructures and sequences.' },
+  { name: 'Tiamat (Windows)', link: '/Tiamat.exe', desc: 'Graphical user interface program for the design of DNA nanostructures and sequences.', download: true },
   { name: 'Tiamat User Manual', link: 'http://link.springer.com/chapter/10.1007%2F978-3-642-03076-5_8', desc: 'User manual for Tiamat.' },
-  { name: 'Tiamat 2.exe', link: 'https://www.yanlab-asu.com/Tiamat%202.exe', desc: 'New version of Tiamat with RNA design, user-defined constraints, and oxDNA-friendly export.' },
-  { name: 'Double crossover (DAE) tile (.dna)', link: 'https://www.yanlab-asu.com/DX.dna', desc: 'DNA model file.' },
-  { name: '4x4 tile (.dna)', link: 'https://www.yanlab-asu.com/4x4.dna', desc: 'DNA model file.' },
-  { name: 'Four-helix tile (.dna)', link: 'https://www.yanlab-asu.com/4%20HT.dna', desc: 'DNA model file.' },
-  { name: 'Tetrahedron (.dna)', link: 'https://www.yanlab-asu.com/tetrahedron.dna', desc: 'DNA model file.' },
-  { name: 'Rectangular origami (.dna)', link: 'https://www.yanlab-asu.com/origami.dna', desc: 'DNA model file.' },
-  { name: '4x4 tile animation (.asf)', link: 'https://www.yanlab-asu.com/4x4.asf', desc: 'Cartoon animation using Tiamat.' },
-  { name: 'Three-helix bundle animation (.asf)', link: 'https://www.yanlab-asu.com/3%20helix%20bundle.asf', desc: 'Cartoon animation using Tiamat.' },
-  { name: 'Tetrahedron animation (.asf)', link: 'https://www.yanlab-asu.com/tetrahedron.asf', desc: 'Cartoon animation using Tiamat.' },
+  { name: 'Tiamat 2.exe', link: '/Tiamat 2.exe', desc: 'New version of Tiamat with RNA design, user-defined constraints, and oxDNA-friendly export.', download: true },
+  { name: 'Double crossover (DAE) tile (.dna)', link: '/DX.dna', desc: 'DNA model file.', download: true },
+  { name: '4x4 tile (.dna)', link: '/4x4.dna', desc: 'DNA model file.', download: true },
+  { name: 'Four-helix tile (.dna)', link: '/4 HT.dna', desc: 'DNA model file.', download: true },
+  { name: 'Tetrahedron (.dna)', link: '/tetrahedron.dna', desc: 'DNA model file.', download: true },
+  { name: 'Rectangular origami (.dna)', link: '/origami.dna', desc: 'DNA model file.', download: true },
+  { name: '4x4 tile animation (.asf)', link: '/4x4.asf', desc: 'Cartoon animation using Tiamat.', download: true },
+  { name: 'Three-helix bundle animation (.asf)', link: '/3 helix bundle.asf', desc: 'Cartoon animation using Tiamat.', download: true },
+  { name: 'Tetrahedron animation (.asf)', link: '/tetrahedron.asf', desc: 'Cartoon animation using Tiamat.', download: true },
 ];
 
 const Resources = () => {
@@ -77,6 +77,10 @@ const Resources = () => {
                   const insertExampleLabel = idx === firstExampleIdx;
                   // Is this an example file?
                   const isExample = exampleFiles.includes(item.name);
+                  // Link props: download for local files like Tiamat.exe, new tab for external links
+                  const linkProps = item.download
+                    ? { download: item.download === true ? '' : item.download }
+                    : { target: '_blank', rel: 'noopener noreferrer' };
                   return (
                     <React.Fragment key={item.name}>
                       {insertExampleLabel && (
@@ -86,7 +90,7 @@ const Resources = () => {
                       )}
                       <li style={{ marginBottom: '1.1rem', textAlign: 'left', lineHeight: 1.2 }}>
                         <span style={{ display: 'inline-block' }}>
-                          <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 400, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{item.name}</a>
+                          <a href={item.link} {...linkProps} style={{ fontWeight: 400, color: '#1a0dab', fontFamily: 'Inter, Arial, sans-serif', textDecoration: 'none', marginBottom: 0 }}>{item.name}</a>
                           {item.desc && <span style={{ marginLeft: 6, color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontWeight: 400, marginBottom: 0 }}>- {item.desc}</span>}
                         </span>
                       </li>
