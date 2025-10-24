@@ -234,7 +234,7 @@ const OurTeam = () => {
                 <b>49. Dr. Guangbo Yao (Postdoctoral Fellow, 2017-2020)</b><br />Associate Professor, Shanghai Jiao Tong University<br /><br />
                 <b>50. Dr. Yinan Zhang (Postdoctoral Fellow, 2017-2019)</b><br />Associate Professor, Tongji University<br /><br />
                 <b>51. Dr. Cheng Zhang (Postdoctoral Fellow, 2011-2013)</b><br />Associate Professor, Peking University<br /><br />
-                <b>52. Dr. Yang Xu (Postdoctoral Fellow, 2008-2010)</b><br />Assistant Research Professor, Biodesign Institute, Arizona State University<br /><br />
+                <b>52. Dr. Yang Xu (Postdoctoral Fellow, 2011-2012)</b><br />Assistant Research Professor, Biodesign Institute, Arizona State University<br /><br />
                 <b>53. Dr. Jing Yang (Postdoctoral Fellow, 2011-2013)</b><br />Professor, Northern University of Electrical Engineering, China<br /><br />
                 <b>54. Bryan Wei (Postdoctoral Fellow, 2008-2009)</b><br />Professor, Tsinghua University<br /><br />
                 <b>55. Yuanchen Dong (Postdoctoral Fellow, 2013-2014)</b><br />Professor, Beijing Institute of Chemistry, CAS<br /><br />

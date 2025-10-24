@@ -7,6 +7,14 @@ import { FaTrophy, FaGraduationCap } from 'react-icons/fa';
 const News = () => {
   const newsItems = [
     {
+      date: "2025-10-31",
+      type: "defense",
+
+      title: "Dr. Deeksha Satyabola Successfully Defends Ph.D. Thesis",
+      description: "Deeksha Satyabola successfully defended his Ph.D. thesis. Congratulations, Dr. Deeksha. She is moving to Johnson & Johnson as a Post doctoral fellow. Best wishes!",
+      color: "#10b981"
+    },
+    {
       date: "2025-02-01",
       type: "award",
 
