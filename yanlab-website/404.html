@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Page not found — loading site</title>
+  </head>
+  <body>
+    <script>
+      // SPA fallback for static hosts (GitHub Pages)
+      // Fetch and render the site's index.html so the SPA router can handle the route,
+      // while keeping the original URL in the address bar.
+      (function () {
+        var indexUrl = '/index.html';
+        try {
+          fetch(indexUrl, {cache: 'no-store'})
+            .then(function (res) { return res.text(); })
+            .then(function (html) {
+              // Replace the current document with the index.html contents
+              document.open();
+              document.write(html);
+              document.close();
+            })
+            .catch(function (err) {
+              console.error('Failed to fetch index.html for SPA fallback:', err);
+              // As a last resort, go to site root
+              window.location.replace('/');
+            });
+        } catch (e) {
+          console.error(e);
+          window.location.replace('/');
+        }
+      })();
+    </script>
+  </body>
+</html>
