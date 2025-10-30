@@ -29,14 +29,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Copy SPA 404 fallback into dist
-        run: |
-          if [ -f ./404.html ]; then
-            cp ./404.html ./dist/404.html
-          else
-            echo "No 404.html found at repo root; skipping copy"
-          fi
-
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
