@@ -177,75 +177,76 @@ const OurTeam = () => {
               textAlign: 'center',
               width: '100%'
             }}>GROUP ALUMNI</h2>
-            <div style={{ margin: '2rem 0 0 0', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+              <div style={{ margin: '2rem 0 0 0', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
               <div style={{ fontWeight: 600, fontSize: '1.5rem', color: '#232946', marginBottom: '0.5rem', textAlign: 'center' }}>Graduate Students</div>
               <div style={{ marginBottom: '2rem', display: 'inline-block', textAlign: 'left' }}>
-                <b>1. Lu Yu (Graduate student, Fall 2019)</b><br />Postdoc, University of Washington<br /><br />
-                <b>2. Liangxiao Chen (Graduate student, Fall 2019)</b><br />Postdoc, Harvard University<br /><br />
-                <b>3. Leeza Abraham (Graduate student, Fall 2018)</b><br />Senior Scientist, Exodigm Biosciences<br /><br />
-                <b>4. Yue Tang (Graduate student, Fall 2018)</b><br />Associate Professor, School of Medicine, Shandong University<br /><br />
-                <b>5. Hao Liu (Graduate student, Fall 2018)</b><br />Postdoc, Biodesign Institute, Arizona State University<br /><br />
-                <b>6. Xu Zhou (Graduate student, Fall 2016)</b><br />Associate Professor, College of Chemistry, Nanjing University<br /><br />
-                <b>7. Raghu Narayanan (Graduate student, Fall 2015)</b><br />Postdoc, University of California, San Francisco<br /><br />
-                <b>8. Swarup Dey (Graduate student, Fall 2015)</b><br />Principal Scientist, Regeneron<br /><br />
-                <b>9. Fan Hong (Graduate student, Fall 2014)</b><br />Assistant Professor, Department of Chemistry, University of Florida<br /><br />
-                <b>10. Yu Zhou (Graduate student, Fall 2013)</b><br />Postdoc ASO, Center for NeuroGenetics, University of Florida<br /><br />
-                <b>11. Angela Edwards (Graduate student, Fall 2012)</b><br />Senior Biologist II, Power Engineers<br /><br />
-                <b>12. Saswata Banerjee (Graduate student, Fall 2012)</b><br />Senior Content Specialist, Aurigene Pharmaceutical Services Limited<br /><br />
-                <b>13. Yuhe Yang (Graduate student, Fall 2011)</b><br />Professor, National Center for Nanoscience and Nanotechnology, China<br /><br />
-                <b>14. Shuoxing Jiang (Graduate student, Fall 2011)</b><br />Associate Professor, College of Engineering and Applied Sciences, Nanjing University<br /><br />
-                <b>15. Fei Zhang (Graduate student, Fall 2010)</b><br />Associate Professor, Department of Chemistry, Rutgers University Newark<br /><br />
-                <b>16. Anirban Samanta (Graduate student, Fall 2009)</b><br />Assistant Professor, Ramakrishna Mission Vidyamandira<br /><br />
-                <b>17. Dongran Han (Graduate student, Fall 2009)</b><br />Professor, Beijing University of Chinese Medicine<br /><br />
-                <b>18. Palash Dutta (Graduate student, Fall 2009)</b><br />Staff Scientist at Bruker Spatial Genomics<br /><br />
-                <b>19. Wei Li (Graduate student, Fall 2009)</b><br />Director of Chemistry at esBiolab<br /><br />
-                <b>20. Xiaowei Liu (Graduate student, Fall 2008)</b><br />LGG Fellow at Montefiore<br /><br />
-                <b>21. Suchetan Pal (Graduate student, Fall 2008)</b><br />Assistant Professor, Department of Chemistry, IIT-Bhilai<br /><br />
-                <b>22. Minghui Liu (Graduate student, Fall 2008)</b><br />Assistant Research Professor, Biodesign Institute, Arizona State University<br /><br />
-                <b>23. XiXi Wei (Graduate student, Fall 2008)</b><br />Senior Research Scientist, Caris Life<br /><br />
-                <b>24. Zhao Zhao (Graduate student, Fall 2008)</b><br />Chief Technology Officer, Neocura<br /><br />
-                <b>25. Zhe Li (Graduate student, Fall 2007)</b><br />Professor and Vice Dean, College of Engineering and Applied Sciences, Nanjing University<br /><br />
-                <b>26. Jeanette Nangreave (Graduate student, Fall 2007)</b><br />Teaching Professor, Arizona State University<br /><br />
-                <b>27. Jaswinder Sharma (Graduate student, Spring 2005)</b><br />Senior R&D Staff and Leader, Energy Storage and Conversion Manufacturing Group, Oak Ridge National Lab<br /><br />
-                <b>28. Chenxiang Lin (Graduate student, Spring 2005)</b><br />Associate Professor, Yale University<br /><br />
-                <b>29. Yonggang Ke (Graduate student, Spring 2005)</b><br />Associate Professor, Emory-Georgia Tech joint Wallace H. Coulter Department of Biomedical Engineering<br /><br />
-                <b>30. Sherri Rinker (Graduate student, Fall 2004)</b><br />Director at B2S Life Sciences<br /><br />
-                <b>31. Rahul Chhabra (Graduate student, Fall 2004)</b><br />Family Physician, Forest Lane Medical<br /><br />
-                <b>32. Kyle Lund (Graduate student, Fall 2004)</b><br />Medical Director, Clinical Pathology, Landstuhl Regional Medical Center<br /><br />
+                <b>1. Deeksha Satyabola (Graduate student, Fall 2021)</b><br />Postdoc, Johnson & Johnson<br /><br />
+                <b>2. Lu Yu (Graduate student, Fall 2019)</b><br />Postdoc, University of Washington<br /><br />
+                <b>3. Liangxiao Chen (Graduate student, Fall 2019)</b><br />Postdoc, Harvard University<br /><br />
+                <b>4. Leeza Abraham (Graduate student, Fall 2018)</b><br />Senior Scientist, Exodigm Biosciences<br /><br />
+                <b>5. Yue Tang (Graduate student, Fall 2018)</b><br />Associate Professor, School of Medicine, Shandong University<br /><br />
+                <b>6. Hao Liu (Graduate student, Fall 2018)</b><br />Postdoc, Biodesign Institute, Arizona State University<br /><br />
+                <b>7. Xu Zhou (Graduate student, Fall 2016)</b><br />Associate Professor, College of Chemistry, Nanjing University<br /><br />
+                <b>8. Raghu Narayanan (Graduate student, Fall 2015)</b><br />Postdoc, University of California, San Francisco<br /><br />
+                <b>9. Swarup Dey (Graduate student, Fall 2015)</b><br />Principal Scientist, Regeneron<br /><br />
+                <b>10. Fan Hong (Graduate student, Fall 2014)</b><br />Assistant Professor, Department of Chemistry, University of Florida<br /><br />
+                <b>11. Yu Zhou (Graduate student, Fall 2013)</b><br />Postdoc ASO, Center for NeuroGenetics, University of Florida<br /><br />
+                <b>12. Angela Edwards (Graduate student, Fall 2012)</b><br />Senior Biologist II, Power Engineers<br /><br />
+                <b>13. Saswata Banerjee (Graduate student, Fall 2012)</b><br />Senior Content Specialist, Aurigene Pharmaceutical Services Limited<br /><br />
+                <b>14. Yuhe Yang (Graduate student, Fall 2011)</b><br />Professor, National Center for Nanoscience and Nanotechnology, China<br /><br />
+                <b>15. Shuoxing Jiang (Graduate student, Fall 2011)</b><br />Associate Professor, College of Engineering and Applied Sciences, Nanjing University<br /><br />
+                <b>16. Fei Zhang (Graduate student, Fall 2010)</b><br />Associate Professor, Department of Chemistry, Rutgers University Newark<br /><br />
+                <b>17. Anirban Samanta (Graduate student, Fall 2009)</b><br />Assistant Professor, Ramakrishna Mission Vidyamandira<br /><br />
+                <b>18. Dongran Han (Graduate student, Fall 2009)</b><br />Professor, Beijing University of Chinese Medicine<br /><br />
+                <b>19. Palash Dutta (Graduate student, Fall 2009)</b><br />Staff Scientist at Bruker Spatial Genomics<br /><br />
+                <b>20. Wei Li (Graduate student, Fall 2009)</b><br />Director of Chemistry at esBiolab<br /><br />
+                <b>21. Xiaowei Liu (Graduate student, Fall 2008)</b><br />LGG Fellow at Montefiore<br /><br />
+                <b>22. Suchetan Pal (Graduate student, Fall 2008)</b><br />Assistant Professor, Department of Chemistry, IIT-Bhilai<br /><br />
+                <b>23. Minghui Liu (Graduate student, Fall 2008)</b><br />Assistant Research Professor, Biodesign Institute, Arizona State University<br /><br />
+                <b>24. XiXi Wei (Graduate student, Fall 2008)</b><br />Senior Research Scientist, Caris Life<br /><br />
+                <b>25. Zhao Zhao (Graduate student, Fall 2008)</b><br />Chief Technology Officer, Neocura<br /><br />
+                <b>26. Zhe Li (Graduate student, Fall 2007)</b><br />Professor and Vice Dean, College of Engineering and Applied Sciences, Nanjing University<br /><br />
+                <b>27. Jeanette Nangreave (Graduate student, Fall 2007)</b><br />Teaching Professor, Arizona State University<br /><br />
+                <b>28. Jaswinder Sharma (Graduate student, Spring 2005)</b><br />Senior R&D Staff and Leader, Energy Storage and Conversion Manufacturing Group, Oak Ridge National Lab<br /><br />
+                <b>29. Chenxiang Lin (Graduate student, Spring 2005)</b><br />Associate Professor, Yale University<br /><br />
+                <b>30. Yonggang Ke (Graduate student, Spring 2005)</b><br />Associate Professor, Emory-Georgia Tech joint Wallace H. Coulter Department of Biomedical Engineering<br /><br />
+                <b>31. Sherri Rinker (Graduate student, Fall 2004)</b><br />Director at B2S Life Sciences<br /><br />
+                <b>32. Rahul Chhabra (Graduate student, Fall 2004)</b><br />Family Physician, Forest Lane Medical<br /><br />
+                <b>33. Kyle Lund (Graduate student, Fall 2004)</b><br />Medical Director, Clinical Pathology, Landstuhl Regional Medical Center<br /><br />
               </div>
               <div style={{ fontWeight: 600, fontSize: '1.5rem', color: '#232946', marginBottom: '0.5rem', textAlign: 'center' }}>Postdoctoral Fellows</div>
               <div style={{ marginBottom: '2rem', display: 'inline-block', textAlign: 'left' }}>
-                <b>33. Dr. Junping Zhang (Postdoctoral Fellow, 2005-2006)</b><br />Principal Scientist, Carestream Health–Advanced Materials<br /><br />
-                <b>34. Dr. Qiangbin Wang (Postdoctoral Fellow, 2006-2008)</b><br />Professor and Director, Suzhou Institute of Nanotech and Nano-bionics, CAS<br /><br />
-                <b>35. Dr. Xiaoju Guan (Postdoctoral Fellow, 2002-2004)</b><br />Principal Scientist, GSK<br /><br />
-                <b>36. Dr. Zhengtao Deng (Postdoctoral Fellow, 2009-2012)</b><br />Professor, College of Engineering and Applied Sciences, Nanjing University<br /><br />
-                <b>37. Dr. Reji Varghese (Postdoctoral Fellow, 2010-2011)</b><br />Professor, Department of Chemistry, Indian Institute of Science Education and Research Thiruvananthapuram<br /><br />
-                <b>38. Dr. Yang Yang (Postdoctoral Fellow, 2010-2012)</b><br />Professor, Shanghai Jiao Tong University<br /><br />
-                <b>39. Dr. Jinglin Fu (Postdoctoral Fellow, 2010-2013)</b><br />Professor and Department Chair, Department of Chemistry, Rutgers University, Camden<br /><br />
-                <b>40. Dr. Alessio Andreoni (Postdoctoral Fellow, 2013-2016)</b><br />Senior Research Scientist at Max Planck Florida Institute for Neuroscience<br /><br />
-                <b>41. Dr. Ryan Nangreave (Postdoctoral Fellow, 2012-2013)</b><br />Assistant Teaching Professor, Arizona State University<br /><br />
-                <b>42. Dr. Sarah Henry (Postdoctoral Fellow, 2013-2015)</b><br />Center for Data Science and AI Manager, University of Glasgow<br /><br />
-                <b>43. Dr. Xiaodong Qi (Postdoctoral Fellow, 2016-2022)</b><br />Staff Scientist, Element Biosciences<br /><br />
-                <b>44. Dr. Zhilei Ge (Postdoctoral Fellow, 2011-2013)</b><br />Associate Professor, College of Chemistry and Chemical Engineering, Shanghai Jiao Tong University<br /><br />
-                <b>45. Dr. Xiaowei Liu (Postdoctoral Fellow, 2013-2015)</b><br />LGG Fellow at Montefiore<br /><br />
-                <b>46. Dr. Nour Eddine Fahmi (Postdoctoral Fellow, 2016-2020)</b><br />Senior Advisor, Eli Lilly and Company<br /><br />
-                <b>47. Dr. Xiang Lan (Postdoctoral Fellow, 2016-2018)</b><br />Professor, Donghua University<br /><br />
-                <b>48. Dr. Zhi Zhao (Postdoctoral Fellow, 2018-2019)</b><br />Professor, Beijing University of Technology<br /><br />
-                <b>49. Dr. Guangbo Yao (Postdoctoral Fellow, 2017-2020)</b><br />Associate Professor, Shanghai Jiao Tong University<br /><br />
-                <b>50. Dr. Yinan Zhang (Postdoctoral Fellow, 2017-2019)</b><br />Associate Professor, Tongji University<br /><br />
-                <b>51. Dr. Cheng Zhang (Postdoctoral Fellow, 2011-2013)</b><br />Associate Professor, Peking University<br /><br />
-                <b>52. Dr. Yang Xu (Postdoctoral Fellow, 2011-2012)</b><br />Assistant Research Professor, Biodesign Institute, Arizona State University<br /><br />
-                <b>53. Dr. Jing Yang (Postdoctoral Fellow, 2011-2013)</b><br />Professor, Northern University of Electrical Engineering, China<br /><br />
-                <b>54. Bryan Wei (Postdoctoral Fellow, 2008-2009)</b><br />Professor, Tsinghua University<br /><br />
-                <b>55. Yuanchen Dong (Postdoctoral Fellow, 2013-2014)</b><br />Professor, Beijing Institute of Chemistry, CAS<br /><br />
-                <b>56. Guoliang Ke (Postdoctoral Fellow, 2014-2015)</b><br />Professor, Department of Chemistry, Hunan University<br /><br />
-                <b>57. Dr. Yen-Ting Lai (Postdoctoral Fellow, 2014-2015)</b><br />Director, Moderna<br /><br />
-                <b>58. Dr. Andre Pinheiro (Postdoctoral Fellow, 2009-2012)</b><br />VP-Head Patient Value & Access EUCAN at Takeda<br /><br />
-                <b>59. Dr. Nicholas Stephanopoulos (Postdoctoral Fellow, 2008)</b><br />Associate Professor, School of Molecular Sciences, Arizona State University<br /><br />
-                <b>60. Dr. Bo Ning (Postdoctoral Fellow, 2017-2019)</b><br />Assistant Professor, School of Medicine, Tulane University<br /><br />
-                <b>61. Lan Liu (Postdoctoral Fellow, 2018-2020)</b><br />Assistant Professor, Department of Chemistry, Hunan University<br /><br />
-                <b>62. Kasper Jahn (Postdoctoral Fellow, 2008-2009)</b><br />Executive Director, Head of Strategy Office hos Novo Holdings<br /><br />
-                <b>63. Casper Anderson (Postdoctoral Fellow, 2007-2008)</b><br />QC Lead, Topsoe<br /><br />
+                <b>34. Dr. Junping Zhang (Postdoctoral Fellow, 2005-2006)</b><br />Principal Scientist, Carestream Health–Advanced Materials<br /><br />
+                <b>35. Dr. Qiangbin Wang (Postdoctoral Fellow, 2006-2008)</b><br />Professor and Director, Suzhou Institute of Nanotech and Nano-bionics, CAS<br /><br />
+                <b>36. Dr. Xiaoju Guan (Postdoctoral Fellow, 2002-2004)</b><br />Principal Scientist, GSK<br /><br />
+                <b>37. Dr. Zhengtao Deng (Postdoctoral Fellow, 2009-2012)</b><br />Professor, College of Engineering and Applied Sciences, Nanjing University<br /><br />
+                <b>38. Dr. Reji Varghese (Postdoctoral Fellow, 2010-2011)</b><br />Professor, Department of Chemistry, Indian Institute of Science Education and Research Thiruvananthapuram<br /><br />
+                <b>39. Dr. Yang Yang (Postdoctoral Fellow, 2010-2012)</b><br />Professor, Shanghai Jiao Tong University<br /><br />
+                <b>40. Dr. Jinglin Fu (Postdoctoral Fellow, 2010-2013)</b><br />Professor and Department Chair, Department of Chemistry, Rutgers University, Camden<br /><br />
+                <b>41. Dr. Alessio Andreoni (Postdoctoral Fellow, 2013-2016)</b><br />Senior Research Scientist at Max Planck Florida Institute for Neuroscience<br /><br />
+                <b>42. Dr. Ryan Nangreave (Postdoctoral Fellow, 2012-2013)</b><br />Assistant Teaching Professor, Arizona State University<br /><br />
+                <b>43. Dr. Sarah Henry (Postdoctoral Fellow, 2013-2015)</b><br />Center for Data Science and AI Manager, University of Glasgow<br /><br />
+                <b>44. Dr. Xiaodong Qi (Postdoctoral Fellow, 2016-2022)</b><br />Staff Scientist, Element Biosciences<br /><br />
+                <b>45. Dr. Zhilei Ge (Postdoctoral Fellow, 2011-2013)</b><br />Associate Professor, College of Chemistry and Chemical Engineering, Shanghai Jiao Tong University<br /><br />
+                <b>46. Dr. Xiaowei Liu (Postdoctoral Fellow, 2013-2015)</b><br />LGG Fellow at Montefiore<br /><br />
+                <b>47. Dr. Nour Eddine Fahmi (Postdoctoral Fellow, 2016-2020)</b><br />Senior Advisor, Eli Lilly and Company<br /><br />
+                <b>48. Dr. Xiang Lan (Postdoctoral Fellow, 2016-2018)</b><br />Professor, Donghua University<br /><br />
+                <b>49. Dr. Zhi Zhao (Postdoctoral Fellow, 2018-2019)</b><br />Professor, Beijing University of Technology<br /><br />
+                <b>50. Dr. Guangbo Yao (Postdoctoral Fellow, 2017-2020)</b><br />Associate Professor, Shanghai Jiao Tong University<br /><br />
+                <b>51. Dr. Yinan Zhang (Postdoctoral Fellow, 2017-2019)</b><br />Associate Professor, Tongji University<br /><br />
+                <b>52. Dr. Cheng Zhang (Postdoctoral Fellow, 2011-2013)</b><br />Associate Professor, Peking University<br /><br />
+                <b>53. Dr. Yang Xu (Postdoctoral Fellow, 2011-2012)</b><br />Assistant Research Professor, Biodesign Institute, Arizona State University<br /><br />
+                <b>54. Dr. Jing Yang (Postdoctoral Fellow, 2011-2013)</b><br />Professor, Northern University of Electrical Engineering, China<br /><br />
+                <b>55. Bryan Wei (Postdoctoral Fellow, 2008-2009)</b><br />Professor, Tsinghua University<br /><br />
+                <b>56. Yuanchen Dong (Postdoctoral Fellow, 2013-2014)</b><br />Professor, Beijing Institute of Chemistry, CAS<br /><br />
+                <b>57. Guoliang Ke (Postdoctoral Fellow, 2014-2015)</b><br />Professor, Department of Chemistry, Hunan University<br /><br />
+                <b>58. Dr. Yen-Ting Lai (Postdoctoral Fellow, 2014-2015)</b><br />Director, Moderna<br /><br />
+                <b>59. Dr. Andre Pinheiro (Postdoctoral Fellow, 2009-2012)</b><br />VP-Head Patient Value & Access EUCAN at Takeda<br /><br />
+                <b>60. Dr. Nicholas Stephanopoulos (Postdoctoral Fellow, 2008)</b><br />Associate Professor, School of Molecular Sciences, Arizona State University<br /><br />
+                <b>61. Dr. Bo Ning (Postdoctoral Fellow, 2017-2019)</b><br />Assistant Professor, School of Medicine, Tulane University<br /><br />
+                <b>62. Lan Liu (Postdoctoral Fellow, 2018-2020)</b><br />Assistant Professor, Department of Chemistry, Hunan University<br /><br />
+                <b>63. Kasper Jahn (Postdoctoral Fellow, 2008-2009)</b><br />Executive Director, Head of Strategy Office hos Novo Holdings<br /><br />
+                <b>64. Casper Anderson (Postdoctoral Fellow, 2007-2008)</b><br />QC Lead, Topsoe<br /><br />
               </div>
             </div>
           </section>
