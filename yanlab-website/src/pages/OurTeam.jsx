@@ -42,7 +42,7 @@ const OurTeam = () => {
     {
       name: "Dr Kun Dai",
       title: "Assistant Research Scientist",
-      email: "",
+      email: "kundai@asu.edu",
   focus: "Nucleic Acid Biologics",
       image: "kun.jpg"
     }
@@ -60,7 +60,8 @@ const OurTeam = () => {
     { name: "Yichen Yan", level: "2nd Year PhD Candidate", email: "yichen@asu.edu", research: "Nucleic Acid Biology", image: "yichen.jpg" },
     // New members
     { name: "Xiang Gu", level: "1st Year PhD Candidate", email: "xianggu2@asu.edu", research: "DNA Nanotechnology", image: "Xiang.jpg" },
-  { name: "Lihui Wang", level: "1st Year PhD Candidate", email: "lwang411@asu.edu", research: "DNA Nanotechnology", image: "lihui.jpg" }
+    { name: "Lihui Wang", level: "1st Year PhD Candidate", email: "lwang411@asu.edu", research: "DNA Nanotechnology", image: "lihui.jpg" },
+    { name: "Shreya Raha", level: "1st Year PhD Candidate", email: "sraha1@asu.edu", research: "DNA Nanotechnology", image: "Shreya.jpg" }
   ];
 
   const former = [
@@ -134,25 +135,31 @@ const OurTeam = () => {
                     <>
                         <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>Principal Investigator</p>
                         <p style={{ color: '#64748b', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>Biomolecular Designer and Programmer</p>
-                        <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center', marginBottom: '0.125rem' }}>
-                          Email
-                        </a>
+                        {member.email ? (
+                          <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center', marginBottom: '0.125rem' }}>
+                            {`Email: ${member.email}`}
+                          </a>
+                        ) : null}
                     </>
                   ) : member.focus ? (
                     <>
                       <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center' }}>{member.title}</p>
                       <p style={{ color: member.name === 'Kun Dai' ? '#64748b' : '#64748b', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.25rem', textAlign: 'center' }}>{member.focus}</p>
-                      <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center' }}>
-                        Email
-                      </a>
+                      {member.email ? (
+                        <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center' }}>
+                          {`Email: ${member.email}`}
+                        </a>
+                      ) : null}
                     </>
                   ) : (
                     <>
                       <p style={{ color: '#232946', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.125rem', textAlign: 'center', fontStyle: 'italic' }}>{member.level}</p>
                       <p style={{ color: '#64748b', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, marginBottom: '0.25rem', textAlign: 'center' }}>{member.research}</p>
-                      <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center' }}>
-                        Email
-                      </a>
+                      {member.email ? (
+                        <a href={`mailto:${member.email}`} style={{ color: '#232946', textDecoration: 'none', fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.2rem', fontWeight: 400, lineHeight: 1.3, display: 'block', textAlign: 'center' }}>
+                          {`Email: ${member.email}`}
+                        </a>
+                      ) : null}
                     </>
                   )}
                 </div>
@@ -180,38 +187,39 @@ const OurTeam = () => {
             <div style={{ margin: '2rem 0 0 0', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
               <div style={{ fontWeight: 600, fontSize: '1.5rem', color: '#232946', marginBottom: '0.5rem', textAlign: 'center' }}>Graduate Students</div>
               <div style={{ marginBottom: '2rem', display: 'inline-block', textAlign: 'left' }}>
-                <b>1. Lu Yu (Graduate student, Fall 2019)</b><br />Postdoc, University of Washington<br /><br />
-                <b>2. Liangxiao Chen (Graduate student, Fall 2019)</b><br />Postdoc, Harvard University<br /><br />
-                <b>3. Leeza Abraham (Graduate student, Fall 2018)</b><br />Senior Scientist, Exodigm Biosciences<br /><br />
-                <b>4. Yue Tang (Graduate student, Fall 2018)</b><br />Associate Professor, School of Medicine, Shandong University<br /><br />
-                <b>5. Hao Liu (Graduate student, Fall 2018)</b><br />Postdoc, Biodesign Institute, Arizona State University<br /><br />
-                <b>6. Xu Zhou (Graduate student, Fall 2016)</b><br />Associate Professor, College of Chemistry, Nanjing University<br /><br />
-                <b>7. Raghu Narayanan (Graduate student, Fall 2015)</b><br />Postdoc, University of California, San Francisco<br /><br />
-                <b>8. Swarup Dey (Graduate student, Fall 2015)</b><br />Principal Scientist, Regeneron<br /><br />
-                <b>9. Fan Hong (Graduate student, Fall 2014)</b><br />Assistant Professor, Department of Chemistry, University of Florida<br /><br />
-                <b>10. Yu Zhou (Graduate student, Fall 2013)</b><br />Postdoc ASO, Center for NeuroGenetics, University of Florida<br /><br />
-                <b>11. Angela Edwards (Graduate student, Fall 2012)</b><br />Senior Biologist II, Power Engineers<br /><br />
-                <b>12. Saswata Banerjee (Graduate student, Fall 2012)</b><br />Senior Content Specialist, Aurigene Pharmaceutical Services Limited<br /><br />
-                <b>13. Yuhe Yang (Graduate student, Fall 2011)</b><br />Professor, National Center for Nanoscience and Nanotechnology, China<br /><br />
-                <b>14. Shuoxing Jiang (Graduate student, Fall 2011)</b><br />Associate Professor, College of Engineering and Applied Sciences, Nanjing University<br /><br />
-                <b>15. Fei Zhang (Graduate student, Fall 2010)</b><br />Associate Professor, Department of Chemistry, Rutgers University Newark<br /><br />
-                <b>16. Anirban Samanta (Graduate student, Fall 2009)</b><br />Assistant Professor, Ramakrishna Mission Vidyamandira<br /><br />
-                <b>17. Dongran Han (Graduate student, Fall 2009)</b><br />Professor, Beijing University of Chinese Medicine<br /><br />
-                <b>18. Palash Dutta (Graduate student, Fall 2009)</b><br />Staff Scientist at Bruker Spatial Genomics<br /><br />
-                <b>19. Wei Li (Graduate student, Fall 2009)</b><br />Director of Chemistry at esBiolab<br /><br />
-                <b>20. Xiaowei Liu (Graduate student, Fall 2008)</b><br />LGG Fellow at Montefiore<br /><br />
-                <b>21. Suchetan Pal (Graduate student, Fall 2008)</b><br />Assistant Professor, Department of Chemistry, IIT-Bhilai<br /><br />
-                <b>22. Minghui Liu (Graduate student, Fall 2008)</b><br />Assistant Research Professor, Biodesign Institute, Arizona State University<br /><br />
-                <b>23. XiXi Wei (Graduate student, Fall 2008)</b><br />Senior Research Scientist, Caris Life<br /><br />
-                <b>24. Zhao Zhao (Graduate student, Fall 2008)</b><br />Chief Technology Officer, Neocura<br /><br />
-                <b>25. Zhe Li (Graduate student, Fall 2007)</b><br />Professor and Vice Dean, College of Engineering and Applied Sciences, Nanjing University<br /><br />
-                <b>26. Jeanette Nangreave (Graduate student, Fall 2007)</b><br />Teaching Professor, Arizona State University<br /><br />
-                <b>27. Jaswinder Sharma (Graduate student, Spring 2005)</b><br />Senior R&D Staff and Leader, Energy Storage and Conversion Manufacturing Group, Oak Ridge National Lab<br /><br />
-                <b>28. Chenxiang Lin (Graduate student, Spring 2005)</b><br />Associate Professor, Yale University<br /><br />
-                <b>29. Yonggang Ke (Graduate student, Spring 2005)</b><br />Associate Professor, Emory-Georgia Tech joint Wallace H. Coulter Department of Biomedical Engineering<br /><br />
-                <b>30. Sherri Rinker (Graduate student, Fall 2004)</b><br />Director at B2S Life Sciences<br /><br />
-                <b>31. Rahul Chhabra (Graduate student, Fall 2004)</b><br />Family Physician, Forest Lane Medical<br /><br />
-                <b>32. Kyle Lund (Graduate student, Fall 2004)</b><br />Medical Director, Clinical Pathology, Landstuhl Regional Medical Center<br /><br />
+                <b>1. Deeksha Satyabola (Graduate student, Spring 2021)</b><br />Postdoc, Johnson & Johnson<br /><br />
+                <b>2. Lu Yu (Graduate student, Fall 2019)</b><br />Postdoc, University of Washington<br /><br />
+                <b>3. Liangxiao Chen (Graduate student, Fall 2019)</b><br />Postdoc, Harvard University<br /><br />
+                <b>4. Leeza Abraham (Graduate student, Fall 2018)</b><br />Senior Scientist, Exodigm Biosciences<br /><br />
+                <b>5. Yue Tang (Graduate student, Fall 2018)</b><br />Associate Professor, School of Medicine, Shandong University<br /><br />
+                <b>6. Hao Liu (Graduate student, Fall 2018)</b><br />Postdoc, Biodesign Institute, Arizona State University<br /><br />
+                <b>7. Xu Zhou (Graduate student, Fall 2016)</b><br />Associate Professor, College of Chemistry, Nanjing University<br /><br />
+                <b>8. Raghu Narayanan (Graduate student, Fall 2015)</b><br />Postdoc, University of California, San Francisco<br /><br />
+                <b>9. Swarup Dey (Graduate student, Fall 2015)</b><br />Principal Scientist, Regeneron<br /><br />
+                <b>10. Fan Hong (Graduate student, Fall 2014)</b><br />Assistant Professor, Department of Chemistry, University of Florida<br /><br />
+                <b>11. Yu Zhou (Graduate student, Fall 2013)</b><br />Postdoc ASO, Center for NeuroGenetics, University of Florida<br /><br />
+                <b>12. Angela Edwards (Graduate student, Fall 2012)</b><br />Senior Biologist II, Power Engineers<br /><br />
+                <b>13. Saswata Banerjee (Graduate student, Fall 2012)</b><br />Senior Content Specialist, Aurigene Pharmaceutical Services Limited<br /><br />
+                <b>14. Yuhe Yang (Graduate student, Fall 2011)</b><br />Professor, National Center for Nanoscience and Nanotechnology, China<br /><br />
+                <b>15. Shuoxing Jiang (Graduate student, Fall 2011)</b><br />Associate Professor, College of Engineering and Applied Sciences, Nanjing University<br /><br />
+                <b>16. Fei Zhang (Graduate student, Fall 2010)</b><br />Associate Professor, Department of Chemistry, Rutgers University Newark<br /><br />
+                <b>17. Anirban Samanta (Graduate student, Fall 2009)</b><br />Assistant Professor, Ramakrishna Mission Vidyamandira<br /><br />
+                <b>18. Dongran Han (Graduate student, Fall 2009)</b><br />Professor, Beijing University of Chinese Medicine<br /><br />
+                <b>19. Palash Dutta (Graduate student, Fall 2009)</b><br />Staff Scientist at Bruker Spatial Genomics<br /><br />
+                <b>20. Wei Li (Graduate student, Fall 2009)</b><br />Director of Chemistry at esBiolab<br /><br />
+                <b>21. Xiaowei Liu (Graduate student, Fall 2008)</b><br />LGG Fellow at Montefiore<br /><br />
+                <b>22. Suchetan Pal (Graduate student, Fall 2008)</b><br />Assistant Professor, Department of Chemistry, IIT-Bhilai<br /><br />
+                <b>23. Minghui Liu (Graduate student, Fall 2008)</b><br />Assistant Research Professor, Biodesign Institute, Arizona State University<br /><br />
+                <b>24. XiXi Wei (Graduate student, Fall 2008)</b><br />Senior Research Scientist, Caris Life<br /><br />
+                <b>25. Zhao Zhao (Graduate student, Fall 2008)</b><br />Chief Technology Officer, Neocura<br /><br />
+                <b>26. Zhe Li (Graduate student, Fall 2007)</b><br />Professor and Vice Dean, College of Engineering and Applied Sciences, Nanjing University<br /><br />
+                <b>27. Jeanette Nangreave (Graduate student, Fall 2007)</b><br />Teaching Professor, Arizona State University<br /><br />
+                <b>28. Jaswinder Sharma (Graduate student, Spring 2005)</b><br />Senior R&D Staff and Leader, Energy Storage and Conversion Manufacturing Group, Oak Ridge National Lab<br /><br />
+                <b>29. Chenxiang Lin (Graduate student, Spring 2005)</b><br />Associate Professor, Yale University<br /><br />
+                <b>30. Yonggang Ke (Graduate student, Spring 2005)</b><br />Associate Professor, Emory-Georgia Tech joint Wallace H. Coulter Department of Biomedical Engineering<br /><br />
+                <b>31. Sherri Rinker (Graduate student, Fall 2004)</b><br />Director at B2S Life Sciences<br /><br />
+                <b>32. Rahul Chhabra (Graduate student, Fall 2004)</b><br />Family Physician, Forest Lane Medical<br /><br />
+                <b>33. Kyle Lund (Graduate student, Fall 2004)</b><br />Medical Director, Clinical Pathology, Landstuhl Regional Medical Center<br /><br />
               </div>
               <div style={{ fontWeight: 600, fontSize: '1.5rem', color: '#232946', marginBottom: '0.5rem', textAlign: 'center' }}>Postdoctoral Fellows</div>
               <div style={{ marginBottom: '2rem', display: 'inline-block', textAlign: 'left' }}>
