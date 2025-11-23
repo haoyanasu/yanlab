@@ -8,16 +8,34 @@
   <body>
     <script>
       // Fallback served by GitHub Pages when pretty URLs are requested directly.
-      // Try to load the SPA shell and let client-side routing handle the path.
+      // Show a minimal, route-specific placeholder (helps title and visible heading)
+      // while we fetch the SPA shell so users don't see "404 Not Found".
       (function () {
         var url = location.pathname + location.search + location.hash;
+
+        // Map a few known pretty routes to friendly titles/headings shown while SPA loads.
+        var routeTitles = {
+          '/contact': 'Contacts - Yan Lab',
+          '/contact/': 'Contacts - Yan Lab'
+        };
+
+        var initialTitle = routeTitles[location.pathname];
+        if (initialTitle) {
+          document.title = initialTitle;
+          // show a quick placeholder so the user sees the page title on load
+          document.body.innerHTML = '<h1 style="font-family:Inter, Arial, sans-serif; text-align:center; margin-top:2rem">' + initialTitle + '</h1>';
+        }
+
+        // Then attempt to load the SPA shell and let client-side routing take over.
         fetch('/index.html').then(function (r) { return r.text(); }).then(function (html) {
           document.open();
           document.write(html);
           history.replaceState({}, '', url);
           document.close();
         }).catch(function () {
-          document.body.innerHTML = '<h1>404: Not Found</h1><p>Could not load the application shell.</p>';
+          if (!initialTitle) {
+            document.body.innerHTML = '<h1>404: Not Found</h1><p>Could not load the application shell.</p>';
+          }
         });
       })();
     </script>
