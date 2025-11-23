@@ -30,7 +30,6 @@ function AppContent() {
         <Route path="/team/pi-yan" element={<PIYan />} />
         <Route path="/team/our-team" element={<OurTeam />} />
         <Route path="/publications" element={<Publications />} />
-        <Route path="/publications/:year" element={<Publications />} />
         <Route path="/news" element={<News />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/contact" element={<Contact />} />
