@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>404 Not Found</title>
+  </head>
+  <body>
+    <script>
+      // Fallback served by GitHub Pages when pretty URLs are requested directly.
+      // Try to load the SPA shell and let client-side routing handle the path.
+      (function () {
+        var url = location.pathname + location.search + location.hash;
+        fetch('/index.html').then(function (r) { return r.text(); }).then(function (html) {
+          document.open();
+          document.write(html);
+          history.replaceState({}, '', url);
+          document.close();
+        }).catch(function () {
+          document.body.innerHTML = '<h1>404: Not Found</h1><p>Could not load the application shell.</p>';
+        });
+      })();
+    </script>
+  </body>
+</html>

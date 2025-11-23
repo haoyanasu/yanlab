@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>404 Not Found</title>
+  </head>
+  <body>
+    <script>
+      // SPA fallback for client-side routing on static hosts (GitHub Pages)
+      // This will fetch the app shell (`index.html`) and replace the document
+      // while preserving the original URL so the client router can handle it.
+      (function () {
+        var url = location.pathname + location.search + location.hash;
+        fetch('/index.html').then(function (r) {
+          return r.text();
+        }).then(function (html) {
+          document.open();
+          document.write(html);
+          // restore the original URL so React Router sees the intended path
+          history.replaceState({}, '', url);
+          document.close();
+        }).catch(function () {
+          document.body.innerHTML = '<h1>404: Not Found</h1>' +
+            '<p>The requested page could not be found.</p>';
+        });
+      })();
+    </script>
+  </body>
+</html>
