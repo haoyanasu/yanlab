@@ -13,13 +13,29 @@
       (function () {
         var url = location.pathname + location.search + location.hash;
 
-        // Map a few known pretty routes to friendly titles/headings shown while SPA loads.
+        // Attempt to derive a friendly title for common pretty routes.
+        // If a specific mapping exists, use it; otherwise derive from the path.
         var routeTitles = {
           '/contact': 'Contacts - Yan Lab',
           '/contact/': 'Contacts - Yan Lab'
         };
 
-        var initialTitle = routeTitles[location.pathname];
+        function deriveTitleFromPath(path) {
+          // Remove leading/trailing slashes and split
+          var p = path.replace(/^\/+|\/+$/g, '');
+          if (!p) return null;
+          // For multi-segment paths, take the last segment
+          var parts = p.split('/');
+          var last = parts[parts.length - 1];
+          // Convert hyphens/underscores to spaces and title-case words
+          var words = last.replace(/[-_]/g, ' ').split(' ');
+          for (var i = 0; i < words.length; i++) {
+            words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+          }
+          return words.join(' ') + ' - Yan Lab';
+        }
+
+        var initialTitle = routeTitles[location.pathname] || deriveTitleFromPath(location.pathname);
         if (initialTitle) {
           document.title = initialTitle;
           // show a quick placeholder so the user sees the page title on load
