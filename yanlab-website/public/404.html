@@ -3,7 +3,55 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>404 Not Found</title>
+    <title></title>
+    <script>
+      // Compute and set a route-specific title early so users don't see
+      // a generic 'Yan Lab' placeholder before the SPA updates the title.
+      (function(){
+        try {
+          var routeTitles = {
+            '/': 'Yan Lab',
+            '/home': 'Yan Lab',
+            '/home/': 'Yan Lab',
+            '/contact': 'Contacts - Yan Lab',
+            '/contact/': 'Contacts - Yan Lab',
+            '/publications': 'Publications - Yan Lab',
+            '/publications/': 'Publications - Yan Lab',
+            '/people': 'People - Yan Lab',
+            '/people/': 'People - Yan Lab',
+            '/our-team': 'Our Team - Yan Lab',
+            '/our-team/': 'Our Team - Yan Lab',
+            '/team/our-team': 'Our Team - Yan Lab',
+            '/team/our-team/': 'Our Team - Yan Lab',
+            '/piyan': 'PI Yan - Yan Lab',
+            '/piyan/': 'PI Yan - Yan Lab',
+            '/team/pi-yan': 'PI Yan - Yan Lab',
+            '/team/pi-yan/': 'PI Yan - Yan Lab',
+            '/ourteam': 'Our Team - Yan Lab',
+            '/ourteam/': 'Our Team - Yan Lab',
+            '/research': 'Research - Yan Lab',
+            '/research/': 'Research - Yan Lab',
+            '/resources': 'Resources - Yan Lab',
+            '/resources/': 'Resources - Yan Lab',
+            '/news': 'News - Yan Lab',
+            '/news/': 'News - Yan Lab'
+          };
+          function deriveTitleFromPath(path) {
+            var p = path.replace(/^\/+|\/+$/g, '');
+            if (!p) return null;
+            var parts = p.split('/');
+            var last = parts[parts.length - 1];
+            var words = last.replace(/[-_]/g, ' ').split(' ');
+            for (var i = 0; i < words.length; i++) {
+              words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+            return words.join(' ') + ' - Yan Lab';
+          }
+          var t = routeTitles[location.pathname] || deriveTitleFromPath(location.pathname) || 'Yan Lab';
+          document.title = t;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <script>
@@ -11,6 +59,8 @@
       // This will fetch the app shell (`index.html`) and replace the document
       // while preserving the original URL so the client router can handle it.
       (function () {
+        // Set a neutral title immediately to avoid a visible "404" flash
+        try { document.title = 'Yan Lab'; } catch (e) {}
         var url = location.pathname + location.search + location.hash;
         fetch('/index.html').then(function (r) {
           return r.text();
