@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import './Publications.css';
 
 // Helper to consistently extract journal name and remaining text.
@@ -928,7 +929,121 @@ const publications2014 = [
   }
 ];
 
-const Publications = () => (
+const Publications = () => {
+  const { year: routeYear } = useParams() || {};
+  const navigate = useNavigate();
+
+  const yearMap = {
+    '2025': publications2025,
+    '2024': publications2024,
+    '2023': publications2023,
+    '2022': publications2022,
+    '2021': publications2021,
+    '2020': publications2020,
+    '2019': publications2019,
+    '2018': publications2018,
+    '2017': publications2017,
+    '2016': publications2016,
+    '2015': publications2015,
+    '2014': publications2014,
+    '2013': publications2013,
+    '2012': publications2012,
+    '2011': publications2011,
+    '2010': publications2010,
+    '2009': publications2009,
+    '2008': publications2008,
+    '2007': publications2007,
+    '2006': publications2006,
+    '2005': publications2005,
+    '2004': publications2004,
+    '2003': publications2003,
+    '2002Before': publications2002Before,
+  };
+
+  const renderYearSection = (yearKey) => {
+    const items = yearMap[String(yearKey)];
+    if (!items) return null;
+    const header = yearKey === '2002Before' ? '2002 and Before' : yearKey;
+    return (
+      <div className="publications-list" style={{ marginTop: '32px' }}>
+        <h2 id={`publications-${yearKey}`} style={{ fontSize: '1.4rem', fontWeight: 700, color: '#232946', margin: '32px 0 16px 0', fontFamily: 'Inter, Arial, sans-serif' }}>{header}</h2>
+        {items.map((item) => (
+          <div key={item.number} style={{ marginBottom: '18px' }}>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', fontSize: '1.05rem', color: '#232946', fontWeight: 400, marginBottom: '2px', lineHeight: 1.5 }}>
+              <span style={{ fontWeight: 700 }}>{item.number}.</span> {item.authors}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '2px', lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+            <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
+              {(() => {
+                const { journalName, restText } = extractJournalParts(item.journal);
+                const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[-._;()\/:A-Z0-9]+)/i;
+                const doiMatch = restText.match(doiRegex);
+                if (doiMatch) {
+                  const prefix = doiMatch[1] ? doiMatch[1] : '';
+                  const doi = doiMatch[2] ? doiMatch[2] : doiMatch[0].replace(/^DOI:\s*/, '');
+                  const url = `https://doi.org/${doi}`;
+                  const start = doiMatch.index || 0;
+                  const end = start + doiMatch[0].length;
+                  return (
+                    <span>
+                      <span style={{ fontWeight: 700 }}>{journalName}</span>
+                      {restText.slice(0, start)}
+                      {prefix}
+                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: '#4a90e2', textDecoration: 'none', fontWeight: 400 }}>{doi}</a>
+                      {restText.slice(end)}
+                    </span>
+                  );
+                }
+                return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
+              })()}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  if (routeYear) {
+    // render simplified page with only the requested year at top
+    return (
+      <div className="publications-page">
+        <div className="publications-container" style={{
+          maxWidth: '900px',
+          margin: '96px auto 48px auto',
+          background: 'rgba(255,255,255,0.65)',
+          borderRadius: '0',
+          boxShadow: '0 2px 16px rgba(0,0,0,0.08)',
+          padding: '0 32px 48px 32px',
+          backdropFilter: 'blur(6px)'
+        }}>
+          <div className="publications-hero" style={{ padding: '48px 0 0 0', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.2rem', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.2rem', width: '100%' }}>
+              <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: '#232946', marginBottom: '0.5rem', letterSpacing: '-1px', fontFamily: 'Inter, Arial, sans-serif' }}>Publications</h1>
+              <select
+                style={{ fontSize: '1.2rem', padding: '0.3rem 1.2rem', borderRadius: '6px', border: '1px solid #232946', marginLeft: '0.5rem', background: '#fff', color: '#232946', fontWeight: 500, cursor: 'pointer' }}
+                onChange={e => {
+                  const y = e.target.value;
+                  if (y) navigate(`/publications/${y}`);
+                }}
+                value={routeYear}
+              >
+                <option value="" disabled>Select Year</option>
+                {Array.from({ length: 2025 - 2003 + 1 }, (_, i) => 2025 - i).map(year => (
+                  <option key={year} value={year}>{year}</option>
+                ))}
+                <option value="2002Before">2002 and Before</option>
+              </select>
+            </div>
+          </div>
+          {renderYearSection(routeYear)}
+        </div>
+      </div>
+    );
+  }
+
+  return (
   <div className="publications-page">
     <div className="publications-container" style={{
       maxWidth: '900px',
@@ -946,10 +1061,7 @@ const Publications = () => (
             style={{ fontSize: '1.2rem', padding: '0.3rem 1.2rem', borderRadius: '6px', border: '1px solid #232946', marginLeft: '0.5rem', background: '#fff', color: '#232946', fontWeight: 500, cursor: 'pointer' }}
             onChange={e => {
               const year = e.target.value;
-              const el = document.getElementById(`publications-${year}`);
-              if (el) {
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
+              if (year) navigate(`/publications/${year}`);
             }}
             defaultValue=""
           >
@@ -1827,6 +1939,7 @@ const Publications = () => (
       </div>
     </div>
   </div>
-);
+  );
+}
 
 export default Publications;
