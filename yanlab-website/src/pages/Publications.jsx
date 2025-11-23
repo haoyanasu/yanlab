@@ -2,6 +2,45 @@
 import React from 'react';
 import './Publications.css';
 
+// Helper to consistently extract journal name and remaining text.
+const extractJournalParts = (rawJournal) => {
+  const journalText = String(rawJournal || '').replace(/"/g, '');
+  // Normalize common abbreviation for J. Am. Chem. Soc.
+  const jacs = journalText.match(/^(J\.?\s*Am\.?\s*Chem\.?\s*Soc\.?)/i);
+  if (jacs) {
+    const journalName = 'J. Am. Chem. Soc.';
+    const restText = journalText.slice(jacs[1].length);
+    return { journalName, restText };
+  }
+  // Normalize several other common journal abbreviations to canonical forms
+  const canonicalMap = [
+    [/^(J\.?\s*Nanobiotechnology)/i, 'J. Nanobiotechnology'],
+    [/^(Nature\s*Communications|Nat\.?\s*Commun\.?)/i, 'Nat. Commun.'],
+    [/^(Nature\s*Reviews\s*Methods\s*Primers|Nat\.?\s*Rev\.?\s*Methods\s*Primers)/i, 'Nat. Rev. Methods Primers'],
+    [/^(Nature\s*Chemistry|Nat\.?\s*Chem\.?)/i, 'Nat. Chem.'],
+    [/^(Angewandte\s*Chemie\s*International\s*Edition|Angew\.?\s*Chem\.?\s*Int\.?\s*Ed\.?)/i, 'Angew. Chem. Int. Ed.'],
+    [/^(Nature\s*Materials|Nat\.?\s*Mater\.?)/i, 'Nat. Mater.'],
+    [/^(ACS\s*Appl\.?\s*(Mater(ials)?|Mater\.)\s*(?:&|and)?\s*Interfaces|ACS\.?\s*Appl\.?\s*Mater\.?\s*Interfaces)/i, 'ACS Appl. Mater. Interfaces'],
+    [/^(Accounts?\.?\s*Chem\.?\s*Res\.?|Acc\.?\s*Chem\.?\s*Res\.?)/i, 'Acc. Chem. Res.'],
+    [/^(Chemical\s*Society\s*Reviews|Chem\.?\s*Soc\.?\s*Rev\.?)/i, 'Chem. Soc. Rev.'],
+    [/^(Journal\s*of\s*Neurosurgery|J\.?\s*Neurosurg\.?)/i, 'J. Neurosurg.']
+  ];
+  for (const [rx, canonical] of canonicalMap) {
+    const m = journalText.match(rx);
+    if (m) {
+      const matched = m[1] || m[0];
+      const journalName = canonical;
+      const restText = journalText.slice(matched.length);
+      return { journalName, restText };
+    }
+  }
+  // Default: take everything up to first comma/period/parenthesis as journal name
+  const journalNameMatch = journalText.match(/^([^,(.]+)/);
+  const journalName = journalNameMatch ? journalNameMatch[1].trim() : '';
+  const restText = journalName ? journalText.slice(journalName.length) : journalText;
+  return { journalName, restText };
+};
+
 const publications2025 = [
   {
     number: '249',
@@ -963,10 +1002,8 @@ const Publications = () => (
                 journalText = journalText.replace(/DOI:\s*10\.1002\/cbic\.201700613(\s*)?/gi, '');
                 // Also remove any trailing 'DOI:' if left alone
                 journalText = journalText.replace(/DOI:\s*/gi, '');
-                // Only bold the journal name, not the number after it
-                const journalNameMatch = journalText.match(/^([A-Za-z .]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                // Use helper to extract canonical journal name + rest
+                const { journalName, restText } = extractJournalParts(item.journal);
                 return <span><span style={{ fontWeight: 700 }}>{journalName}</span>{restText}</span>;
               })()}
             </div>
@@ -983,10 +1020,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1021,10 +1055,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1059,10 +1090,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1097,10 +1125,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1135,10 +1160,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1173,10 +1195,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1211,10 +1230,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1249,10 +1265,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1287,10 +1300,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1325,10 +1335,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1364,9 +1371,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1402,10 +1407,7 @@ const Publications = () => (
             </div>
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
-                const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1441,9 +1443,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1479,9 +1479,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1517,9 +1515,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1555,9 +1551,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1593,9 +1587,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1631,9 +1623,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
-                const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                const { journalName, restText } = extractJournalParts(item.journal);
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                 const doiMatch = restText.match(doiRegex);
                 if (doiMatch) {
@@ -1669,9 +1659,7 @@ const Publications = () => (
               <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
                 {(() => {
                   const journalText = item.journal.replace(/"/g, '');
-                  const journalNameMatch = journalText.match(/^([^,.]+)/);
-                  const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                  const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                  const { journalName, restText } = extractJournalParts(item.journal);
                   const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                   const doiMatch = restText.match(doiRegex);
                   if (doiMatch) {
@@ -1707,9 +1695,7 @@ const Publications = () => (
                 <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
                   {(() => {
                     const journalText = item.journal.replace(/"/g, '');
-                    const journalNameMatch = journalText.match(/^([^,.]+)/);
-                    const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                    const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                    const { journalName, restText } = extractJournalParts(item.journal);
                     const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                     const doiMatch = restText.match(doiRegex);
                     if (doiMatch) {
@@ -1744,10 +1730,7 @@ const Publications = () => (
                   </div>
                   <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
                     {(() => {
-                      const journalText = item.journal.replace(/"/g, '');
-                      const journalNameMatch = journalText.match(/^([^,.]+)/);
-                      const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                      const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                      const { journalName, restText } = extractJournalParts(item.journal);
                       const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                       const doiMatch = restText.match(doiRegex);
                       if (doiMatch) {
@@ -1782,10 +1765,7 @@ const Publications = () => (
                     </div>
                     <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
                       {(() => {
-                        const journalText = item.journal.replace(/"/g, '');
-                        const journalNameMatch = journalText.match(/^([^,.]+)/);
-                        const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                        const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                        const { journalName, restText } = extractJournalParts(item.journal);
                         const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                         const doiMatch = restText.match(doiRegex);
                         if (doiMatch) {
@@ -1820,10 +1800,7 @@ const Publications = () => (
                       </div>
                       <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
                         {(() => {
-                          const journalText = item.journal.replace(/"/g, '');
-                          const journalNameMatch = journalText.match(/^([^,.]+)/);
-                          const journalName = journalNameMatch ? journalNameMatch[1] : '';
-                          const restText = journalName ? journalText.slice(journalName.length) : journalText;
+                          const { journalName, restText } = extractJournalParts(item.journal);
                           const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
                           const doiMatch = restText.match(doiRegex);
                           if (doiMatch) {
