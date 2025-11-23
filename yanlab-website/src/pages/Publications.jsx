@@ -34,13 +34,13 @@ const publications2024 = [
     number: '245',
     authors: 'L. Yu#, L. Chen#, D. Satyabola, A. Prasad, H. Yan*',
     title: 'NucleoCraft: The art of stimuli-responsive precision in DNA and RNA bioengineering',
-    journal: 'BME Frontiers. DOI: 10.34133/bmef.00 (2024).'
+    journal: 'BME Frontiers (2024).'
   },
   {
     number: '244',
     authors: 'D. Satyabola, A. Prasad, H. Yan*, X. Zhou*',
     title: 'Bioinspired photonic systems directed by designer DNA nanostructures',
-    journal: 'ACS Applied Optical Materials. DOI: 10.1021/acsaom.4c00103 (2024).'
+    journal: 'ACS Applied Optical Materials (2024).'
   },
   {
     number: '243',
@@ -984,7 +984,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
@@ -1022,7 +1022,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
@@ -1060,7 +1060,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
@@ -1098,7 +1098,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
@@ -1136,7 +1136,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
@@ -1174,7 +1174,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
@@ -1212,7 +1212,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
@@ -1250,7 +1250,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
@@ -1288,7 +1288,7 @@ const Publications = () => (
             <div style={{ fontFamily: 'Inter, Arial, sans-serif', color: '#232946', fontWeight: 400, fontSize: '1.05rem', marginBottom: '0px', lineHeight: 1.5 }}>
               {(() => {
                 const journalText = item.journal.replace(/"/g, '');
-                const journalNameMatch = journalText.match(/^([^,.]+)/);
+                const journalNameMatch = journalText.match(/^([A-Za-z0-9 .&'\/-]+?)(?=(\s+(?:in press|submitted|in revision|in review)|\s*\(|,|\.|$))/i);
                 const journalName = journalNameMatch ? journalNameMatch[1] : '';
                 const restText = journalName ? journalText.slice(journalName.length) : journalText;
                 const doiRegex = /(DOI:\s*)?(10\.\d{4,9}\/[\-._;()\/:A-Z0-9]+|10\.\d{4,9}\.[\-._;()\/:A-Z0-9]+)/i;
