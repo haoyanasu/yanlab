@@ -11,7 +11,7 @@ const News = () => {
       type: "defense",
 
       title: "Dr. Deeksha Satyabola Successfully Defends Ph.D. Thesis",
-      description: "Deeksha Satyabola successfully defended his Ph.D. thesis. Congratulations, Dr. Deeksha. She is moving to Johnson & Johnson as a Post doctoral fellow. Best wishes!",
+      description: "Deeksha Satyabola successfully defended her Ph.D. thesis — congratulations, Dr. Satyabola! She will be joining Johnson & Johnson as a postdoctoral fellow. We wish her every success in her new role.",
       color: "#10b981"
     },
     {
