@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaDna, FaBars, FaTimes } from 'react-icons/fa';
@@ -6,6 +6,17 @@ import { FaDna, FaBars, FaTimes } from 'react-icons/fa';
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const navTextRefs = useRef([]);
+  const [navWidths, setNavWidths] = useState([]);
+
+  useEffect(() => {
+    const compute = () => {
+      setNavWidths(navTextRefs.current.map((el) => (el ? Math.round(el.getBoundingClientRect().width) : 0)));
+    };
+    compute();
+    window.addEventListener('resize', compute);
+    return () => window.removeEventListener('resize', compute);
+  }, []);
 
   const navItems = [
     { path: '/research', label: 'Research' },
@@ -152,10 +163,11 @@ const Navbar = () => {
                     padding: '0.5rem 0',
                     fontFamily: 'Arial, sans-serif',
                     position: 'relative',
-                    zIndex: 2
+                    zIndex: 2,
+                    display: 'inline-block'
                   }}
                 >
-                  {item.label}
+                  <span ref={el => navTextRefs.current[idx] = el}>{item.label}</span>
                 </Link>
                 {/* Maroon underline for active, attached to navbar border */}
                 {location.pathname === item.path && (
@@ -164,7 +176,7 @@ const Navbar = () => {
                     left: '50%',
                     transform: 'translateX(-50%)',
                     bottom: '-1px', // overlaps the navbar border so the lines touch
-                    width: 120,
+                    width: navWidths[idx] || 120,
                     height: 10,
                     background: '#FFC627',
                     borderRadius: 0,
